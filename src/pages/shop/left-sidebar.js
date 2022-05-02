@@ -7,6 +7,7 @@ import { SlideDown } from "react-slidedown";
 import { LayoutTwo } from "../../components/Layout";
 import { BreadcrumbOne } from "../../components/Breadcrumb";
 import { getSortedProducts } from "../../lib/product";
+import { getProducts } from "../../lib/product";
 import {
   ShopHeader,
   ShopFilter,
@@ -58,7 +59,7 @@ const LeftSidebar = ({ products }) => {
     <LayoutTwo>
       {/* breadcrumb */}
       <BreadcrumbOne
-        pageTitle="Shop Left Sidebar"
+        pageTitle="珠寶/玉石"
         backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.png"
       >
         <ul className="breadcrumb__list">
@@ -72,21 +73,6 @@ const LeftSidebar = ({ products }) => {
         </ul>
       </BreadcrumbOne>
       <div className="shop-page-content">
-        {/* shop page header */}
-        <ShopHeader
-          getLayout={getLayout}
-          getFilterSortParams={getFilterSortParams}
-          productCount={products.length}
-          sortedProductCount={currentData.length}
-          shopTopFilterStatus={shopTopFilterStatus}
-          setShopTopFilterStatus={setShopTopFilterStatus}
-        />
-
-        {/* shop header filter */}
-        <SlideDown closed={shopTopFilterStatus ? false : true}>
-          <ShopFilter products={products} getSortParams={getSortParams} />
-        </SlideDown>
-
         {/* shop page body */}
         <div className="shop-page-content__body space-mt--r130 space-mb--r130">
           <Container>
@@ -130,8 +116,9 @@ const LeftSidebar = ({ products }) => {
 };
 
 const mapStateToProps = (state) => {
+  const products = state.productData;
   return {
-    products: state.productData
+    products: getProducts(products, "furniture", "popular", 12)
   };
 };
 

@@ -58,7 +58,7 @@ const FullwidthLeftSidebar = ({ products }) => {
     <LayoutTwo>
       {/* breadcrumb */}
       <BreadcrumbOne
-        pageTitle="Shop Full Width Left Sidebar"
+        pageTitle="所有商品"
         backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.png"
       >
         <ul className="breadcrumb__list">

@@ -27,7 +27,7 @@ const Navigation = () => {
            </Link>
          </li>
       <li className="position-relative">
-          <Link href="/home/furniture" as={process.env.PUBLIC_URL + "/"}>
+        <Link href="/shop/left-sidebar" as={process.env.PUBLIC_URL + "/"}>
             <a>珠寶/玉石</a>
           </Link>
         </li>
@@ -96,6 +96,11 @@ const Navigation = () => {
               </Link>
             </li>
           </ul>
+        </li>
+        <li className="position-relative">
+          <Link href="/" as={process.env.PUBLIC_URL + "/"}>
+            <a>合作商家產品介紹</a>
+          </Link>
         </li>
       </ul>
     </nav>
