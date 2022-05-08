@@ -16,7 +16,7 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
                 <img
                   src={
                     process.env.PUBLIC_URL +
-                    "/assets/images/banners/banner-furniture-1.jpg"
+                    "/assets/images/banners/img1.jpg"
                   }
                   className="img-fluid"
                   alt=""
@@ -26,25 +26,25 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
                 <div className="title">
                   <p>
                     <Link
-                      href="/shop/left-sidebar"
-                      as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
+                      href="/shop/jewls"
+                      as={process.env.PUBLIC_URL + "/shop/jewls"}
                     >
                       <a>
-                        Wooden <span>Chair</span>
+                        珠寶玉石
                       </a>
                     </Link>
                   </p>
                   <Link
-                    href="/shop/left-sidebar"
-                    as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
+                    href="/shop/jewls"
+                    as={process.env.PUBLIC_URL + "/shop/jewls"}
                   >
                     <a>Shop Now</a>
                   </Link>
                 </div>
               </div>
               <Link
-                href="/shop/left-sidebar"
-                as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
+                href="/shop/jewls"
+                as={process.env.PUBLIC_URL + "/shop/jewls"}
               >
                 <a className="banner-link" />
               </Link>
@@ -56,9 +56,9 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
                 <img
                   src={
                     process.env.PUBLIC_URL +
-                    "/assets/images/banners/banner-furniture-2.jpg"
+                    "/assets/images/banners/img2.jpg"
                   }
-                  className="img-fluid"
+                  // className="img-fluid"
                   alt=""
                 />
               </div>
@@ -66,25 +66,25 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
                 <div className="title">
                   <p>
                     <Link
-                      href="/shop/left-sidebar"
-                      as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
+                      href="/shop/clothes"
+                      as={process.env.PUBLIC_URL + "/shop/clothes"}
                     >
                       <a>
-                        Thumbler <span>Alarm Clock</span>
+                        服裝飾品
                       </a>
                     </Link>
                   </p>
                   <Link
-                    href="/shop/left-sidebar"
-                    as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
+                    href="/shop/clothes"
+                    as={process.env.PUBLIC_URL + "/shop/clothes"}
                   >
                     <a>Shop Now</a>
                   </Link>
                 </div>
               </div>
               <Link
-                href="/shop/left-sidebar"
-                as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
+                href="/shop/clothes"
+                as={process.env.PUBLIC_URL + "/shop/clothes"}
               >
                 <a className="banner-link" />
               </Link>
@@ -96,7 +96,7 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
                 <img
                   src={
                     process.env.PUBLIC_URL +
-                    "/assets/images/banners/banner-furniture-3.jpg"
+                    "/assets/images/banners/img3.jpg"
                   }
                   className="img-fluid"
                   alt=""
@@ -106,16 +106,16 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
                 <div className="title">
                   <p>
                     <Link
-                      href="/shop/left-sidebar"
+                      href="/shop/supplies"
                       as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
                     >
                       <a>
-                        Home <span>Decoration</span>
+                        日常用品
                       </a>
                     </Link>
                   </p>
                   <Link
-                    href="/shop/left-sidebar"
+                    href="/shop/supplies"
                     as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
                   >
                     <a>Shop Now</a>
@@ -123,7 +123,7 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
                 </div>
               </div>
               <Link
-                href="/shop/left-sidebar"
+                href="/shop/supplies"
                 as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
               >
                 <a className="banner-link" />

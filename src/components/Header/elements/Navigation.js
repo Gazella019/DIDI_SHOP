@@ -27,12 +27,12 @@ const Navigation = () => {
            </Link>
          </li>
       <li className="position-relative">
-        <Link href="/shop/left-sidebar" as={process.env.PUBLIC_URL + "/"}>
+        <Link href="/shop/jewls" as={process.env.PUBLIC_URL + "/"}>
             <a>珠寶/玉石</a>
           </Link>
         </li>
         <li className="position-relative">
-          <Link href="/" as={process.env.PUBLIC_URL + "/"}>
+          <Link href="/shop/clothes" as={process.env.PUBLIC_URL + "/"}>
             <a>服裝飾品</a>
           </Link>
           <IoIosArrowDown />
@@ -64,18 +64,18 @@ const Navigation = () => {
           </ul>
         </li>
         <li className="position-relative">
-          <Link href="/" as={process.env.PUBLIC_URL + "/"}>
+          <Link href="/shop/supplies" as={process.env.PUBLIC_URL + "/"}>
             <a>日常用品</a>
           </Link>
         </li>
         <li className="position-relative">
-          <Link href="/" as={process.env.PUBLIC_URL + "/"}>
+          <Link href="/shop/foods" as={process.env.PUBLIC_URL + "/"}>
             <a>食品</a>
           </Link>
         </li>
         <li className="position-relative">
-          <Link href="/" as={process.env.PUBLIC_URL + "/"}>
-            <a>房屋</a>
+          <Link href="/shop/house" as={process.env.PUBLIC_URL + "/"}>
+            <a>房屋/車</a>
           </Link>
           <IoIosArrowDown />
           <ul className="sub-menu sub-menu--one-column">
@@ -98,7 +98,7 @@ const Navigation = () => {
           </ul>
         </li>
         <li className="position-relative">
-          <Link href="/" as={process.env.PUBLIC_URL + "/"}>
+          <Link href="/shop/partners" as={process.env.PUBLIC_URL + "/"}>
             <a>合作商家產品介紹</a>
           </Link>
         </li>

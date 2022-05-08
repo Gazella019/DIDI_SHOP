@@ -13,23 +13,25 @@ const AboutTwo = () => {
   return (
     <LayoutTwo>
       {/* breadcrumb */}
-      <BreadcrumbOne
-        pageTitle="關於我們"
-        backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.png"
-      >
-        <ul className="breadcrumb__list">
-          <li>
-            <Link href="/" as={process.env.PUBLIC_URL + "/"}>
-              <a>DIDI Shop</a>
-            </Link>
-          </li>
 
-          <li>關於我們</li>
-        </ul>
-      </BreadcrumbOne>
-      <div className="about-page-wrapper space-mt--r130 space-mb--r130">
+      <div className="about-page-wrapper">
         {/* primary content */}
-        <div className="about-content ">
+        <div className="about-content space-pt--r130 space-pb--r130">
+          <BreadcrumbOne
+            pageTitle="關於我們"
+            backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.png"
+          >
+            <ul className="breadcrumb__list">
+              <li>
+                <Link href="/" as={process.env.PUBLIC_URL + "/"}>
+                  <a>DIDI Shop</a>
+                </Link>
+              </li>
+
+              <li>關於我們</li>
+            </ul>
+          </BreadcrumbOne>
+
           <Container className="wide">
             <SectionTitleOne
               title="DIDI 選貨"

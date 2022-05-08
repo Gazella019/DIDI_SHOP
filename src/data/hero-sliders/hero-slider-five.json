@@ -1,23 +1,51 @@
 [
   {
     "id": "1",
-    "subtitle": "精選飾品",
-    "title": "手鐲飾品",
+    "subtitle": "",
+    "title": "珠寶玉石",
     "url": "/shop/left-sidebar",
     "bgImage": "/assets/images/hero-slider/hero-slider-five/bg1.jpg"
   },
   {
     "id": "2",
-    "subtitle": "珍珠系列",
-    "title": "精選珍珠首飾",
+    "subtitle": "",
+    "title": "日常用品",
     "url": "/shop/left-sidebar",
     "bgImage": "/assets/images/hero-slider/hero-slider-five/bg2.jpg"
   },
   {
     "id": "3",
-    "subtitle": "典藏系列",
-    "title": "典藏經典設計",
+    "subtitle": "",
+    "title": "服裝飾品",
     "url": "/shop/left-sidebar",
     "bgImage": "/assets/images/hero-slider/hero-slider-five/bg3.jpg"
+  },
+  {
+    "id": "4",
+    "subtitle": "",
+    "title": "食品",
+    "url": "/shop/left-sidebar",
+    "bgImage": "/assets/images/hero-slider/hero-slider-five/bg4.jpg"
+  },
+  {
+    "id": "5",
+    "subtitle": "",
+    "title": "車",
+    "url": "/shop/left-sidebar",
+    "bgImage": "/assets/images/hero-slider/hero-slider-five/bg5.jpg"
+  },
+  {
+    "id": "6",
+    "subtitle": "",
+    "title": "房屋",
+    "url": "/shop/left-sidebar",
+    "bgImage": "/assets/images/hero-slider/hero-slider-five/bg6.jpg"
+  },
+  {
+    "id": "7",
+    "subtitle": "",
+    "title": "合作商家產品介紹",
+    "url": "/shop/left-sidebar",
+    "bgImage": "/assets/images/hero-slider/hero-slider-five/bg7.jpg"
   }
 ]

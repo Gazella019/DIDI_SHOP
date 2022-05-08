@@ -15,7 +15,7 @@ import {
   ShopProducts
 } from "../../components/Shop";
 
-const LeftSidebar = ({ products }) => {
+const ShopSupplies = ({ products }) => {
   const [layout, setLayout] = useState("grid four-column");
   const [sortType, setSortType] = useState("");
   const [sortValue, setSortValue] = useState("");
@@ -58,8 +58,9 @@ const LeftSidebar = ({ products }) => {
   return (
     <LayoutTwo>
       {/* breadcrumb */}
+      <div className="shop-page-content shop-supplies">
       <BreadcrumbOne
-        pageTitle="珠寶/玉石"
+        pageTitle="日常用品"
       >
         <ul className="breadcrumb__list">
           <li>
@@ -71,9 +72,8 @@ const LeftSidebar = ({ products }) => {
           <li>Shop Left Sidebar</li>
         </ul>
       </BreadcrumbOne>
-      <div className="shop-page-content">
         {/* shop page body */}
-        <div className="shop-page-content__body space-mt--r130 space-mb--r130">
+        <div className="shop-page-content__body space-mt--r130">
           <Container>
             <Row>
               <Col
@@ -121,4 +121,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(LeftSidebar);
+export default connect(mapStateToProps)(ShopSupplies);

@@ -19,7 +19,9 @@ body {
     // didi_modify
     background-color: rgb(238, 235, 235);
     background-image: url("/assets/images/background-img.jpg");
-    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
     background-size: 100% auto;
     // background-color: $white;
 }
@@ -75,4 +77,74 @@ textarea:focus:-ms-input-placeholder {
     color: transparent !important;
 } /* IE 10+ */
 
+// didi_modify
+.shop-clothes {
+    background-image: url("/assets/images/shop/shop-clothes.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.shop-foods {
+    background-image: url("/assets/images/shop/shop-food.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.shop-house {
+    background-image: url("/assets/images/shop/shop-house.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.shop-jewls {
+    background-image: url("/assets/images/shop/shop-jewl.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.shop-partners {
+    background-image: url("/assets/images/shop/shop-cooperate.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.shop-supplies {
+    background-image: url("/assets/images/shop/shop-gadgets.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.about-content {
+    background-image: url("/assets/images/about-img.jpg");
+}
 /*=====  End of base  ======*/
