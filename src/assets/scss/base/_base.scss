@@ -17,8 +17,9 @@ body {
     margin: 0;
 
     // didi_modify
-    background-color: rgb(238, 235, 235);
-    background-image: url("/assets/images/background-img.jpg");
+    // background-color: rgb(238, 235, 235);
+    background-color: rgb(255, 255, 255);
+    // background-image: url("/assets/images/background-img.jpg");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -79,7 +80,7 @@ textarea:focus:-ms-input-placeholder {
 
 // didi_modify
 .shop-clothes {
-    background-image: url("/assets/images/shop/shop-clothes.jpg");
+    background-image: url("https://images.unsplash.com/photo-1571139627661-cf707929f465?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -90,7 +91,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .shop-foods {
-    background-image: url("/assets/images/shop/shop-food.jpg");
+    background-image: url("https://images.unsplash.com/photo-1582683740035-92658ae5ed5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -101,7 +102,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .shop-house {
-    background-image: url("/assets/images/shop/shop-house.jpg");
+    background-image: url("https://images.unsplash.com/photo-1559385072-5adb2c4fc83f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -112,7 +113,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .shop-jewls {
-    background-image: url("/assets/images/shop/shop-jewl.jpg");
+    background-image: url("https://images.unsplash.com/photo-1605092676920-8ac5ae40c7c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -123,7 +124,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .shop-partners {
-    background-image: url("/assets/images/shop/shop-cooperate.jpg");
+    background-image: url("https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -134,7 +135,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .shop-supplies {
-    background-image: url("/assets/images/shop/shop-gadgets.jpg");
+    background-image: url("https://images.unsplash.com/photo-1578941838877-141265f3a898?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1965&q=80");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
@@ -145,6 +146,24 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .about-content {
-    background-image: url("/assets/images/about-img.jpg");
+    background-image: url("https://images.unsplash.com/photo-1518451841069-6d102d0be9d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
+    ackground-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.shop-all {
+    background-image: url("https://images.unsplash.com/photo-1518451841069-6d102d0be9d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
+    ackground-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 /*=====  End of base  ======*/

@@ -19,19 +19,21 @@ const Furniture = ({ products }) => {
   return (
     <LayoutTwo aboutOverlay={false}>
       {/* hero slider */}
-      <HeroSliderSeven 
-        sliderData={heroSliderData}
-        spaceBottomClass="space-mb--50"
-      />
-       <div className="space-mb--r100"></div>
-      {/* hover banner */}
-      <HoverBannerOne spaceBottomClass="space-mb--r100" />
+      <div className="shop-page-content shop-all">
+        <HeroSliderSeven 
+          sliderData={heroSliderData}
+          spaceBottomClass="space-mb--50"
+        />
+          <div className="space-mb--r100"></div>
+          {/* hover banner */}
+          <HoverBannerOne spaceBottomClass="space-mb--r100" />
 
-      {/* Image slider for testing purpose */}
-      <ImageSliderTwo imageSliderData={imageSliderData} />
+          {/* Image slider for testing purpose */}
+          <ImageSliderTwo imageSliderData={imageSliderData} />
 
-      {/* image cta */}
-      <ImageCtaTwo spaceBottomClass="space-mb--r100" />
+          {/* image cta */}
+          <ImageCtaTwo spaceBottomClass="space-pb--r100" />
+      </div>
     </LayoutTwo>
   );
 };

@@ -53,47 +53,48 @@ const FullwidthNoSidebar = ({ products }) => {
   return (
     <LayoutTwo>
       {/* breadcrumb */}
-      <BreadcrumbOne
-        pageTitle="所有商品"
-        backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.jpg"
-      >
-        <ul className="breadcrumb__list">
-          <li>
-            <Link href="/" as={process.env.PUBLIC_URL + "/"}>
-              <a>主頁</a>
-            </Link>
-          </li>
+      <div className="shop-page-content shop-all">
+        <BreadcrumbOne
+          pageTitle="所有商品"
+        >
+          <ul className="breadcrumb__list">
+            <li>
+              <Link href="/" as={process.env.PUBLIC_URL + "/"}>
+                <a>主頁</a>
+              </Link>
+            </li>
 
-          <li>所有商品</li>
-        </ul>
-      </BreadcrumbOne>
-      <div className="shop-page-content">
+            <li>所有商品</li>
+          </ul>
+        </BreadcrumbOne>
+        <div className="shop-page-content">
 
-        {/* shop page body */}
-        <div className="shop-page-content__body space-mt--r130 space-mb--r130">
-          <Container className="wide">
-            <Row>
-              <Col>
-                {/* shop products */}
-                <ShopProducts layout={layout} products={currentData} />
+          {/* shop page body */}
+          <div className="shop-page-content__body space-mt--r130 space-pb--r130">
+            <Container className="wide">
+              <Row>
+                <Col>
+                  {/* shop products */}
+                  <ShopProducts layout={layout} products={currentData} />
 
-                {/* shop product pagination */}
-                <div className="pro-pagination-style">
-                  <Paginator
-                    totalRecords={sortedProducts.length}
-                    pageLimit={pageLimit}
-                    pageNeighbours={2}
-                    setOffset={setOffset}
-                    currentPage={currentPage}
-                    setCurrentPage={setCurrentPage}
-                    pageContainerClass="mb-0 mt-0"
-                    pagePrevText="«"
-                    pageNextText="»"
-                  />
-                </div>
-              </Col>
-            </Row>
-          </Container>
+                  {/* shop product pagination */}
+                  <div className="pro-pagination-style">
+                    <Paginator
+                      totalRecords={sortedProducts.length}
+                      pageLimit={pageLimit}
+                      pageNeighbours={2}
+                      setOffset={setOffset}
+                      currentPage={currentPage}
+                      setCurrentPage={setCurrentPage}
+                      pageContainerClass="mb-0 mt-0"
+                      pagePrevText="«"
+                      pageNextText="»"
+                    />
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </div>
         </div>
       </div>
     </LayoutTwo>
