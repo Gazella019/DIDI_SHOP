@@ -14,6 +14,7 @@ import {
   ShopSidebar,
   ShopProducts
 } from "../../components/Shop";
+import { client } from '../../lib/client';
 
 const ShopJewls = ({ products }) => {
   const [layout, setLayout] = useState("grid four-column");
@@ -114,11 +115,23 @@ const ShopJewls = ({ products }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  const products = state.productData;
-  return {
-    products: getProducts(products, "furniture", "popular", 12)
-  };
-};
 
-export default connect(mapStateToProps)(ShopJewls);
+export const getServerSideProps = async () => {
+  const query = '*[_type == "product"]';
+  const products = await client.fetch(query);
+  console.log(products)
+  return {
+    props: { products }
+  }
+}
+
+export default ShopJewls;
+
+// const mapStateToProps = (state) => {
+//   const products = state.productData;
+//   return {
+//     products: getProducts(products, "furniture", "popular", 12)
+//   };
+// };
+
+// export default connect(mapStateToProps)(ShopJewls);

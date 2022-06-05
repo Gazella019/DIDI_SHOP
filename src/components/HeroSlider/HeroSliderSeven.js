@@ -16,12 +16,12 @@ const HeroSliderSeven = ({ sliderData }) => {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    renderPrevButton: () => (
-      <button className="swiper-button-prev ht-swiper-button-nav"></button>
-    ),
-    renderNextButton: () => (
-      <button className="swiper-button-next ht-swiper-button-nav"></button>
-    ),
+    // renderPrevButton: () => (
+    //   <button className="swiper-button-prev ht-swiper-button-nav"></button>
+    // ),
+    // renderNextButton: () => (
+    //   <button className="swiper-button-next ht-swiper-button-nav"></button>
+    // ),
   };
   return (
     <div className="hero-slider-seven">
@@ -58,11 +58,11 @@ const HeroSliderSeven = ({ sliderData }) => {
                       </Col>
                     </Row>
                   </Container>
-                  <div className="hero-slider-seven__pagination">
+                  {/* <div className="hero-slider-seven__pagination">
                     <span className="current">{i + 1}</span>
                     <span className="border"></span>
                     <span className="total">{sliderData.length}</span>
-                  </div>
+                  </div> */}
                 </div>
               );
             })}

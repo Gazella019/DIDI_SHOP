@@ -4,6 +4,7 @@ import Link from "next/link";
 import { IoIosHeartEmpty, IoIosShuffle, IoIosSearch } from "react-icons/io";
 import { Tooltip } from "react-tippy";
 import ProductModal from "./ProductModal";
+import { urlFor } from "../../lib/client";
 
 const ProductGridList = ({
   product,
@@ -37,13 +38,13 @@ const ProductGridList = ({
             >
               <a className="image-wrap">
                 <img
-                  src={process.env.PUBLIC_URL + product.thumbImage[0]}
+                  src={urlFor(product.thumbImage[0])}
                   className="img-fluid"
                   alt={product.name}
                 />
                 {product.thumbImage.length > 1 ? (
                   <img
-                    src={process.env.PUBLIC_URL + product.thumbImage[1]}
+                    src={urlFor(product.thumbImage[1])}
                     className="img-fluid"
                     alt={product.name}
                   />
@@ -139,13 +140,13 @@ const ProductGridList = ({
             >
               <a className="image-wrap">
                 <img
-                  src={process.env.PUBLIC_URL + product.thumbImage[0]}
+                  src={urlFor(product.thumbImage[0])}
                   className="img-fluid"
                   alt={product.name}
                 />
                 {product.thumbImage.length > 1 ? (
                   <img
-                    src={process.env.PUBLIC_URL + product.thumbImage[1]}
+                    src={urlFor(product.thumbImage[0])}
                     className="img-fluid"
                     alt={product.name}
                   />

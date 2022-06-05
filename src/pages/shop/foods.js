@@ -14,8 +14,11 @@ import {
   ShopSidebar,
   ShopProducts
 } from "../../components/Shop";
+import { client } from '../../lib/client';
+
 
 const ShopFoods = ({ products }) => {
+  console.log(products)
   const [layout, setLayout] = useState("grid four-column");
   const [sortType, setSortType] = useState("");
   const [sortValue, setSortValue] = useState("");
@@ -114,11 +117,22 @@ const ShopFoods = ({ products }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  const products = state.productData;
+export const getServerSideProps = async () => {
+  const query = '*[_type == "product"]';
+  const products = await client.fetch(query);
+  console.log(products)
   return {
-    products: getProducts(products, "furniture", "popular", 12)
-  };
-};
+    props: { products }
+  }
+}
 
-export default connect(mapStateToProps)(ShopFoods);
+export default ShopFoods;
+
+// const mapStateToProps = (state) => {
+//   const products = state.productData;
+//   console.log(getProducts(products, "furniture", "popular", 12))
+//   return {
+//     products: getProducts(products, "furniture", "popular", 12)
+//   };
+// };
+// export default connect(mapStateToProps)(ShopFoods);

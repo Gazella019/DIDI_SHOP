@@ -9,8 +9,11 @@
     "export": "next export"
   },
   "dependencies": {
+    "@sanity/client": "^2.23.2",
+    "@sanity/image-url": "^1.0.1",
     "bootstrap": "4.6.0",
-    "next": "^11.0.1",
+    "next": "^12.1.6",
+    "next-sanity-image": "^3.2.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
     "react-countdown": "^2.2.1",
@@ -32,7 +35,7 @@
     "redux": "^4.0.5",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
-    "swiper": "^5.3.6",
+    "swiper": "^6.8.4",
     "uuid": "^7.0.3"
   },
   "devDependencies": {

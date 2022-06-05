@@ -14,6 +14,7 @@ import {
   ShopSidebar,
   ShopProducts
 } from "../../components/Shop";
+import { client } from '../../lib/client';
 
 const ShopClothes = ({ products }) => {
   const [layout, setLayout] = useState("grid four-column");
@@ -114,11 +115,22 @@ const ShopClothes = ({ products }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  const products = state.productData;
+export const getServerSideProps = async () => {
+  const query = '*[_type == "product"]';
+  const products = await client.fetch(query);
+  console.log(products)
   return {
-    products: getProducts(products, "furniture", "popular", 12)
-  };
-};
+    props: { products }
+  }
+}
 
-export default connect(mapStateToProps)(ShopClothes);
+export default ShopClothes;
+
+// const mapStateToProps = (state) => {
+//   const products = state.productData;
+//   return {
+//     products: getProducts(products, "furniture", "popular", 12)
+//   };
+// };
+
+// export default connect(mapStateToProps)(ShopClothes);

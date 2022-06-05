@@ -9,6 +9,7 @@ import { LayoutTwo } from "../../components/Layout";
 import { BreadcrumbOne } from "../../components/Breadcrumb";
 import { getSortedProducts } from "../../lib/product";
 import { ShopHeader, ShopFilter, ShopProducts } from "../../components/Shop";
+import { client } from '../../lib/client';
 
 const FullwidthNoSidebar = ({ products }) => {
   const [layout, setLayout] = useState("grid four-column");
@@ -101,15 +102,26 @@ const FullwidthNoSidebar = ({ products }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  const products = state.productData;
+export const getServerSideProps = async () => {
+  const query = '*[_type == "product"]';
+  const products = await client.fetch(query);
+  console.log(products)
   return {
-    products: getProducts(products, "furniture", "popular", 12)
-  };
-  // did_modify
-  // return {
-  //   products: state.productData
-  // };
-};
+    props: { products }
+  }
+}
 
-export default connect(mapStateToProps)(FullwidthNoSidebar);
+export default FullwidthNoSidebar;
+
+// const mapStateToProps = (state) => {
+//   const products = state.productData;
+//   return {
+//     products: getProducts(products, "furniture", "popular", 12)
+//   };
+//   // did_modify
+//   // return {
+//   //   products: state.productData
+//   // };
+// };
+
+// export default connect(mapStateToProps)(FullwidthNoSidebar);

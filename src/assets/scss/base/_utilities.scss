@@ -417,9 +417,11 @@
 
 /* background image */
 .bg-img {
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
+	// background-size: contain;
 	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
 }
 
 /* borders */
