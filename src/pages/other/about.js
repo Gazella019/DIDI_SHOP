@@ -3,32 +3,24 @@ import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 import { IoMdAdd } from "react-icons/io";
 import ModalVideo from "react-modal-video";
-import { LayoutTwo } from "../../components/Layout";
+import { LayoutDidi } from "../../components/Layout";
 import { BreadcrumbOne } from "../../components/Breadcrumb";
 import { TestimonialOne } from "../../components/Testimonial";
 import { BrandLogoOne } from "../../components/BrandLogo";
 import testimonialData from "../../data/testimonials/testimonial-one.json";
 import brandLogoData from "../../data/brand-logos/brand-logo-one.json";
+import { FooterTwo } from "../../components/Footer";
 
 const About = () => {
   const [modalStatus, isOpen] = useState(false);
 
   return (
-    <LayoutTwo>
+    <LayoutDidi>
       {/* breadcrumb */}
       <BreadcrumbOne
         pageTitle="About"
         backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.png"
       >
-        <ul className="breadcrumb__list">
-          <li>
-            <Link href="/" as={process.env.PUBLIC_URL + "/"}>
-              <a>Home</a>
-            </Link>
-          </li>
-
-          <li>About</li>
-        </ul>
       </BreadcrumbOne>
       {/* about content */}
       <div className="about-content space-mt--r130 space-mb--r130">
@@ -162,7 +154,8 @@ const About = () => {
         {/* brand logo */}
         <BrandLogoOne brandLogoData={brandLogoData} />
       </div>
-    </LayoutTwo>
+      <FooterTwo/>
+    </LayoutDidi>
   );
 };
 

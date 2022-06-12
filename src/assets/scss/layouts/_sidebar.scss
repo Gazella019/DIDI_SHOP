@@ -60,7 +60,7 @@
     font-size: 30px;
     line-height: 1.2;
 
-    color: $black--two;
+    color: rgb(0, 0, 0);
   }
 
   &__list {
@@ -82,7 +82,7 @@
 
         text-transform: capitalize;
 
-        color: $grey--six;
+        color: rgb(0, 0, 0);
         border: none;
         background: none;
         &:after {
@@ -97,12 +97,12 @@
           content: "";
           transition: 0.3s;
 
-          background-color: $black--two;
+          background-color: rgb(232, 157, 17);
         }
 
         &:hover,
         &.active {
-          color: $black--two;
+          color: rgb(232, 157, 17);
 
           &:after {
             right: auto;

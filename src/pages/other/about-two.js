@@ -2,16 +2,17 @@ import { useState } from "react";
 import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 import ModalVideo from "react-modal-video";
-import { LayoutTwo } from "../../components/Layout";
+import { LayoutDidi } from "../../components/Layout";
 import { BreadcrumbOne } from "../../components/Breadcrumb";
 import { SectionTitleOne } from "../../components/SectionTitle";
+import { FooterTwo } from "../../components/Footer";
 import { TestimonialTwo } from "../../components/Testimonial";
 import testimonialTwoData from "../../data/testimonials/testimonial-two.json";
 
 const AboutTwo = () => {
   const [modalStatus, isOpen] = useState(false);
   return (
-    <LayoutTwo>
+    <LayoutDidi>
       {/* breadcrumb */}
 
       <div className="about-page-wrapper">
@@ -78,6 +79,7 @@ const AboutTwo = () => {
               </Col>
             </Row>
           </Container>
+          <FooterTwo/>
         </div>
 
         {/* testimonial */}
@@ -86,7 +88,7 @@ const AboutTwo = () => {
           backgroundImage="/assets/images/backgrounds/testimonials-bg.png"
         /> */}
       </div>
-    </LayoutTwo>
+    </LayoutDidi>
   );
 };
 

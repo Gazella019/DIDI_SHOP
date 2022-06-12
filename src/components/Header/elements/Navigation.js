@@ -9,7 +9,7 @@ const Navigation = () => {
       <li className="position-relative">   
       </li>
       <li>
-           <Link href="/home/furniture" as={process.env.PUBLIC_URL + "/"}>
+           <Link href="/" as={process.env.PUBLIC_URL + "/"}>
              <a>主頁</a>
           </Link>
       </li>

@@ -27,9 +27,7 @@ const FooterTwo = ({ footerBgClass }) => {
   };
   return (
     <footer
-      className={`space-pt--100 space-pb--50 ${
-        footerBgClass ? footerBgClass : "bg-color--grey"
-      }`}
+      className={`space-pt--100 space-pb--50`}
     >
       <Container className="wide">
         <Row>
@@ -47,7 +45,7 @@ const FooterTwo = ({ footerBgClass }) => {
                 height={150}
                 alt=""
               />
-              <p>DIDI 選貨</p>
+              {/* <p>DIDI 選貨</p> */}
             </div>
 
             {/*=======  copyright text  =======*/}
@@ -78,26 +76,29 @@ const FooterTwo = ({ footerBgClass }) => {
           </Col> */}
 
           <Col className="footer-single-widget space-mb--50">
-            <h5 className="footer-single-widget__title">關注我們</h5>
-            <nav className="footer-single-widget__nav footer-single-widget__nav--social">
-              <ul>
-                <li>
-                  <a href="https://www.facebook.com">
-                    <FaFacebookF /> Facebook
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.instagram.com">
-                    <FaInstagram /> Instagram
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com">
-                    <FaYoutube /> Youtube
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <div className="blurr"></div>
+            <div className="footer-blurr-text">
+              <h5 className="footer-single-widget__title">關注我們</h5>
+              <nav className="footer-single-widget__nav footer-single-widget__nav--social">
+                <ul>
+                  <li>
+                    <a href="https://www.facebook.com">
+                      <FaFacebookF style = {{ color: "black", fontSize: "1.2em" }}/> Facebook
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com">
+                      <FaInstagram style = {{ color: "black", fontSize: "1.2em" }}/> Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com">
+                      <FaYoutube style = {{ color: "black", fontSize: "1.2em" }}/> Youtube
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
           </Col>
         </Row>
       </Container>

@@ -8,6 +8,7 @@ import LayoutSeven from "./LayoutSeven";
 import LayoutEight from "./LayoutEight";
 import LayoutNine from "./LayoutNine";
 import LayoutTen from "./LayoutTen";
+import LayoutDidi from "./LayoutDidi";
 
 export {
   LayoutOne,
@@ -19,5 +20,6 @@ export {
   LayoutSeven,
   LayoutEight,
   LayoutNine,
-  LayoutTen
+  LayoutTen,
+  LayoutDidi
 };

@@ -4,10 +4,11 @@ import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 import Paginator from "react-hooks-paginator";
 import { SlideDown } from "react-slidedown";
-import { LayoutTwo } from "../../components/Layout";
+import { LayoutDidi } from "../../components/Layout";
 import { BreadcrumbOne } from "../../components/Breadcrumb";
 import { getSortedProducts } from "../../lib/product";
 import { getProducts } from "../../lib/product";
+import { FooterTwo } from "../../components/Footer";
 import {
   ShopHeader,
   ShopFilter,
@@ -57,24 +58,15 @@ const ShopJewls = ({ products }) => {
   }, [offset, products, sortType, sortValue, filterSortType, filterSortValue]);
 
   return (
-    <LayoutTwo>
+    <LayoutDidi>
       {/* breadcrumb */}
       <div className="shop-page-content shop-jewls">
       <BreadcrumbOne
         pageTitle="珠寶/玉石"
       >
-        <ul className="breadcrumb__list">
-          <li>
-            <Link href="/" as={process.env.PUBLIC_URL + "/"}>
-              <a>Home</a>
-            </Link>
-          </li>
-
-          <li>Shop Left Sidebar</li>
-        </ul>
       </BreadcrumbOne>
         {/* shop page body */}
-        <div className="shop-page-content__body space-mt--r100 space-pb--r100">
+        <div className="shop-page-content__body space-mt--r100">
           <Container>
             <Row>
               <Col
@@ -109,9 +101,10 @@ const ShopJewls = ({ products }) => {
               </Col>
             </Row>
           </Container>
+          <FooterTwo className="space-mt--r100"/>
         </div>
       </div>
-    </LayoutTwo>
+    </LayoutDidi>
   );
 };
 

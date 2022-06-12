@@ -4,10 +4,11 @@ import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 import Paginator from "react-hooks-paginator";
 import { SlideDown } from "react-slidedown";
-import { LayoutTwo } from "../../components/Layout";
+import { LayoutDidi } from "../../components/Layout";
 import { BreadcrumbOne } from "../../components/Breadcrumb";
 import { getSortedProducts } from "../../lib/product";
 import { getProducts } from "../../lib/product";
+import { FooterTwo } from "../../components/Footer";
 import {
   ShopHeader,
   ShopFilter,
@@ -57,7 +58,7 @@ const ShopHouse = ({ products }) => {
   }, [offset, products, sortType, sortValue, filterSortType, filterSortValue]);
 
   return (
-    <LayoutTwo>
+    <LayoutDidi>
       {/* breadcrumb */}
       <div className="shop-page-content shop-house">
       <BreadcrumbOne
@@ -109,9 +110,10 @@ const ShopHouse = ({ products }) => {
               </Col>
             </Row>
           </Container>
+          <FooterTwo/>
         </div>
       </div>
-    </LayoutTwo>
+    </LayoutDidi>
   );
 };
 

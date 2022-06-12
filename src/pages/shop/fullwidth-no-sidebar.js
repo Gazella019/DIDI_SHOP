@@ -5,10 +5,11 @@ import { getProducts } from "../../lib/product";
 import { Container, Row, Col } from "react-bootstrap";
 import Paginator from "react-hooks-paginator";
 import { SlideDown } from "react-slidedown";
-import { LayoutTwo } from "../../components/Layout";
+import { LayoutDidi } from "../../components/Layout";
 import { BreadcrumbOne } from "../../components/Breadcrumb";
 import { getSortedProducts } from "../../lib/product";
 import { ShopHeader, ShopFilter, ShopProducts } from "../../components/Shop";
+import { FooterTwo } from "../../components/Footer";
 import { client } from '../../lib/client';
 
 const FullwidthNoSidebar = ({ products }) => {
@@ -52,7 +53,7 @@ const FullwidthNoSidebar = ({ products }) => {
   }, [offset, products, sortType, sortValue, filterSortType, filterSortValue]);
 
   return (
-    <LayoutTwo>
+    <LayoutDidi>
       {/* breadcrumb */}
       <div className="shop-page-content shop-all">
         <BreadcrumbOne
@@ -96,9 +97,10 @@ const FullwidthNoSidebar = ({ products }) => {
               </Row>
             </Container>
           </div>
+          <FooterTwo/>
         </div>
       </div>
-    </LayoutTwo>
+    </LayoutDidi>
   );
 };
 

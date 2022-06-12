@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
 import { Container, Row, Col } from "react-bootstrap";
 import { CountdownTimerFour } from "../components/Countdown";
-import { LayoutTwo, LayoutEight } from "../components/Layout";
-import { HeroSliderFive, HeroSliderSeven  } from "../components/HeroSlider";
+import { LayoutDidi, LayoutEight } from "../components/Layout";
+import { HeroSliderFour, HeroSliderSeven  } from "../components/HeroSlider";
 import { SectionTitleOne } from "../components/SectionTitle";
 import { getProducts } from "../lib/product";
 import { ProductGridWrapper } from "../components/ProductThumb";
@@ -10,17 +10,17 @@ import { TestimonialOne } from "../components/Testimonial";
 import { ImageCtaTwo } from "../components/Cta";
 import { HoverBannerOne } from "../components/Banner";
 import { ImageSliderOne, ImageSliderTwo, ImageSliderThree } from "../components/ImageSlider";
-
+import { FooterTwo } from "../components/Footer";
 import heroSliderData from "../data/hero-sliders/hero-slider-five.json";
 import testimonialOneData from "../data/testimonials/testimonial-one.json";
 import imageSliderData from "../data/image-sliders/image-slider-one.json";
 
 const Furniture = ({ products }) => {
   return (
-    <LayoutTwo aboutOverlay={false}>
+    <LayoutDidi aboutOverlay={false}>
       {/* hero slider */}
       <div className="shop-page-content shop-all">
-        <HeroSliderSeven 
+        <HeroSliderFour 
           sliderData={heroSliderData}
           spaceBottomClass="space-mb--50"
         />
@@ -33,8 +33,9 @@ const Furniture = ({ products }) => {
 
           {/* image cta */}
           <ImageCtaTwo spaceBottomClass="space-pb--r100" />
+          <FooterTwo/>
       </div>
-    </LayoutTwo>
+    </LayoutDidi>
   );
 };
 

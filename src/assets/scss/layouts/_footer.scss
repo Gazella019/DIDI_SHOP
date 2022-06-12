@@ -127,7 +127,7 @@
 
 .footer-single-widget {
   flex-basis: 17.5%;
-
+  color:rgb(0, 0, 0);
 @include respond (small-desktop) {
     flex-basis: 33.33%;
   }
@@ -235,19 +235,19 @@
   }
 
   &__title {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
 
     margin-bottom: 30px;
 
-    color: $black--two;
+    color:rgb(0, 0, 0);
   }
 
   &__copyright {
     font-size: 15px;
     line-height: 2;
 
-    color: $grey--seven;
+    color:rgb(0, 0, 0);
     span {
       display: block;
     }
@@ -263,7 +263,7 @@
 
           position: relative;
 
-          color: $grey--six;
+          color:rgb(0, 0, 0);
 
           &:after {
             position: absolute;
@@ -282,7 +282,7 @@
           }
 
           &:hover {
-            color: $black--two;
+            color:rgb(231, 231, 231);
             &:after {
               visibility: visible;
 
