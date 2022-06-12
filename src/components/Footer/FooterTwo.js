@@ -38,8 +38,8 @@ const FooterTwo = ({ footerBgClass }) => {
                 src={
                   process.env.PUBLIC_URL + footerBgClass ===
                   "bg-color--blue-two"
-                    ? "/assets/images/logo-alt.png"
-                    : "/assets/images/1-01.jpg"
+                    ? "/assets/images/logo.png"
+                    : "/assets/images/logo.png"
                 }
                 width={150}
                 height={150}

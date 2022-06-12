@@ -58,7 +58,7 @@ const HeaderThree = ({ cartItems, wishlistItems }) => {
                 <Link href="/" as={process.env.PUBLIC_URL + "/"}>
                   <a>
                   <Image
-                    src={process.env.PUBLIC_URL + "/assets/images/1-01.jpg"}
+                    src={process.env.PUBLIC_URL + "/assets/images/logo.png"}
                     alt="logo image"
                     width={100}
                     height={100}
