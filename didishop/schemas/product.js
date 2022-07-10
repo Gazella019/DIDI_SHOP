@@ -21,7 +21,11 @@ export default {
         {
             name: 'slug',
             title: '英文網址',
-            type: 'string',
+            type: 'slug',
+            options: {
+                source: 'name',
+                maxLength: 90,
+            }
         },
         { 
             name: 'price',

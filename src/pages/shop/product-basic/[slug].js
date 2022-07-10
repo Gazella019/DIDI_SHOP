@@ -21,7 +21,7 @@ import {
   deleteFromCompare
 } from "../../../redux/actions/compareActions";
 import products from "../../../data/products.json";
-
+import { client } from '../../../lib/client';
 const ProductBasic = ({
   product,
   cartItems,
@@ -33,6 +33,7 @@ const ProductBasic = ({
   addToCompare,
   deleteFromCompare
 }) => {
+  console.log(product)
   useEffect(() => {
     document.querySelector("body").classList.remove("overflow-hidden");
   });
@@ -44,16 +45,6 @@ const ProductBasic = ({
   ).toFixed(2);
 
   const productPrice = product.price.toFixed(2);
-  const cartItem = cartItems.filter(
-    (cartItem) => cartItem.id === product.id
-  )[0];
-  const wishlistItem = wishlistItems.filter(
-    (wishlistItem) => wishlistItem.id === product.id
-  )[0];
-  const compareItem = compareItems.filter(
-    (compareItem) => compareItem.id === product.id
-  )[0];
-
   return (
     <LayoutTwo>
       {/* breadcrumb */}
@@ -87,7 +78,6 @@ const ProductBasic = ({
               {/* image gallery bottom thumb */}
               <ImageGalleryBottomThumb
                 product={product}
-                wishlistItem={wishlistItem}
                 addToast={addToast}
                 addToWishlist={addToWishlist}
                 deleteFromWishlist={deleteFromWishlist}
@@ -100,10 +90,6 @@ const ProductBasic = ({
                 product={product}
                 productPrice={productPrice}
                 discountedPrice={discountedPrice}
-                cartItems={cartItems}
-                cartItem={cartItem}
-                wishlistItem={wishlistItem}
-                compareItem={compareItem}
                 addToast={addToast}
                 addToCart={addToCart}
                 addToWishlist={addToWishlist}
@@ -167,20 +153,45 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductBasic);
 
-export async function getStaticPaths() {
-  // get the paths we want to pre render based on products
+// const ProductBasic = (props) => {
+//   console.log(props);
+//   return (
+//     <div>
+//       hello
+//     </div>
+//   )
+// };
+// export default connect(mapStateToProps, mapDispatchToProps)(ProductBasic);
+export default ProductBasic;
+export const getStaticPaths = async () => {
+  const query = `*[_type == "product"] {
+    slug {
+      current
+    }
+  }
+  `;
+
+  const products = await client.fetch(query);
+
   const paths = products.map((product) => ({
-    params: { slug: product.slug }
+    params: { 
+      slug: product.slug.current
+    }
   }));
 
-  return { paths, fallback: false };
+  return {
+    paths,
+    fallback: 'blocking'
+  }
 }
 
-export async function getStaticProps({ params }) {
-  // get product data based on slug
-  const product = products.filter((single) => single.slug === params.slug)[0];
-
-  return { props: { product } };
+export const getStaticProps = async ({ params: { slug }}) => {
+  const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
+  const product = await client.fetch(query);
+  console.log("====");
+  console.log(product);
+  return {
+    props: { product }
+  }
 }
