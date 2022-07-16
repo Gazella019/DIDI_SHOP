@@ -29,12 +29,10 @@ const ProductGridList = ({
       <Col lg={3} md={6} className={bottomSpace ? bottomSpace : ""}>
         <div className="product-grid">
           {/*=======  single product image  =======*/}
+          {console.log(product)}
           <div className="product-grid__image">
             <Link
-              href={`/shop/product-basic/[slug]?slug=${product.slug}`}
-              as={
-                process.env.PUBLIC_URL + "/shop/product-basic/" + product.slug
-              }
+              href={`/shop/product-basic/${product.slug.current}`}
             >
               <a className="image-wrap">
                 <img
@@ -76,99 +74,11 @@ const ProductGridList = ({
             <div className="title">
               <h3>
                 <Link
-                  href={`/shop/product-basic/[slug]?slug=${product.slug}`}
+                  href={`/shop/product-basic/${product.slug.current}`}
                   as={
                     process.env.PUBLIC_URL +
                     "/shop/product-basic/" +
-                    product.slug
-                  }
-                >
-                  <a>{product.name}</a>
-                </Link>
-              </h3>
-              {/* add to cart */}
-              {/* {product.affiliateLink ? (
-                <a href={product.affiliateLink} target="_blank">
-                  Buy now
-                </a>
-              ) : product.variation && product.variation.length >= 1 ? (
-                <Link
-                  href={`/shop/product-basic/[slug]?slug=${product.slug}`}
-                  as={
-                    process.env.PUBLIC_URL +
-                    "/shop/product-basic/" +
-                    product.slug
-                  }
-                >
-                  <a>Select Option</a>
-                </Link>
-              ) : product.stock && product.stock > 0 ? (
-                <button
-                  onClick={() => addToCart(product, addToast)}
-                  disabled={
-                    cartItem !== undefined &&
-                    cartItem.quantity >= cartItem.stock
-                  }
-                >
-                  {cartItem !== undefined ? "Added to cart" : "Add to cart"}
-                </button>
-              ) : (
-                <button disabled>Out of Stock</button>
-              )} */}
-            </div>
-            <div className="price">
-              {product.discount > 0 ? (
-                <Fragment>
-                  {/* <span className="main-price discounted">${productPrice}</span> */}
-                  <span className="discounted-price">${discountedPrice}</span>
-                </Fragment>
-              ) : (
-                <span className="main-price">${productPrice}</span>
-              )}
-            </div>
-          </div>
-        </div>
-
-        <div className="product-list">
-          {/*=======  single product image  =======*/}
-          <div className="product-list__image">
-            <Link
-              href={`/shop/product-basic/[slug]?slug=${product.slug}`}
-              as={
-                process.env.PUBLIC_URL + "/shop/product-basic/" + product.slug
-              }
-            >
-              <a className="image-wrap">
-                <img
-                  src={urlFor(product.thumbImage[0])}
-                  className="img-fluid"
-                  alt={product.name}
-                />
-                {product.thumbImage.length > 1 ? (
-                  <img
-                    src={urlFor(product.thumbImage[0])}
-                    className="img-fluid"
-                    alt={product.name}
-                  />
-                ) : (
-                  ""
-                )}
-              </a>
-            </Link>
-            <div className="product-list__floating-badges">
-            </div>
-          </div>
-
-          {/*=======  single product content  =======*/}
-          <div className="product-list__content">
-            <div className="title">
-              <h3>
-                <Link
-                  href={`/shop/product-basic/[slug]?slug=${product.slug}`}
-                  as={
-                    process.env.PUBLIC_URL +
-                    "/shop/product-basic/" +
-                    product.slug
+                    product.slug.current
                   }
                 >
                   <a>{product.name}</a>
@@ -185,10 +95,9 @@ const ProductGridList = ({
                 <span className="main-price">${productPrice}</span>
               )}
             </div>
-
-            <div className="short-description">{product.shortDescription}</div>
           </div>
         </div>
+
       </Col>
       {/* product modal */}
       <ProductModal

@@ -7,6 +7,7 @@ import { LayoutTwo } from "../../../components/Layout";
 import { getDiscountPrice } from "../../../lib/product";
 import { BreadcrumbOne } from "../../../components/Breadcrumb";
 import {
+  DidiGallery,
   ImageGalleryBottomThumb,
   ProductDescription,
   ProductDescriptionTab
@@ -24,9 +25,6 @@ import products from "../../../data/products.json";
 import { client } from '../../../lib/client';
 const ProductBasic = ({
   product,
-  cartItems,
-  wishlistItems,
-  compareItems,
   addToCart,
   addToWishlist,
   deleteFromWishlist,
@@ -52,22 +50,6 @@ const ProductBasic = ({
         pageTitle={product.name}
         backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.png"
       >
-        <ul className="breadcrumb__list">
-          <li>
-            <Link href="/" as={process.env.PUBLIC_URL + "/"}>
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/shop/left-sidebar"
-              as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
-            >
-              <a>Shop</a>
-            </Link>
-          </li>
-          <li>{product.name}</li>
-        </ul>
       </BreadcrumbOne>
 
       {/* product details */}
@@ -76,33 +58,12 @@ const ProductBasic = ({
           <Row>
             <Col lg={6} className="space-mb-mobile-only--50">
               {/* image gallery bottom thumb */}
-              <ImageGalleryBottomThumb
-                product={product}
-                addToast={addToast}
-                addToWishlist={addToWishlist}
-                deleteFromWishlist={deleteFromWishlist}
-              />
+              <DidiGallery/>
             </Col>
 
             <Col lg={6}>
               {/* product description */}
-              <ProductDescription
-                product={product}
-                productPrice={productPrice}
-                discountedPrice={discountedPrice}
-                addToast={addToast}
-                addToCart={addToCart}
-                addToWishlist={addToWishlist}
-                deleteFromWishlist={deleteFromWishlist}
-                addToCompare={addToCompare}
-                deleteFromCompare={deleteFromCompare}
-              />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              {/* product description tab */}
-              <ProductDescriptionTab product={product} />
+              {product.fullDescription}
             </Col>
           </Row>
         </Container>
@@ -111,47 +72,40 @@ const ProductBasic = ({
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    cartItems: state.cartData,
-    wishlistItems: state.wishlistData,
-    compareItems: state.compareData
-  };
-};
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addToCart: (
-      item,
-      addToast,
-      quantityCount,
-      selectedProductColor,
-      selectedProductSize
-    ) => {
-      dispatch(
-        addToCart(
-          item,
-          addToast,
-          quantityCount,
-          selectedProductColor,
-          selectedProductSize
-        )
-      );
-    },
-    addToWishlist: (item, addToast) => {
-      dispatch(addToWishlist(item, addToast));
-    },
-    deleteFromWishlist: (item, addToast) => {
-      dispatch(deleteFromWishlist(item, addToast));
-    },
-    addToCompare: (item, addToast) => {
-      dispatch(addToCompare(item, addToast));
-    },
-    deleteFromCompare: (item, addToast) => {
-      dispatch(deleteFromCompare(item, addToast));
-    }
-  };
-};
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//     addToCart: (
+//       item,
+//       addToast,
+//       quantityCount,
+//       selectedProductColor,
+//       selectedProductSize
+//     ) => {
+//       dispatch(
+//         addToCart(
+//           item,
+//           addToast,
+//           quantityCount,
+//           selectedProductColor,
+//           selectedProductSize
+//         )
+//       );
+//     },
+//     addToWishlist: (item, addToast) => {
+//       dispatch(addToWishlist(item, addToast));
+//     },
+//     deleteFromWishlist: (item, addToast) => {
+//       dispatch(deleteFromWishlist(item, addToast));
+//     },
+//     addToCompare: (item, addToast) => {
+//       dispatch(addToCompare(item, addToast));
+//     },
+//     deleteFromCompare: (item, addToast) => {
+//       dispatch(deleteFromCompare(item, addToast));
+//     }
+//   };
+// };
 
 
 // const ProductBasic = (props) => {

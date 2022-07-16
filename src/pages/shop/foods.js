@@ -93,7 +93,7 @@ const ShopFoods = ({ products }) => {
 
               <Col lg={9} className="order-1 order-lg-2">
                 {/* shop products */}
-                <ShopProducts layout={layout} products={currentData} />
+                <ShopProducts layout={layout} products={products} />
 
                 {/* shop product pagination */}
                 <div className="pro-pagination-style">
