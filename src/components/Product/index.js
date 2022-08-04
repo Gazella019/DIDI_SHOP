@@ -1,3 +1,4 @@
 import ProductRating from "./ProductRating";
+import DidiProduct from "./DidiProduct";
 
-export { ProductRating };
+export { ProductRating, DidiProduct };

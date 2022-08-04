@@ -23,6 +23,8 @@ import {
 } from "../../../redux/actions/compareActions";
 import products from "../../../data/products.json";
 import { client } from '../../../lib/client';
+import { DidiProduct } from "../../../components/Product";
+
 const ProductBasic = ({
   product,
   addToCart,
@@ -56,14 +58,21 @@ const ProductBasic = ({
       <div className="product-details space-mt--r100 space-mb--r100">
         <Container>
           <Row>
-            <Col lg={6} className="space-mb-mobile-only--50">
+            <Col lg={8} className="space-mb-mobile-only--50">
               {/* image gallery bottom thumb */}
-              <DidiGallery/>
+              <div className="gallery-container">
+                <DidiProduct product={product}/>
+              </div>
             </Col>
 
-            <Col lg={6}>
+            <Col lg={4}>
               {/* product description */}
-              {product.fullDescription}
+              <div>
+                {product.fullDescription}
+              </div>
+              <div>
+              {product.price}
+              </div>
             </Col>
           </Row>
         </Container>

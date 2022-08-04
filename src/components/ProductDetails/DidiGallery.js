@@ -6,15 +6,18 @@ const DidiGallery = ({
     return (
         <>
           <Swiper className="mySwiper">
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            <SwiperSlide>Slide 5</SwiperSlide>
-            <SwiperSlide>Slide 6</SwiperSlide>
-            <SwiperSlide>Slide 7</SwiperSlide>
-            <SwiperSlide>Slide 8</SwiperSlide>
-            <SwiperSlide>Slide 9</SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            </SwiperSlide>
           </Swiper>
         </>
       );
