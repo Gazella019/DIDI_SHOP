@@ -223,3 +223,101 @@ textarea:focus:-ms-input-placeholder {
     margin-top: 30px;
     color:#f02d34;
   }
+
+  // didi product carousels
+  .productImg {
+    width: 90%;
+    height: 50vh;
+  }
+
+  .slick-arrow.slick-prev,
+  .slick-arrow.slick-next {
+    background-color: #324d67;
+    }
+// .custom-indicator {
+//     border: 2px solid green;
+//     padding-top: 100px;
+// }
+
+.custom-indicator li {
+    border: #f02d34;
+    width: 50px;
+    height: 50px;
+    margin-left: 1000px;
+}
+
+
+// .didi-product-container {
+//     display: flex;
+// // }
+// .gallery-container {
+//     width: 500px;
+//     height: 500px;
+//     background-color: #f02d34;
+// }
+
+
+.didi-product-container {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: antiquewhite;
+}
+
+.didi-thumb-img {
+    object-fit: cover;
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.didi-main-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.didi-thumb-swiper {
+    margin-top: 15px;
+    width: 100%;
+    height: 15vh;
+}
+
+.didi-main-swiper {
+    width: 100%;
+    height: 50vh;
+}
+
+// .didi-product-info {
+//     padding: 20px;
+// }
+
+.didi-product-name {
+    padding: 20px 0px 10px 0;
+}
+
+.didi-product-price {
+    padding: 20px 0px 10px 0;
+}
+
+.didi-product-price {
+    padding: 20px 0px 10px 0;
+}
+
+.didi-product-fullDescription {
+    padding: 20px 20px 10px 20px;
+    line-height: 3;
+}
+
+.didi-product-button {
+    margin-top: 50px;
+}
+
+
+.didi-line {
+    width: 80%;
+    height: 1.4px;
+    background-color: #f09f25;
+}

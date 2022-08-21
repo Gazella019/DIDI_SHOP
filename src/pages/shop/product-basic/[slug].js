@@ -6,6 +6,9 @@ import { useToasts } from "react-toast-notifications";
 import { LayoutTwo } from "../../../components/Layout";
 import { getDiscountPrice } from "../../../lib/product";
 import { BreadcrumbOne } from "../../../components/Breadcrumb";
+import { IoIosCart } from "react-icons/io";
+
+
 import {
   DidiGallery,
   ImageGalleryBottomThumb,
@@ -55,23 +58,52 @@ const ProductBasic = ({
       </BreadcrumbOne>
 
       {/* product details */}
-      <div className="product-details space-mt--r100 space-mb--r100">
+
+      {/* <div className="didi-product-container">
+        <div className="product-image">
+          <DidiProduct product={product} />
+        </div>
+        <div className="product-info">
+          <h2> title </h2>
+          <h2> $100 </h2>
+          <button> 聯繫我們 </button>
+          <h2>簡介</h2>
+          <p>
+          全新Quadro方錶系列是Daniel Wellington首次方形設計腕錶,錶身採用拋光不銹鋼製成,精緻的玫瑰金或是極光銀兩種錶身選擇,別緻的方形錶面有蛋殼白,經典黑和伯朗大道綠三種款式,搭配新型的麥穗式金屬編織錶帶或是細緻的壓邊皮革錶帶,讓妳的造型更為出眾,成為眾人的目光嬌點
+          </p>
+        </div>
+      </div> */}
+      <div className="product-details space-mt--r80 space-mb--r100">
         <Container>
+
           <Row>
-            <Col lg={8} className="space-mb-mobile-only--50">
-              {/* image gallery bottom thumb */}
+            <Col lg={6} className="space-mb-mobile-only--50">
               <div className="gallery-container">
                 <DidiProduct product={product}/>
+                {/* <img src="https://swiperjs.com/demos/images/nature-1.jpg" className="didi-img"/> */}
               </div>
             </Col>
 
-            <Col lg={4}>
-              {/* product description */}
-              <div>
-                {product.fullDescription}
-              </div>
-              <div>
-              {product.price}
+            <Col lg={6} className="didi-product-info">
+              <div className="didi-product-container">
+                <h2 className="didi-product-name"> {product.name} </h2>
+                <div className="didi-line">
+                </div>
+                <div className="didi-product-price">
+                  <h3> ${product.price} </h3>
+                </div>
+                {/* <h3 > 簡介 </h3> */}
+                <div className="didi-product-fullDescription">
+                  {product.fullDescription}
+                </div>
+                <Link
+                  href="/"
+                  as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
+                >
+                  <a className="lezada-button lezada-button--medium lezada-button--icon--left didi-product-button">
+                    <IoIosCart />  購買
+                  </a>
+                </Link>
               </div>
             </Col>
           </Row>

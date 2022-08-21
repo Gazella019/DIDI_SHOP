@@ -1,41 +1,66 @@
 import { urlFor } from "../../lib/client";
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+import 'swiper/swiper.min.css';
+import 'swiper/components/navigation/navigation.min.css';
+import 'swiper/components/thumbs/thumbs.min.css';
+import "swiper/components/scrollbar/scrollbar.min.css";
+
+
+import SwiperCore, { Navigation, Thumbs, Scrollbar } from "swiper";
+SwiperCore.use([Navigation, Thumbs, Scrollbar]);
 
 const DidiProduct = ({product}) => {
-  console.log(product);
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  
   return (
-    <Slider {...settings}>
-      <div>
-        <img src={urlFor(product.image[0])}/>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
-  )
+    <>
+      <Swiper
+        style={{
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
+        }}
+        spaceBetween={10}
+        navigation={true}
+        scrollbar={true}
+        thumbs={{ swiper: thumbsSwiper }}
+        slidesPerView={1}
+        modules={[Navigation, Thumbs, Scrollbar]}
+        className="didi-main-swiper"
+      >
+        <SwiperSlide>
+          <img src={urlFor(product.image[0])} className="didi-main-img"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={urlFor(product.image[1])} className="didi-main-img"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={urlFor(product.image[2])} className="didi-main-img"/>
+        </SwiperSlide>
+      </Swiper>
+      <Swiper
+        onSwiper={setThumbsSwiper}
+        spaceBetween={5}
+        slidesPerView={3}
+        watchSlidesProgress={true}
+        // modules={[Navigation, Thumbs]}
+        // width={500}
+        // height={500}
+        className="didi-thumb-swiper"
+      >
+         <SwiperSlide>
+          <img src={urlFor(product.image[0])} className="didi-main-img"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={urlFor(product.image[1])} className="didi-main-img"/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={urlFor(product.image[2])} className="didi-main-img"/>
+        </SwiperSlide>
+      </Swiper>
+    </>
+  );
 }
 // const DidiProduct = (product) => {
 //     return (
