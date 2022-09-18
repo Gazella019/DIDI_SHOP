@@ -15,8 +15,7 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
               <div className="single-category__image single-category__image--three single-category__image--three--creativehome single-category__image--three--banner">
                 <img
                   src={
-                    process.env.PUBLIC_URL +
-                    "/assets/images/banners/img1.jpg"
+                    "https://images.unsplash.com/photo-1628926379972-9843ad139a8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
                   }
                   className="img-fluid"
                   alt=""
@@ -55,8 +54,7 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
               <div className="single-category__image single-category__image--three single-category__image--three--creativehome single-category__image--three--banner">
                 <img
                   src={
-                    process.env.PUBLIC_URL +
-                    "/assets/images/banners/img2.jpg"
+                    "https://images.unsplash.com/photo-1502652023201-a16bde8138d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80"
                   }
                   // className="img-fluid"
                   alt=""
@@ -95,8 +93,7 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
               <div className="single-category__image single-category__image--three single-category__image--three--creativehome single-category__image--three--banner">
                 <img
                   src={
-                    process.env.PUBLIC_URL +
-                    "/assets/images/banners/img3.jpg"
+                    "https://images.unsplash.com/photo-1539050125830-eb92d115b2b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
                   }
                   className="img-fluid"
                   alt=""

@@ -6,7 +6,8 @@ import { useToasts } from "react-toast-notifications";
 import { LayoutTwo } from "../../../components/Layout";
 import { getDiscountPrice } from "../../../lib/product";
 import { BreadcrumbOne } from "../../../components/Breadcrumb";
-import { IoIosCart } from "react-icons/io";
+import { IoMdArrowForward } from "react-icons/io";
+import { DidiProductCard, DidiRelatedProduct }from "../../../components/Product";
 
 
 import {
@@ -36,7 +37,7 @@ const ProductBasic = ({
   addToCompare,
   deleteFromCompare
 }) => {
-  console.log(product)
+  // console.log(product)
   useEffect(() => {
     document.querySelector("body").classList.remove("overflow-hidden");
   });
@@ -51,11 +52,11 @@ const ProductBasic = ({
   return (
     <LayoutTwo>
       {/* breadcrumb */}
-      <BreadcrumbOne
+      {/* <BreadcrumbOne
         pageTitle={product.name}
         backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.png"
       >
-      </BreadcrumbOne>
+      </BreadcrumbOne> */}
 
       {/* product details */}
 
@@ -73,12 +74,11 @@ const ProductBasic = ({
           </p>
         </div>
       </div> */}
-      <div className="product-details space-mt--r80 space-mb--r100">
-        <Container>
-
+      <div className="product-details space-mt--r100 ">
+        <Container className="didi-container">
           <Row>
-            <Col lg={6} className="space-mb-mobile-only--50">
-              <div className="gallery-container">
+            <Col lg={6} className="space-mb-mobile-only--30">
+              <div className="didi-gallery-container">
                 <DidiProduct product={product}/>
                 {/* <img src="https://swiperjs.com/demos/images/nature-1.jpg" className="didi-img"/> */}
               </div>
@@ -86,28 +86,44 @@ const ProductBasic = ({
 
             <Col lg={6} className="didi-product-info">
               <div className="didi-product-container">
-                <h2 className="didi-product-name"> {product.name} </h2>
-                <div className="didi-line">
-                </div>
-                <div className="didi-product-price">
-                  <h3> ${product.price} </h3>
-                </div>
+                <h2 className="didi-product-name">
+                  <div>
+                    {product.name} 
+                  </div>
+                  <div className="didi-product-price">
+                    NT${product.price}
+                  </div>
+                </h2>
+                {/* <div className="didi-line">
+                </div> */}
                 {/* <h3 > 簡介 </h3> */}
                 <div className="didi-product-fullDescription">
                   {product.fullDescription}
                 </div>
-                <Link
+                {/* <Link
                   href="/"
                   as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
                 >
                   <a className="lezada-button lezada-button--medium lezada-button--icon--left didi-product-button">
-                    <IoIosCart />  購買
+                    <IoIosCart />  立即購買
                   </a>
-                </Link>
+                </Link> */}
+                <button className="didi-product-button">
+                  立即購買 <IoMdArrowForward/>
+                </button>
               </div>
             </Col>
           </Row>
+          <Row>
+            <Col>
+              {/* product description tab */}
+              <ProductDescriptionTab product={product} />
+            </Col>
+          </Row>
+              <DidiRelatedProduct/>
         </Container>
+      </div>
+      <div className="didi-product-banner">
       </div>
     </LayoutTwo>
   );
@@ -184,8 +200,8 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params: { slug }}) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
   const product = await client.fetch(query);
-  console.log("====");
-  console.log(product);
+  // console.log("====");
+  // console.log(product);
   return {
     props: { product }
   }

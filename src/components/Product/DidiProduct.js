@@ -18,15 +18,14 @@ const DidiProduct = ({product}) => {
     <>
       <Swiper
         style={{
-          "--swiper-navigation-color": "#fff",
-          "--swiper-pagination-color": "#fff",
+          "--swiper-navigation-color": "#a6a3a3",
+          "--swiper-pagination-color": "#a6a3a3",
         }}
         spaceBetween={10}
         navigation={true}
-        scrollbar={true}
         thumbs={{ swiper: thumbsSwiper }}
         slidesPerView={1}
-        modules={[Navigation, Thumbs, Scrollbar]}
+        modules={[Navigation, Thumbs]}
         className="didi-main-swiper"
       >
         <SwiperSlide>
@@ -39,7 +38,9 @@ const DidiProduct = ({product}) => {
           <img src={urlFor(product.image[2])} className="didi-main-img"/>
         </SwiperSlide>
       </Swiper>
-      <Swiper
+
+      {/* Swiper for dual swiper */}
+      {/* <Swiper
         onSwiper={setThumbsSwiper}
         spaceBetween={5}
         slidesPerView={3}
@@ -58,7 +59,7 @@ const DidiProduct = ({product}) => {
         <SwiperSlide>
           <img src={urlFor(product.image[2])} className="didi-main-img"/>
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
     </>
   );
 }

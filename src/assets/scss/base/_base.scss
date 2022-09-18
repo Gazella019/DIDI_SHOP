@@ -256,9 +256,12 @@ textarea:focus:-ms-input-placeholder {
 //     background-color: #f02d34;
 // }
 
+// .didi-gallery-container {
+    
+// }
 
 .didi-product-container {
-    height: 70vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,6 +280,7 @@ textarea:focus:-ms-input-placeholder {
     width: 100%;
     height: 100%;
     border-radius: 5px;
+    padding: 0 40px;
 }
 
 .didi-thumb-swiper {
@@ -295,15 +299,15 @@ textarea:focus:-ms-input-placeholder {
 // }
 
 .didi-product-name {
-    padding: 20px 0px 10px 0;
+    width: 100%;
+    display: flex;
+    padding: 20px 0px 20px 0;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .didi-product-price {
-    padding: 20px 0px 10px 0;
-}
-
-.didi-product-price {
-    padding: 20px 0px 10px 0;
+    font-size: 17px;
 }
 
 .didi-product-fullDescription {
@@ -315,9 +319,118 @@ textarea:focus:-ms-input-placeholder {
     margin-top: 50px;
 }
 
-
+.didi-product-button {
+    width: 100%;
+    border: 0;
+    box-sizing: border-box;
+    margin: 1em;
+    padding: 1em 2em;
+    background-color: #00081C;
+    color: #CDBC7A;
+}
 .didi-line {
-    width: 80%;
-    height: 1.4px;
-    background-color: #f09f25;
+    width: 100%;
+    height: 0.8px;
+    background-color: #b5b5b5
+}
+
+
+// .didi-related-product {
+//     background-color: #CDBC7A;
+//     width: 100%;
+//     height: 200px;
+// }
+
+.didi-card-container {
+    overflow: hidden;
+    box-shadow: 0px, 0px, 15px, -5px;
+    transition: 0.3s;
+    animation: ease-in-out;
+    margin: 30px 40px;
+}
+
+.didi-card-container:hover {
+    // transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+}
+
+.didi-image-container img{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.didi-card-content {
+    padding: 10px;
+}
+
+.didi-card-price h6{
+    padding: 5px 0px;
+}
+
+.didi-related-product-container {
+    h5 {
+        color: #535252;
+    }
+    display: flex;
+    flex-direction: column;
+    margin-top: 15vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.didi-related-product {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.didi-product-banner {
+    margin-top: 150px;
+    width: 100%;
+    height: 50vh;
+    // background-color: #324d67;
+    background-image: url("https://images.unsplash.com/photo-1466781783364-36c955e42a7f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1742&q=80");
+    background-size: cover;
+}
+
+
+.didi-card-container-v1 {
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    box-shadow: 0px, 0px, 15px, -5px;
+    transition: 0.3s;
+    animation: ease-in-out;
+    background-color: #fffcfc;
+}
+
+.didi-image-container-v1 {
+    width: 100%;
+    min-height: 300px;
+    background-color: #535252;
+}
+
+.didi-image-container-v1 img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.didi-card-container-v1:hover {
+    // transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
+}
+
+.didi-card-content-v1 {
+    h6 {
+        padding: 10px;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
 }

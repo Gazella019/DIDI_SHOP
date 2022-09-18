@@ -19,7 +19,7 @@ import { client } from '../../lib/client';
 
 
 const ShopFoods = ({ products }) => {
-  console.log(products)
+  // console.log(products)
   const [layout, setLayout] = useState("grid four-column");
   const [sortType, setSortType] = useState("");
   const [sortValue, setSortValue] = useState("");
@@ -122,7 +122,7 @@ const ShopFoods = ({ products }) => {
 export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';
   const products = await client.fetch(query);
-  console.log(products)
+  // console.log(products)
   return {
     props: { products }
   }

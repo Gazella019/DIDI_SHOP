@@ -3,6 +3,7 @@ import { Col } from "react-bootstrap";
 import Link from "next/link";
 import { IoIosHeartEmpty, IoIosShuffle, IoIosSearch } from "react-icons/io";
 import { Tooltip } from "react-tippy";
+import DidiProductCard from "../Product/DidiProductCard";
 import ProductModal from "./ProductModal";
 import { urlFor } from "../../lib/client";
 
@@ -26,11 +27,9 @@ const ProductGridList = ({
 
   return (
     <Fragment>
-      <Col lg={3} md={6} className={bottomSpace ? bottomSpace : ""}>
+      <Col lg={3} md={3} className={bottomSpace ? bottomSpace : ""}>
         <div className="product-grid">
-          {/*=======  single product image  =======*/}
-          {console.log(product)}
-          <div className="product-grid__image">
+          {/* <div className="product-grid__image">
             <Link
               href={`/shop/product-basic/${product.slug.current}`}
             >
@@ -40,36 +39,10 @@ const ProductGridList = ({
                   className="img-fluid"
                   alt={product.name}
                 />
-                {product.thumbImage.length > 1 ? (
-                  <img
-                    src={urlFor(product.thumbImage[1])}
-                    className="img-fluid"
-                    alt={product.name}
-                  />
-                ) : (
-                  ""
-                )}
               </a>
             </Link>
-            <div className="product-grid__floating-badges">
-              {product.discount && product.discount > 0 ? (
-                <span className="onsale">-{product.discount}%</span>
-              ) : (
-                ""
-              )}
-              {product.new ? <span className="hot">New</span> : ""}
-              {product.stock === 0 ? (
-                <span className="out-of-stock">out</span>
-              ) : (
-                ""
-              )}
-            </div>
-            <div className="product-grid__floating-icons">
-                {/*didi_modify*/}
-            </div>
           </div>
 
-          {/*=======  single product content  =======*/}
           <div className="product-grid__content">
             <div className="title">
               <h3>
@@ -88,14 +61,20 @@ const ProductGridList = ({
             <div className="price">
               {product.discount > 0 ? (
                 <Fragment>
-                  {/* <span className="main-price discounted">${productPrice}</span> */}
                   <span className="discounted-price">${discountedPrice}</span>
                 </Fragment>
               ) : (
                 <span className="main-price">${productPrice}</span>
               )}
             </div>
-          </div>
+          </div> */}
+          <Link
+              href={`/shop/product-basic/${product.slug.current}`}
+            >
+              <a>
+                <DidiProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])} isTemplate={false}/>
+              </a>
+            </Link>
         </div>
 
       </Col>

@@ -95,6 +95,22 @@ const Navigation = () => {
                 <a>中古屋</a>
               </Link>
             </li>
+            <li>
+              <Link
+                href="/other/about-two"
+                as={process.env.PUBLIC_URL + "/other/about-two"}
+              >
+                <a>新車</a>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/other/about-two"
+                as={process.env.PUBLIC_URL + "/other/about-two"}
+              >
+                <a>中古車</a>
+              </Link>
+            </li>
           </ul>
         </li>
         <li className="position-relative">
