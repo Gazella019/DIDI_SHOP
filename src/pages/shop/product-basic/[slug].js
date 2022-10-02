@@ -37,7 +37,6 @@ const ProductBasic = ({
   addToCompare,
   deleteFromCompare
 }) => {
-  // console.log(product)
   useEffect(() => {
     document.querySelector("body").classList.remove("overflow-hidden");
   });
@@ -130,41 +129,6 @@ const ProductBasic = ({
 };
 
 
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     addToCart: (
-//       item,
-//       addToast,
-//       quantityCount,
-//       selectedProductColor,
-//       selectedProductSize
-//     ) => {
-//       dispatch(
-//         addToCart(
-//           item,
-//           addToast,
-//           quantityCount,
-//           selectedProductColor,
-//           selectedProductSize
-//         )
-//       );
-//     },
-//     addToWishlist: (item, addToast) => {
-//       dispatch(addToWishlist(item, addToast));
-//     },
-//     deleteFromWishlist: (item, addToast) => {
-//       dispatch(deleteFromWishlist(item, addToast));
-//     },
-//     addToCompare: (item, addToast) => {
-//       dispatch(addToCompare(item, addToast));
-//     },
-//     deleteFromCompare: (item, addToast) => {
-//       dispatch(deleteFromCompare(item, addToast));
-//     }
-//   };
-// };
-
-
 // const ProductBasic = (props) => {
 //   console.log(props);
 //   return (
@@ -184,7 +148,8 @@ export const getStaticPaths = async () => {
   `;
 
   const products = await client.fetch(query);
-
+  console.log("hello");
+  console.log(products);
   const paths = products.map((product) => ({
     params: { 
       slug: product.slug.current
@@ -193,14 +158,13 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: 'blocking'
+    fallback: true,
   }
 }
 
 export const getStaticProps = async ({ params: { slug }}) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
   const product = await client.fetch(query);
-  // console.log("====");
   // console.log(product);
   return {
     props: { product }

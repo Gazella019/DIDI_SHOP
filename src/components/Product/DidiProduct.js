@@ -28,7 +28,13 @@ const DidiProduct = ({product}) => {
         modules={[Navigation, Thumbs]}
         className="didi-main-swiper"
       >
-        <SwiperSlide>
+        {product.image.map((img, index) => (
+          // console.log(index)
+          <SwiperSlide>
+            <img src={urlFor(product.image[index])} className="didi-main-img"/>
+          </SwiperSlide>
+        ))}
+        {/* <SwiperSlide>
           <img src={urlFor(product.image[0])} className="didi-main-img"/>
         </SwiperSlide>
         <SwiperSlide>
@@ -36,7 +42,7 @@ const DidiProduct = ({product}) => {
         </SwiperSlide>
         <SwiperSlide>
           <img src={urlFor(product.image[2])} className="didi-main-img"/>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
 
       {/* Swiper for dual swiper */}
