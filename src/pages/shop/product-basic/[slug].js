@@ -7,8 +7,7 @@ import { LayoutTwo } from "../../../components/Layout";
 import { getDiscountPrice } from "../../../lib/product";
 import { BreadcrumbOne } from "../../../components/Breadcrumb";
 import { IoMdArrowForward } from "react-icons/io";
-import { DidiProductCard, DidiRelatedProduct }from "../../../components/Product";
-
+import { DidiProductCard, DidiRelatedProduct, DidiModal }from "../../../components/Product";
 
 import {
   DidiGallery,
@@ -75,6 +74,7 @@ const ProductBasic = ({
       </div> */}
       <div className="product-details space-mt--r100 ">
         <Container className="didi-container">
+          <DidiModal product={product}/>
           <Row>
             <Col lg={6} className="space-mb-mobile-only--30">
               <div className="didi-gallery-container">
@@ -112,6 +112,14 @@ const ProductBasic = ({
                 </button>
               </div>
             </Col>
+          </Row>
+          <Row>
+            <div className="didi-product-video">
+              <h3>
+                影片介紹
+              </h3>
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ONqYdBtTltg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </Row>
           <Row>
             <Col>

@@ -20,16 +20,14 @@ const HoverBannerTwo = ({ spaceBottomClass }) => {
               </Link>
               <img
                 src={
-                  process.env.PUBLIC_URL +
-                  "/assets/images/banners/banner-cosmetic-3.jpg"
-                }
+                  "https://images.unsplash.com/photo-1628926379972-9843ad139a8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                }ㄋ
                 className="img-fluid"
                 alt=""
               />
               <div className="banner-content banner-content--middle-white banner-content--middle-dark">
                 <p>
-                  <span className="bold-white">10%</span> off your
-                  <span className="d-block">next purchase</span>
+                  <span className="d-block">食品</span>
                 </p>
               </div>
             </div>
@@ -44,17 +42,15 @@ const HoverBannerTwo = ({ spaceBottomClass }) => {
               </Link>
               <img
                 src={
-                  process.env.PUBLIC_URL +
-                  "/assets/images/banners/banner-cosmetic-4.jpg"
+                  "https://images.unsplash.com/photo-1628926379972-9843ad139a8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
                 }
                 className="img-fluid"
                 alt=""
               />
               <div className="banner-content banner-content--black-left">
                 <p>
-                  <span className="big-text">Free shipping</span>
                   <span className="small-text d-block">
-                    Free shipping on domestic orders
+                    房屋/車
                   </span>
                 </p>
               </div>

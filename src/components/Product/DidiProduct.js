@@ -7,7 +7,6 @@ import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/thumbs/thumbs.min.css';
 import "swiper/components/scrollbar/scrollbar.min.css";
 
-
 import SwiperCore, { Navigation, Thumbs, Scrollbar } from "swiper";
 SwiperCore.use([Navigation, Thumbs, Scrollbar]);
 
@@ -31,7 +30,9 @@ const DidiProduct = ({product}) => {
         {product.image.map((img, index) => (
           // console.log(index)
           <SwiperSlide>
-            <img src={urlFor(product.image[index])} className="didi-main-img"/>
+            <div className="swiper-img-card">
+              <img src={urlFor(product.image[index])} className="didi-main-img"/>
+            </div>
           </SwiperSlide>
         ))}
         {/* <SwiperSlide>

@@ -276,12 +276,6 @@ textarea:focus:-ms-input-placeholder {
     cursor: pointer;
 }
 
-.didi-main-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    padding: 0 40px;
-}
 
 .didi-thumb-swiper {
     margin-top: 15px;
@@ -294,10 +288,6 @@ textarea:focus:-ms-input-placeholder {
     height: 50vh;
 }
 
-// .didi-product-info {
-//     padding: 20px;
-// }
-
 .didi-product-name {
     width: 100%;
     display: flex;
@@ -307,7 +297,8 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .didi-product-price {
-    font-size: 17px;
+    font-size: 20px;
+    margin-right: 30px;
 }
 
 .didi-product-fullDescription {
@@ -333,13 +324,6 @@ textarea:focus:-ms-input-placeholder {
     height: 0.8px;
     background-color: #b5b5b5
 }
-
-
-// .didi-related-product {
-//     background-color: #CDBC7A;
-//     width: 100%;
-//     height: 200px;
-// }
 
 .didi-card-container {
     overflow: hidden;
@@ -398,7 +382,6 @@ textarea:focus:-ms-input-placeholder {
     background-size: cover;
 }
 
-
 .didi-card-container-v1 {
     width: 100%;
     min-height: 400px;
@@ -433,4 +416,76 @@ textarea:focus:-ms-input-placeholder {
     display: flex;
     flex-direction: column;
     justify-items: center;
+}
+
+.swiper-img-card img {
+    width: 100%;
+    height: 100%;
+    // object-fit: cover;
+}
+
+.didi-product-video {
+    height: 50vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+}
+
+.didi-product-video h3 {
+    margin-bottom: 50px 0;
+}
+
+.didi-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.didi-modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.shop-sidebar-container {
+    width: 90%;
+    background-color: #ebebeb;
+}
+
+.didi-swiper-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.test {
+    width: 500px;
+    height: 500px;
+}
+
+.test img {
+    width: 100%;
+    height: 100%;
+}
+
+.didi-swiper-slide {
+    background-color: #535252;
+    padding: 50px;
+}
+
+.didi-product-swiper {
+    width: 600px;
+    height: 600px;
 }

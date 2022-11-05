@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 
-const HoverBannerOne = ({ spaceBottomClass }) => {
+const HoverBannerOne = ({ spaceBottomClass, text, images}) => {
   return (
     <div
       className={`hover-banner-area ${
@@ -15,7 +15,7 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
               <div className="single-category__image single-category__image--three single-category__image--three--creativehome single-category__image--three--banner">
                 <img
                   src={
-                    "https://images.unsplash.com/photo-1628926379972-9843ad139a8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                    images[0]
                   }
                   className="img-fluid"
                   alt=""
@@ -29,7 +29,7 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
                       as={process.env.PUBLIC_URL + "/shop/jewls"}
                     >
                       <a>
-                        珠寶玉石
+                        {text[0]}
                       </a>
                     </Link>
                   </p>
@@ -54,7 +54,7 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
               <div className="single-category__image single-category__image--three single-category__image--three--creativehome single-category__image--three--banner">
                 <img
                   src={
-                    "https://images.unsplash.com/photo-1502652023201-a16bde8138d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80"
+                    images[1]
                   }
                   // className="img-fluid"
                   alt=""
@@ -68,7 +68,7 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
                       as={process.env.PUBLIC_URL + "/shop/clothes"}
                     >
                       <a>
-                        服裝飾品
+                      {text[1]}
                       </a>
                     </Link>
                   </p>
@@ -93,7 +93,7 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
               <div className="single-category__image single-category__image--three single-category__image--three--creativehome single-category__image--three--banner">
                 <img
                   src={
-                    "https://images.unsplash.com/photo-1539050125830-eb92d115b2b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                    images[2]
                   }
                   className="img-fluid"
                   alt=""
@@ -107,7 +107,7 @@ const HoverBannerOne = ({ spaceBottomClass }) => {
                       as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
                     >
                       <a>
-                        日常用品
+                      {text[2]}
                       </a>
                     </Link>
                   </p>
