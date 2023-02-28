@@ -26,58 +26,14 @@ const ProductGridList = ({
   const [modalShow, setModalShow] = useState(false);
 
   return (
-    <Fragment>
-      <Col lg={3} md={3} className={bottomSpace ? bottomSpace : ""}>
-        <div className="product-grid">
-          {/* <div className="product-grid__image">
-            <Link
-              href={`/shop/product-basic/${product.slug.current}`}
-            >
-              <a className="image-wrap">
-                <img
-                  src={urlFor(product.thumbImage[0])}
-                  className="img-fluid"
-                  alt={product.name}
-                />
-              </a>
-            </Link>
-          </div>
-
-          <div className="product-grid__content">
-            <div className="title">
-              <h3>
-                <Link
-                  href={`/shop/product-basic/${product.slug.current}`}
-                  as={
-                    process.env.PUBLIC_URL +
-                    "/shop/product-basic/" +
-                    product.slug.current
-                  }
-                >
-                  <a>{product.name}</a>
-                </Link>
-              </h3>
-            </div>
-            <div className="price">
-              {product.discount > 0 ? (
-                <Fragment>
-                  <span className="discounted-price">${discountedPrice}</span>
-                </Fragment>
-              ) : (
-                <span className="main-price">${productPrice}</span>
-              )}
-            </div>
-          </div> */}
-          <Link
-              href={`/shop/product-basic/${product.slug.current}`}
-            >
-              <a>
-                <DidiProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])} isTemplate={false}/>
-              </a>
-            </Link>
-        </div>
-
-      </Col>
+    <div className="didi-product-wrapper">
+      <Link
+          href={`/shop/product-basic/${product.slug.current}`}
+        >
+          <a>
+            <DidiProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])} isTemplate={false}/>
+          </a>
+      </Link>
       {/* product modal */}
       <ProductModal
         show={modalShow}
@@ -96,7 +52,7 @@ const ProductGridList = ({
         deletefromcompare={deleteFromCompare}
         addtoast={addToast}
       />
-    </Fragment>
+    </div>
   );
 };
 

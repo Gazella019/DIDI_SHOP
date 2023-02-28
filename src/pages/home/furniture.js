@@ -31,7 +31,7 @@ const Furniture = ({ products }) => {
       <ImageSliderTwo imageSliderData={imageSliderData} />
 
       {/* image cta */}
-      <ImageCtaTwo spaceBottomClass="space-mb--r100" />
+      {/* <ImageCtaTwo spaceBottomClass="space-mb--r100" /> */}
     </LayoutTwo>
   );
 };

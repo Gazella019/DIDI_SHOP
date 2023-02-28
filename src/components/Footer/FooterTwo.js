@@ -26,12 +26,10 @@ const FooterTwo = ({ footerBgClass }) => {
     setScroll(window.scrollY);
   };
   return (
-    <footer
-      className={`space-pt--100 space-pb--50`}
-    >
+    <footer className="didi-footer space-mt--50">
       <Container className="wide">
         <Row>
-          <Col className="footer-single-widget space-mb--50">
+          <Col className="footer-single-widget">
             {/* logo */}
             <div className="logo space-mb--35">
               <Image
