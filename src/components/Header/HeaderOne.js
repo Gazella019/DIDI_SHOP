@@ -53,63 +53,12 @@ const HeaderOne = ({ aboutOverlay, cartItems, wishlistItems }) => {
       >
         {/* <Container className="wide"> */}
           <div className="header-content d-flex align-items-center justify-content-between position-relative space-py-mobile-only--30 didi_header">
-            {/* logo */}
-            {/* <div className="header-content__logo d-flex align-items-center space-pr--15">
-              <button
-                onClick={() => {
-                  setOffCanvasAboutActive(true);
-                  document
-                    .querySelector("body")
-                    .classList.add("overflow-hidden");
-                }}
-                className={`${
-                  aboutOverlay === false
-                    ? "d-none"
-                    : "about-overlay-trigger d-none d-lg-block"
-                }`}
-              >
-                <IoIosMenu />
-              </button>
-              <Link href="/" as={process.env.PUBLIC_URL + "/"}>
-                <a>
-                  DIDI Shop
-                </a>
-              </Link>
-            </div> */}
 
             {/* navigation */}
             <Navigation />
           </div>
         {/* </Container> */}
       </header>
-
-      {/* about overlay */}
-      {aboutOverlay === false ? (
-        ""
-      ) : (
-        <AboutOverlay
-          activeStatus={offCanvasAboutActive}
-          getActiveStatus={setOffCanvasAboutActive}
-        />
-      )}
-      {/* search overlay */}
-      {/* <SearchOverlay
-        activeStatus={offCanvasSearchActive}
-        getActiveStatus={setOffCanvasSearchActive}
-      /> */}
-
-      {/* cart overlay */}
-      <CartOverlay
-        activeStatus={offCanvasCartActive}
-        getActiveStatus={setOffCanvasCartActive}
-      />
-
-      {/* wishlist overlay */}
-      <WishlistOverlay
-        activeStatus={offCanvasWishlistActive}
-        getActiveStatus={setOffCanvasWishlistActive}
-      />
-      {/* Mobile Menu */}
       <MobileMenu
         activeStatus={offCanvasMobileMenuActive}
         getActiveStatus={setOffCanvasMobileMenuActive}

@@ -28,7 +28,7 @@ const DidiProductCard = ({title, price, image, isTemplate, index}) => {
     }
     else {
         return (
-            <div className="didi-card-container-v1">
+            <div>
                 <div className="didi-image-container-v1">
                     <img src={image}/>
                 </div>
