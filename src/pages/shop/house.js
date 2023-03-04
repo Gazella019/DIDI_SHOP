@@ -64,18 +64,9 @@ const ShopHouse = ({ products }) => {
       <BreadcrumbOne
         pageTitle="房屋/車"
       >
-        <ul className="breadcrumb__list">
-          <li>
-            <Link href="/" as={process.env.PUBLIC_URL + "/"}>
-              <a>Home</a>
-            </Link>
-          </li>
-
-          <li>Shop Left Sidebar</li>
-        </ul>
       </BreadcrumbOne>
         {/* shop page body */}
-        <div className="shop-page-content__body space-mt--r100 space-pb--r100">
+        <div className="shop-page-content__body space-mt--r100">
           <Container>
             <Row>
               <Col
@@ -110,7 +101,7 @@ const ShopHouse = ({ products }) => {
               </Col>
             </Row>
           </Container>
-          <FooterTwo/>
+          <FooterTwo className="space-mt--r100"/>
         </div>
       </div>
     </LayoutDidi>

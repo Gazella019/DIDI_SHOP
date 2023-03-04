@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import Link from "next/link";
 import { connect } from "react-redux";
 import Image from "next/image"
+
 import {
   IoIosSearch,
   IoMdPerson,
@@ -52,17 +53,11 @@ const HeaderOne = ({ aboutOverlay, cartItems, wishlistItems }) => {
         className={`topbar-shadow ${scroll > headerTop ? "is-sticky" : ""}`}
       >
         {/* <Container className="wide"> */}
-          <div className="header-content d-flex align-items-center justify-content-between position-relative space-py-mobile-only--30 didi_header">
 
             {/* navigation */}
             <Navigation />
-          </div>
         {/* </Container> */}
       </header>
-      <MobileMenu
-        activeStatus={offCanvasMobileMenuActive}
-        getActiveStatus={setOffCanvasMobileMenuActive}
-      />
     </Fragment>
   );
 };

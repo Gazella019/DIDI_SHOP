@@ -127,30 +127,6 @@ header {
         }
       }
 
-      .header-content__navigation {
-        & > ul {
-          & > li {
-            & > a {
-              color: #E7AB3C;
-              &:hover {
-                &:after {
-                  background-color: #E7AB3C;
-                }
-              }
-            }
-            & > svg {
-              fill: #E7AB3C;
-            }
-
-            &:hover {
-              & > svg {
-                fill: #E7AB3C;
-              }
-            }
-          }
-        }
-      }
-
       .header-content__icons {
         & > ul {
           & > li {

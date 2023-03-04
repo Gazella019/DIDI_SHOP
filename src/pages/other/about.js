@@ -23,7 +23,7 @@ const About = () => {
       >
       </BreadcrumbOne>
       {/* about content */}
-      <div className="about-content space-mt--r130 space-mb--r130">
+      <div className="about-content space-mt--r130">
         <div className="section-title-container space-mb--40">
           <Container>
             <Row>

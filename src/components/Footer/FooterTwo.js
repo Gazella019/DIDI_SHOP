@@ -26,7 +26,7 @@ const FooterTwo = ({ footerBgClass }) => {
     setScroll(window.scrollY);
   };
   return (
-    <footer className="didi-footer space-mt--50">
+    <footer className="didi-footer space-pt--100 space-pb--50">
       <Container className="wide">
         <Row>
           <Col className="footer-single-widget">
@@ -50,7 +50,7 @@ const FooterTwo = ({ footerBgClass }) => {
           </Col>
 
           {/* <Col className="footer-single-widget space-mb--50">
-            <h3>DIDI 選貨</h3>
+            <h3>DIDI </h3>
           </Col> */}
 
           {/* <Col className="footer-single-widget space-mb--50">

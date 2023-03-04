@@ -12,7 +12,6 @@ SwiperCore.use([Navigation, Thumbs, Scrollbar]);
 
 const DidiModal = ({product, onClickHandler}) => {
     const [toggler, setToggler] = useState(true);
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     const toggleModal = () => {
         setToggler(!toggler);
@@ -22,8 +21,6 @@ const DidiModal = ({product, onClickHandler}) => {
         <>
         {toggler && 
             <div className="didi-modal-container">
-                <div className="didi-overlay" onClick={toggleModal}>
-                </div>
                 <div className="didi-modal-content">
                     <Swiper
                         style={{

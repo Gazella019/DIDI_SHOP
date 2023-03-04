@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 import { connect } from "react-redux";
@@ -7,6 +7,7 @@ import { LayoutTwo } from "../../../components/Layout";
 import { getDiscountPrice } from "../../../lib/product";
 import { BreadcrumbOne } from "../../../components/Breadcrumb";
 import { IoMdArrowForward } from "react-icons/io";
+import { FaTimes } from "react-icons/fa";
 import { DidiProductCard, DidiRelatedProduct, DidiModal }from "../../../components/Product";
 
 import {
@@ -39,6 +40,12 @@ const ProductBasic = ({
   useEffect(() => {
     document.querySelector("body").classList.remove("overflow-hidden");
   });
+  
+  const [toggler, setToggler] = useState(false);
+
+  const toggleModal = () => {
+    setToggler(!toggler);
+  }
 
   const { addToast } = useToasts();
   const discountedPrice = getDiscountPrice(
@@ -74,10 +81,15 @@ const ProductBasic = ({
       </div> */}
       <div className="product-details space-mt--r100 ">
         <Container className="didi-container">
-          <DidiModal product={product}/>
+          { toggler && <div>
+            <div className="didi-overlay" onClick={toggleModal}>
+            </div>
+            <FaTimes className="didi-modal-btn" onClick={toggleModal}/>
+            <DidiModal product={product}/>
+          </div>}
           <Row>
             <Col lg={6} className="space-mb-mobile-only--30">
-              <div className="didi-gallery-container">
+              <div className="didi-gallery-container" onClick={toggleModal}>
                 <DidiProduct product={product}/>
                 {/* <img src="https://swiperjs.com/demos/images/nature-1.jpg" className="didi-img"/> */}
               </div>
@@ -115,7 +127,7 @@ const ProductBasic = ({
           </Row>
           <Row>
             <div className="didi-product-video">
-              <h3>
+              <h3 className="space-mb--r50">
                 影片介紹
               </h3>
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ONqYdBtTltg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

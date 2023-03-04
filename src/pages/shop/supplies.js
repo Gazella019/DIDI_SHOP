@@ -75,7 +75,7 @@ const ShopSupplies = ({ products }) => {
         </ul>
       </BreadcrumbOne>
         {/* shop page body */}
-        <div className="shop-page-content__body space-mt--r100 space-pb--r100">
+        <div className="shop-page-content__body space-mt--r100">
           <Container>
             <Row>
               <Col
