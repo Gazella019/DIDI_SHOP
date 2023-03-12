@@ -5,10 +5,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import Paginator from "react-hooks-paginator";
 import { SlideDown } from "react-slidedown";
 import { LayoutDidi } from "../../components/Layout";
+import { DidiNewProductCard } from "../../components/Product";
 import { BreadcrumbOne } from "../../components/Breadcrumb";
 import { getSortedProducts } from "../../lib/product";
 import { getProducts } from "../../lib/product";
 import { FooterTwo } from "../../components/Footer";
+import { urlFor } from "../../lib/client";
 import {
   ShopHeader,
   ShopFilter,
@@ -17,7 +19,7 @@ import {
 } from "../../components/Shop";
 import { client } from '../../lib/client';
 
-const ShopJewls = ({ products }) => {
+const Test = ({ products }) => {
   const [layout, setLayout] = useState("grid four-column");
   const [sortType, setSortType] = useState("");
   const [sortValue, setSortValue] = useState("");
@@ -60,49 +62,41 @@ const ShopJewls = ({ products }) => {
   return (
     <LayoutDidi>
       {/* breadcrumb */}
-      <div className="shop-page-content shop-jewls">
-        <BreadcrumbOne
-          pageTitle="珠寶/玉石"
-        >
-        </BreadcrumbOne>
-          {/* shop page body */}
-          <div className="space-mt--r100 space-mb--r100">
-            <Container>
-              <Row>
-                <Col
-                  lg={3}
-                  className="order-2 order-lg-1 space-mt-mobile-only--50"
-                >
-                  {/* shop sidebar */}
-                  <ShopSidebar
-                    products={products}
-                    getSortParams={getSortParams}
-                  />
-                </Col>
-                <Col lg={9} className="order-1 order-lg-2">
-                  {/* shop products */}
-                  <ShopProducts layout={layout} products={currentData} />
+      <div className = "didi-test-products">
+          <div className = "didi-test-container">
+              <h1 className = "lg-title">商品</h1>
 
-                  {/* shop product pagination */}
-                  <div className="pro-pagination-style">
-                    <Paginator
-                      totalRecords={sortedProducts.length}
-                      pageLimit={pageLimit}
-                      pageNeighbours={2}
-                      setOffset={setOffset}
-                      currentPage={currentPage}
-                      setCurrentPage={setCurrentPage}
-                      pageContainerClass="mb-0 mt-0"
-                      pagePrevText="«"
-                      pageNextText="»"
-                    />
+              <div className = "product-items">
+                {products &&
+                  products.map((product) => {
+                    return (
+                      <Link
+                        href={`/shop/product-basic/${product.slug.current}`}
+                      >
+                        <a>
+                          <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                        </a>
+                      </Link>
+                    );
+                  })}
+              </div>
+              {/* <div className = "product-items">
+                  <div className = "product">
+                      <div className = "product-content">
+                          <div className = "product-img">
+                              <img className = "didi-product-img" src = "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1699&q=80" alt = "product image"/>
+                          </div>
+                      </div>
+
+                      <div className = "product-info">
+                          <a href = "#" className = "product-name">mens shoes DN 23XX, new product</a>
+                          <p className = "product-price">$ 150.00</p>
+                      </div>
                   </div>
-                </Col>
-              </Row>
-            </Container>
+
+              </div> */}
           </div>
-          <FooterTwo className="space-mt--r100"/>
-      </div>
+        </div>
     </LayoutDidi>
   );
 };
@@ -117,7 +111,7 @@ export const getServerSideProps = async () => {
   }
 }
 
-export default ShopJewls;
+export default Test;
 
 // const mapStateToProps = (state) => {
 //   const products = state.productData;
@@ -126,4 +120,4 @@ export default ShopJewls;
 //   };
 // };
 
-// export default connect(mapStateToProps)(ShopJewls);
+// export default connect(mapStateToProps)(Test);
