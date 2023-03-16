@@ -56,29 +56,6 @@ const ProductBasic = ({
   const productPrice = product.price.toFixed(2);
   return (
     <LayoutTwo>
-      {/* breadcrumb */}
-      {/* <BreadcrumbOne
-        pageTitle={product.name}
-        backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.png"
-      >
-      </BreadcrumbOne> */}
-
-      {/* product details */}
-
-      {/* <div className="didi-product-container">
-        <div className="product-image">
-          <DidiProduct product={product} />
-        </div>
-        <div className="product-info">
-          <h2> title </h2>
-          <h2> $100 </h2>
-          <button> 聯繫我們 </button>
-          <h2>簡介</h2>
-          <p>
-          全新Quadro方錶系列是Daniel Wellington首次方形設計腕錶,錶身採用拋光不銹鋼製成,精緻的玫瑰金或是極光銀兩種錶身選擇,別緻的方形錶面有蛋殼白,經典黑和伯朗大道綠三種款式,搭配新型的麥穗式金屬編織錶帶或是細緻的壓邊皮革錶帶,讓妳的造型更為出眾,成為眾人的目光嬌點
-          </p>
-        </div>
-      </div> */}
       <div className="product-details space-mt--r100 ">
         <Container className="didi-container">
           { toggler && <div>
@@ -120,9 +97,14 @@ const ProductBasic = ({
                   </a>
                 </Link> */}
                 <button className="didi-product-button">
-                  聯繫我們 <IoMdArrowForward/>
+                  <a href={product.lineURL}>
+                    聯繫我們 <IoMdArrowForward/>
+                  </a>
                 </button>
               </div>
+              <a>
+
+              </a>
             </Col>
           </Row>
           <Row>
@@ -130,7 +112,8 @@ const ProductBasic = ({
               <h3 className="space-mb--r50">
                 影片介紹
               </h3>
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ONqYdBtTltg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              {/* <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ONqYdBtTltg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+              <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${product.youtubeURL}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </Row>
           <Row>
@@ -147,7 +130,6 @@ const ProductBasic = ({
     </LayoutTwo>
   );
 };
-
 
 // const ProductBasic = (props) => {
 //   console.log(props);

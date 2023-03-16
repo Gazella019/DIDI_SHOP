@@ -26,11 +26,10 @@ const FooterTwo = ({ footerBgClass }) => {
     setScroll(window.scrollY);
   };
   return (
-    <footer className="didi-footer space-pt--100 space-pb--50">
+    <footer className="didi-footer">
       <Container className="wide">
         <Row>
           <Col className="footer-single-widget">
-            {/* logo */}
             <div className="logo space-mb--35">
               <Image
                 src={
@@ -43,35 +42,9 @@ const FooterTwo = ({ footerBgClass }) => {
                 height={150}
                 alt=""
               />
-              {/* <p>DIDI 選貨</p> */}
             </div>
 
-            {/*=======  copyright text  =======*/}
           </Col>
-
-          {/* <Col className="footer-single-widget space-mb--50">
-            <h3>DIDI </h3>
-          </Col> */}
-
-          {/* <Col className="footer-single-widget space-mb--50">
-            <h5 className="footer-single-widget__title">USEFUL LINKS</h5>
-            <nav className="footer-single-widget__nav">
-              <ul>
-                <li>
-                  <a href="#">Returns</a>
-                </li>
-                <li>
-                  <a href="#">Support Policy</a>
-                </li>
-                <li>
-                  <a href="#">Size guide</a>
-                </li>
-                <li>
-                  <a href="#">FAQs</a>
-                </li>
-              </ul>
-            </nav>
-          </Col> */}
 
           <Col className="footer-single-widget space-mb--50">
             <div className="blurr"></div>

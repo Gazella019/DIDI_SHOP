@@ -66,7 +66,7 @@ const ShopJewls = ({ products }) => {
         >
         </BreadcrumbOne>
           {/* shop page body */}
-          <div className="space-mt--r100 space-mb--r100">
+          <div>
             <Container>
               <Row>
                 <Col
@@ -101,7 +101,7 @@ const ShopJewls = ({ products }) => {
               </Row>
             </Container>
           </div>
-          <FooterTwo className="space-mt--r100"/>
+          <FooterTwo />
       </div>
     </LayoutDidi>
   );

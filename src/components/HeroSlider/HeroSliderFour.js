@@ -6,7 +6,7 @@ const HeroSliderFour = ({ sliderData }) => {
     loop: true,
     speed: 1000,
     autoplay: {
-      delay: 5000,
+      delay: 1000,
       disableOnInteraction: false,
     },
     effect: "fade",
