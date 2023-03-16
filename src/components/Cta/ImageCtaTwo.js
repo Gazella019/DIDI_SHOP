@@ -18,7 +18,7 @@ const ImageCtaTwo = ({ spaceBottomClass }) => {
                 as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
               >
                 <a className="lezada-button lezada-button--medium lezada-button--icon--left">
-                  <IoIosCart />  Facebook Instgram 關注我們
+                  <IoIosCart />  Line 聯繫我們
                 </a>
               </Link>
             </div>

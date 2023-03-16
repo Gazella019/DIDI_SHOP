@@ -33,6 +33,16 @@ export default {
             type: 'number',
         },
         {
+            name: 'youtubeURL',
+            title: 'YOUTUBE連結',
+            type: 'string',
+        },
+        {
+            name: 'lineURL',
+            title: 'LINE連結',
+            type: 'string',
+        },
+        {
             name: 'category',
             title: '分類',
             type: 'array',

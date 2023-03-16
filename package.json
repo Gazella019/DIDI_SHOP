@@ -9,6 +9,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@sanity/cli": "^3.7.0",
     "@sanity/client": "^2.23.2",
     "@sanity/image-url": "^1.0.1",
     "bootstrap": "4.6.0",

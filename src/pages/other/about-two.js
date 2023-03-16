@@ -58,7 +58,7 @@ const AboutTwo = () => {
                   </p>
                 </div>
                 <div className="about-widget space-mb--35">
-                  <p className="widget-content">
+                  <p className="widget-content didi-about">
                     以經營食衣住行育樂等類別的生活百貨為主
                     透過本公司的專頁採購品質把關及良好的服務態度提供顧客物美價廉精緻且實用的多項商品做選擇
                     以顧客的需求做需求 並且隨時掌握大眾流行 季節所需的產品趨勢 提供顧客更多的選擇

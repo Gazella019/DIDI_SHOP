@@ -120,7 +120,7 @@ const ProductBasic = ({
                   </a>
                 </Link> */}
                 <button className="didi-product-button">
-                  立即購買 <IoMdArrowForward/>
+                  聯繫我們 <IoMdArrowForward/>
                 </button>
               </div>
             </Col>
