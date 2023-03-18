@@ -62,8 +62,8 @@ const ShopJewls = ({ products }) => {
       {/* breadcrumb */}
       <div className="shop-page-content shop-jewls">
         <BreadcrumbOne
-          pageTitle="珠寶/玉石"
-        >
+            pageTitle="珠寶/玉石"
+          >
         </BreadcrumbOne>
           {/* shop page body */}
           <div>
@@ -101,8 +101,8 @@ const ShopJewls = ({ products }) => {
               </Row>
             </Container>
           </div>
-          <FooterTwo />
       </div>
+      <FooterTwo />
     </LayoutDidi>
   );
 };

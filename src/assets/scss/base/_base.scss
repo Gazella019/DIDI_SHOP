@@ -128,17 +128,19 @@ textarea:focus:-ms-input-placeholder {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height: 130vh;
 }
 
 .shop-partners {
-    background-image: url("https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    // background-image: url("https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    // background-position: center; /* Center the image */
+    // background-repeat: no-repeat; /* Do not repeat the image */
+    // background-size: cover; /* Resize the background image to cover the entire container */
+    // -webkit-background-size: cover;
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+    height: 130vh;
 }
 
 .shop-supplies {
@@ -323,7 +325,9 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .didi-product-fullDescription {
-    padding: 20px 20px 10px 20px;
+    font-weight: 500;
+    color: #00081C;
+    padding: 20px 10px 10px 0px;
     line-height: 3;
 }
 
@@ -367,7 +371,6 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .didi-footer {
-    margin-top: 30vh;
     padding: 100px 0 10px 0;
     background-color: #ebeae6;
 }
@@ -512,10 +515,6 @@ textarea:focus:-ms-input-placeholder {
 .didi-card-container-v1:hover {
     // transform: scale(1.1);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px;
-}
-
-.didi-about {
-    color: #00081C;
 }
 
 .didi-card-content-v1 {
@@ -828,4 +827,41 @@ textarea:focus:-ms-input-placeholder {
     .product-col-left{
         height: 121.5vh;
     }
+}
+
+.didi-text {
+    color: #00081C;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.didi-detail-text {
+    color: #00081C;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+.didi-partner-img {
+    width: 100%;
+    height: 60vh;
+    // background-color: #324d67;
+    background-image: url("https://images.unsplash.com/photo-1512704450162-780bb2dba7a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
+    background-size: cover;
+}
+
+.didi-partner-title {
+    margin-top: 10vh;
+    text-align: center;
+    color: #00081C;
+    font-size: 50px;
+    font-weight: 400;
+
+}
+
+.didi-partner-info {
+    width: 70vw;
+    margin: 0 auto;
+    line-height: 2;
+    font-size: 20px;
+    color: #00081C;
 }

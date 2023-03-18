@@ -60,59 +60,23 @@ const ShopPartners = ({ products }) => {
   return (
     <LayoutDidi>
       {/* breadcrumb */}
-      <div className="shop-page-content shop-partners">
-      <BreadcrumbOne
-        pageTitle="合作商家"
-      >
-        <ul className="breadcrumb__list">
-          <li>
-            <Link href="/" as={process.env.PUBLIC_URL + "/"}>
-              <a>Home</a>
-            </Link>
-          </li>
-
-          <li>Shop Left Sidebar</li>
-        </ul>
-      </BreadcrumbOne>
-        {/* shop page body */}
-        <div className="shop-page-content__body space-mt--r100">
-          <Container>
-            <Row>
-              <Col
-                lg={3}
-                className="order-2 order-lg-1 space-mt-mobile-only--50"
-              >
-                {/* shop sidebar */}
-                <ShopSidebar
-                  products={products}
-                  getSortParams={getSortParams}
-                />
-              </Col>
-
-              <Col lg={9} className="order-1 order-lg-2">
-                {/* shop products */}
-                <ShopProducts layout={layout} products={currentData} />
-
-                {/* shop product pagination */}
-                <div className="pro-pagination-style">
-                  <Paginator
-                    totalRecords={sortedProducts.length}
-                    pageLimit={pageLimit}
-                    pageNeighbours={2}
-                    setOffset={setOffset}
-                    currentPage={currentPage}
-                    setCurrentPage={setCurrentPage}
-                    pageContainerClass="mb-0 mt-0"
-                    pagePrevText="«"
-                    pageNextText="»"
-                  />
-                </div>
-              </Col>
-            </Row>
-          </Container>
-          <FooterTwo/>
+      <div className="shop-partners">
+        <div className="didi-partner-title">
+          合作商家
         </div>
+        <div className="partner-container">
+          <div className="didi-partner-img">
+
+          </div>
+          <div className="didi-partner-info">
+            從車庫到 Googleplex
+            Google 的發展史要從 1995 年的史丹佛大學 (Stanford University) 開始說起。Larry Page 當年正考慮到史丹佛大學攻讀研究所，而 Sergey Brin 是該所的學生，負責帶 Larry 認識校園環境。
+          </div>
+        </div>
+        {/* shop page body */}
+          
       </div>
+      <FooterTwo/>
     </LayoutDidi>
   );
 };
@@ -129,6 +93,7 @@ export const getServerSideProps = async () => {
 
 export default ShopPartners;
 
+// https://images.unsplash.com/photo-1584257354243-694488a0adac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80
 
 // const mapStateToProps = (state) => {
 //   const products = state.productData;
