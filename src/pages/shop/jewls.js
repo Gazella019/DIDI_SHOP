@@ -9,6 +9,9 @@ import { BreadcrumbOne } from "../../components/Breadcrumb";
 import { getSortedProducts } from "../../lib/product";
 import { getProducts } from "../../lib/product";
 import { FooterTwo } from "../../components/Footer";
+import { DidiNewProductCard } from "../../components/Product";
+import { urlFor } from "../../lib/client";
+
 import {
   ShopHeader,
   ShopFilter,
@@ -70,7 +73,7 @@ const ShopJewls = ({ products }) => {
             <Container>
               <Row>
                 <Col
-                  lg={3}
+                  lg={2}
                   className="order-2 order-lg-1 space-mt-mobile-only--50"
                 >
                   {/* shop sidebar */}
@@ -79,12 +82,12 @@ const ShopJewls = ({ products }) => {
                     getSortParams={getSortParams}
                   />
                 </Col>
-                <Col lg={9} className="order-1 order-lg-2">
+                <Col lg={10} className="order-1 order-lg-2">
                   {/* shop products */}
-                  <ShopProducts layout={layout} products={currentData} />
+                  {/* <ShopProducts layout={layout} products={currentData} /> */}
 
                   {/* shop product pagination */}
-                  <div className="pro-pagination-style">
+                  {/* <div className="pro-pagination-style">
                     <Paginator
                       totalRecords={sortedProducts.length}
                       pageLimit={pageLimit}
@@ -96,6 +99,20 @@ const ShopJewls = ({ products }) => {
                       pagePrevText="«"
                       pageNextText="»"
                     />
+                  </div> */}
+                  <div className = "product-items">
+                    {products &&
+                      products.map((product) => {
+                        return (
+                          <Link
+                            href={`/shop/product-basic/${product.slug.current}`}
+                          >
+                            <a>
+                              <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                            </a>
+                          </Link>
+                        );
+                      })}
                   </div>
                 </Col>
               </Row>

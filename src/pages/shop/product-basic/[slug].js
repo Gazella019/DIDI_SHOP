@@ -66,8 +66,8 @@ const ProductBasic = ({
           </div>}
           <Row>
             <Col lg={6} className="space-mb-mobile-only--30">
-              <div className="didi-gallery-container" onClick={toggleModal}>
-                <DidiProduct product={product}/>
+              <div className="didi-gallery-container">
+                <DidiProduct product={product} onClick={toggleModal}/>
                 {/* <img src="https://swiperjs.com/demos/images/nature-1.jpg" className="didi-img"/> */}
               </div>
             </Col>

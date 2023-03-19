@@ -7,7 +7,6 @@ const HeroSliderFour = ({ sliderData }) => {
     speed: 1000,
     autoplay: {
       delay: 1000,
-      disableOnInteraction: false,
     },
     effect: "fade",
     watchSlidesVisibility: true,
@@ -16,6 +15,7 @@ const HeroSliderFour = ({ sliderData }) => {
       clickable: true,
     },
   };
+
   return (
     <div className="hero-slider-four">
       <div className="hero-slider-four__wrapper">

@@ -67,10 +67,14 @@ const ImageSliderTwo = ({ imageSliderData }) => {
             </div>
           </Col>
           <Col lg={4} className="order-1 order-lg-2">
-            <div className="image-slider-text">
-              <a href="#">@DIDI_shop</a>
-
-              <h3>Instagram 關注我們</h3>
+            <div>
+              <h3 className="didi-main-about">
+                DIDI SHOP
+                欣賞我們精選的商品
+              </h3>
+              <h3 className="didi-main-about">
+                找到最適合您的完美物件
+              </h3>
             </div>
           </Col>
         </Row>

@@ -13,14 +13,9 @@ const ImageCtaTwo = ({ spaceBottomClass }) => {
             <div className="image-cta-two__content space-mb-mobile-only--40">
               <h3 className="subtitle space-mb--30">@DIDI_SOP</h3>
               <h2 className="title space-mb--30">聯繫我們</h2>
-              <Link
-                href="/shop/left-sidebar"
-                as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
-              >
-                <a className="lezada-button lezada-button--medium lezada-button--icon--left">
+                <a href="https://page.line.me/680suyiu?openQrModal=true" className="lezada-button lezada-button--medium lezada-button--icon--left">
                   <IoIosCart />  Line 聯繫我們
                 </a>
-              </Link>
             </div>
           </Col>
           <Col lg={6}>

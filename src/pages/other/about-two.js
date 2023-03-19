@@ -20,7 +20,6 @@ const AboutTwo = () => {
         <div className="about-content space-pt--r130">
           <BreadcrumbOne
             pageTitle="關於我們"
-            backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.png"
           >
           </BreadcrumbOne>
 
@@ -64,18 +63,17 @@ const AboutTwo = () => {
                   隨著科技進步 本公司也期盼跟著時代一同成長，期盼可以帶給各位顧客更方便更優質的服務。
                   </p>
                 </div>
-                <div className="about-widget space-mb--35">
+                {/* <div className="about-widget space-mb--35">
                   <p className="didi-text">手機: (+88) – 1990</p>
                   <p className="didi-text">專線: 1800 – 1102</p>
                 </div>
                 <div className="about-widget">
                   <h2 className="widget-title space-mb--25">EMAIL</h2>
                   <p className="didi-text">contact@lezadastore.com</p>
-                </div>
+                </div> */}
               </Col>
             </Row>
           </Container>
-          <FooterTwo/>
         </div>
 
         {/* testimonial */}
@@ -84,6 +82,7 @@ const AboutTwo = () => {
           backgroundImage="/assets/images/backgrounds/testimonials-bg.png"
         /> */}
       </div>
+      <FooterTwo/>
     </LayoutDidi>
   );
 };

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const DidiNewProductCard = ({title, price, image}) => {
     return (
-        <div className="product">
+        <div className="didi-new-product">
             <div className="product-img">
                 <img src ={image} />
             </div>

@@ -80,21 +80,6 @@ const Test = ({ products }) => {
                     );
                   })}
               </div>
-              {/* <div className = "product-items">
-                  <div className = "product">
-                      <div className = "product-content">
-                          <div className = "product-img">
-                              <img className = "didi-product-img" src = "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1699&q=80" alt = "product image"/>
-                          </div>
-                      </div>
-
-                      <div className = "product-info">
-                          <a href = "#" className = "product-name">mens shoes DN 23XX, new product</a>
-                          <p className = "product-price">$ 150.00</p>
-                      </div>
-                  </div>
-
-              </div> */}
           </div>
         </div>
     </LayoutDidi>

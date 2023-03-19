@@ -54,14 +54,14 @@ const HeaderThree = ({ cartItems, wishlistItems }) => {
           <Row className="header-content align-items-center space-pt--15 space-pb--15">
 
             <Col xs={1} lg={1}>
-              <div className="header-content__logo text-left">
+              <div>
                 <Link href="/" as={process.env.PUBLIC_URL + "/"}>
                   <a>
                   <Image
                     src={process.env.PUBLIC_URL + "/assets/images/logo.png"}
                     alt="logo image"
-                    width={100}
-                    height={100}
+                    width={200}
+                    height={200}
                   />
                   </a>
                 </Link>
