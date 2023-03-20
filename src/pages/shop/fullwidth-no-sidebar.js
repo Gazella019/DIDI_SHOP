@@ -11,6 +11,8 @@ import { getSortedProducts } from "../../lib/product";
 import { ShopHeader, ShopFilter, ShopProducts } from "../../components/Shop";
 import { FooterTwo } from "../../components/Footer";
 import { client } from '../../lib/client';
+import { DidiNewProductCard } from "../../components/Product";
+import { urlFor } from "../../lib/client";
 
 const FullwidthNoSidebar = ({ products }) => {
   const [layout, setLayout] = useState("grid four-column");
@@ -59,47 +61,35 @@ const FullwidthNoSidebar = ({ products }) => {
         <BreadcrumbOne
           pageTitle="所有商品"
         >
-          <ul className="breadcrumb__list">
-            <li>
-              <Link href="/" as={process.env.PUBLIC_URL + "/"}>
-                <a>主頁</a>
-              </Link>
-            </li>
-
-            <li>所有商品</li>
-          </ul>
         </BreadcrumbOne>
         <div className="shop-page-content">
 
           {/* shop page body */}
-          <div className="shop-page-content__body space-mt--r130 space-pb--r130">
+          <div className="shop-page-content__body">
             <Container className="wide">
               <Row>
                 <Col>
-                  {/* shop products */}
-                  <ShopProducts layout={layout} products={currentData} />
-
-                  {/* shop product pagination */}
-                  <div className="pro-pagination-style">
-                    <Paginator
-                      totalRecords={sortedProducts.length}
-                      pageLimit={pageLimit}
-                      pageNeighbours={2}
-                      setOffset={setOffset}
-                      currentPage={currentPage}
-                      setCurrentPage={setCurrentPage}
-                      pageContainerClass="mb-0 mt-0"
-                      pagePrevText="«"
-                      pageNextText="»"
-                    />
+                  <div className = "product-items">
+                    {products &&
+                      products.map((product) => {
+                        return (
+                          <Link
+                            href={`/shop/product-basic/${product.slug.current}`}
+                          >
+                            <a>
+                              <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                            </a>
+                          </Link>
+                        );
+                      })}
                   </div>
                 </Col>
               </Row>
             </Container>
           </div>
-          <FooterTwo/>
         </div>
       </div>
+      <FooterTwo/>
     </LayoutDidi>
   );
 };

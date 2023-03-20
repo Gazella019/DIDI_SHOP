@@ -18,10 +18,10 @@ const AboutTwo = () => {
       <div className="about-page-wrapper">
         {/* primary content */}
         <div className="about-content space-pt--r130">
-          <BreadcrumbOne
+          {/* <BreadcrumbOne
             pageTitle="關於我們"
           >
-          </BreadcrumbOne>
+          </BreadcrumbOne> */}
 
           <Container className="wide">
             <SectionTitleOne

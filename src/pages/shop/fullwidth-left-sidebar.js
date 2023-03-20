@@ -61,15 +61,6 @@ const FullwidthLeftSidebar = ({ products }) => {
         pageTitle="所有商品"
         backgroundImage="/assets/images/backgrounds/breadcrumb-bg-1.png"
       >
-        <ul className="breadcrumb__list">
-          <li>
-            <Link href="/" as={process.env.PUBLIC_URL + "/"}>
-              <a>Home</a>
-            </Link>
-          </li>
-
-          <li>Shop Full Width Left Sidebar</li>
-        </ul>
       </BreadcrumbOne>
       <div className="shop-page-content">
         {/* shop page header */}

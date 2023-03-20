@@ -126,6 +126,17 @@ const Navigation = () => {
               <Link href="/shop/partners" as={process.env.PUBLIC_URL + "/"}>
                 <a onClick={ShowNavbar}>合作商家產品介紹</a>
               </Link>
+              <IoIosArrowDown />
+              <ul className="sub-menu sub-menu--one-column">
+                <li>
+                  <Link
+                    href="/shop/partners"
+                    as={process.env.PUBLIC_URL + "/shop/partners"}
+                  >
+                    <a onClick={ShowNavbar}>傑泰玻璃</a>
+                  </Link>
+                </li>
+              </ul>
             </li>
             <FaTimes className="nav-btn nav-close-btn" onClick={ShowNavbar}/>
         </ul>
