@@ -5,6 +5,7 @@ const DidiNewProductCard = ({title, price, image}) => {
         <div className="didi-new-product">
             <div className="product-img">
                 <img src ={image} />
+                {/* hello */}
             </div>
 
             <div className="product-info">

@@ -29,9 +29,9 @@ const DidiProduct = ({product}) => {
       >
         {product.image.map((img, index) => (
           // console.log(index)
-          <SwiperSlide>
+          <SwiperSlide className="swiper_wrapper">
             <div className="swiper-img-card">
-              <img src={urlFor(product.image[index])} className="didi-main-img"/>
+              <img src={urlFor(product.image[index])}/>
             </div>
           </SwiperSlide>
         ))}

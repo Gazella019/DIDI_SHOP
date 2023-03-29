@@ -169,6 +169,7 @@ export const getStaticProps = async ({ params: { slug }}) => {
   const product = await client.fetch(query);
   // console.log(product);
   return {
-    props: { product }
+    props: { product },
+    revalidate: 300,
   }
 }
