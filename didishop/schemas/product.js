@@ -56,9 +56,14 @@ export default {
         },
         {
             name: 'thumbImage',
-            title: '預覽圖片',
+            title: '封面圖片',
             type: 'array',
-            of: [{ type: 'image' }],
+            of: [{
+                type: 'image',
+                options: {
+                    hotspot: true,
+                }
+            }],
         },
         {
             name: 'image',
