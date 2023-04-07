@@ -10,7 +10,7 @@ import "swiper/components/scrollbar/scrollbar.min.css";
 import SwiperCore, { Navigation, Thumbs, Scrollbar } from "swiper";
 SwiperCore.use([Navigation, Thumbs, Scrollbar]);
 
-const DidiProduct = ({product}) => {
+const DidiProduct = ({product, toggleModal}) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   
   return (

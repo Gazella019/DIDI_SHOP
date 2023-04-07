@@ -32,14 +32,14 @@ class MyApp extends App {
               rel="stylesheet"
             ></link>
             {/* <iframe src="silence.mp3" allow="autoplay" id="audio"></iframe> */}
-            <audio
+            {/* <audio
               controls
               autoplay
               loop
               src="/bgm.mp3" className="didi-music-player">
                   Your browser does not support the
                   <code>audio</code> element.
-            </audio>
+            </audio> */}
           </div>
         </Head>
         <ToastProvider placement="bottom-left">

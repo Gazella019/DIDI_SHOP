@@ -69,7 +69,12 @@ export default {
             name: 'image',
             title: '所有圖片',
             type: 'array',
-            of: [{ type: 'image' }],
+            of: [{
+                type: 'image',
+                options: {
+                    hotspot: true,
+                }
+            }],
         },
         {
             name: 'shortDescription',

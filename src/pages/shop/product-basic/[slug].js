@@ -43,10 +43,6 @@ const ProductBasic = ({
   
   const [toggler, setToggler] = useState(false);
 
-  const toggleModal = () => {
-    setToggler(!toggler);
-  }
-
   const { addToast } = useToasts();
   const discountedPrice = getDiscountPrice(
     product.price,
@@ -59,15 +55,15 @@ const ProductBasic = ({
       <div className="product-details space-mt--r100 ">
         <Container className="didi-container">
           { toggler && <div>
-            <div className="didi-overlay" onClick={toggleModal}>
+            <div className="didi-overlay" onClick={() => setToggler(false)}>
             </div>
-            <FaTimes className="didi-modal-btn" onClick={toggleModal}/>
+            <FaTimes className="didi-modal-btn" onClick={() => setToggler(false)}/>
             <DidiModal product={product}/>
           </div>}
           <Row>
             <Col lg={6} className="space-mb-mobile-only--30">
               <div className="didi-gallery-container">
-                <DidiProduct product={product} onClick={toggleModal}/>
+                <DidiProduct product={product} onClick={() => setToggler(true)}/>
                 {/* <img src="https://swiperjs.com/demos/images/nature-1.jpg" className="didi-img"/> */}
               </div>
             </Col>

@@ -9,17 +9,10 @@ import "swiper/components/scrollbar/scrollbar.min.css";
 
 import SwiperCore, { Navigation, Thumbs, Scrollbar } from "swiper";
 SwiperCore.use([Navigation, Thumbs, Scrollbar]);
-
 const DidiModal = ({product, onClickHandler}) => {
-    const [toggler, setToggler] = useState(true);
-
-    const toggleModal = () => {
-        setToggler(!toggler);
-    }
 
     return (
         <>
-        {toggler && 
             <div className="didi-modal-container">
                 <div className="didi-modal-content">
                     <Swiper
@@ -44,7 +37,6 @@ const DidiModal = ({product, onClickHandler}) => {
                         <img src={urlFor(product.image[0])} className="didi-main-img"/>
                     </div> */}
             </div>
-        }
         </>
     )
 }
