@@ -15,7 +15,7 @@ const Navigation = () => {
 
   return (
     <div className="didi-header">
-      <div ref={navRef} className="didi-navbar responsive_nav header-content__navigation space-pr--15 space-pl--15">
+      <div ref={navRef} className="didi-navbar header-content__navigation space-pr--15 space-pl--15">
         <ul className="test-nav">
           <li>
               <Link href="/" as={process.env.PUBLIC_URL + "/"}>
