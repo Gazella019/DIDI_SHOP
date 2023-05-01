@@ -63,60 +63,32 @@ const ShopJewls = ({ products }) => {
   return (
     <LayoutDidi>
       {/* breadcrumb */}
-      <div className="shop-page-content shop-jewls">
+      <div className="shop-jewls">
         <BreadcrumbOne
             pageTitle="珠寶/玉石"
           >
         </BreadcrumbOne>
           {/* shop page body */}
-          <div>
-            <Container>
-              <Row>
-                <Col
-                  lg={2}
-                  className="order-2 order-lg-1 space-mt-mobile-only--50"
-                >
-                  {/* shop sidebar */}
-                  <ShopSidebar
-                    products={products}
-                    getSortParams={getSortParams}
-                  />
-                </Col>
-                <Col lg={10} className="order-1 order-lg-2">
-                  {/* shop products */}
-                  {/* <ShopProducts layout={layout} products={currentData} /> */}
-
-                  {/* shop product pagination */}
-                  {/* <div className="pro-pagination-style">
-                    <Paginator
-                      totalRecords={sortedProducts.length}
-                      pageLimit={pageLimit}
-                      pageNeighbours={2}
-                      setOffset={setOffset}
-                      currentPage={currentPage}
-                      setCurrentPage={setCurrentPage}
-                      pageContainerClass="mb-0 mt-0"
-                      pagePrevText="«"
-                      pageNextText="»"
-                    />
-                  </div> */}
-                  <div className = "product-items">
-                    {products &&
-                      products.map((product) => {
-                        return (
-                          <Link
-                            href={`/shop/product-basic/${product.slug.current}`}
-                          >
-                            <a>
-                              <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
-                            </a>
-                          </Link>
-                        );
-                      })}
-                  </div>
-                </Col>
-              </Row>
-            </Container>
+          <div className="products-container">
+            {/* <ShopSidebar
+              products={products}
+              getSortParams={getSortParams}
+            /> */}
+            <div className = "product-items">
+              {products &&
+                products.map((product) => {
+                  return (
+                    <DidiNewProductCard slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                    // <Link
+                    //   href={`/shop/product-basic/${product.slug.current}`}
+                    // >
+                    //   <a>
+                    //     <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                    //   </a>
+                    // </Link>
+                  );
+                })}
+            </div>
           </div>
       </div>
       <FooterTwo />

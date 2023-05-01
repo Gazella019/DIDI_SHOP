@@ -16,38 +16,24 @@ import {
   ProductDescription,
   ProductDescriptionTab
 } from "../../../components/ProductDetails";
-import { addToCart } from "../../../redux/actions/cartActions";
-import {
-  addToWishlist,
-  deleteFromWishlist
-} from "../../../redux/actions/wishlistActions";
-import {
-  addToCompare,
-  deleteFromCompare
-} from "../../../redux/actions/compareActions";
-import products from "../../../data/products.json";
-import { client } from '../../../lib/client';
+import { client, urlFor } from '../../../lib/client';
 import { DidiProduct } from "../../../components/Product";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from "swiper";
+
+import 'swiper/swiper.min.css';
+import 'swiper/components/navigation/navigation.min.css';
+import 'swiper/components/thumbs/thumbs.min.css';
+import "swiper/components/scrollbar/scrollbar.min.css";
 
 const ProductBasic = ({
   product,
-  addToCart,
-  addToWishlist,
-  deleteFromWishlist,
-  addToCompare,
-  deleteFromCompare
 }) => {
   useEffect(() => {
     document.querySelector("body").classList.remove("overflow-hidden");
   });
   
   const [toggler, setToggler] = useState(false);
-
-  const { addToast } = useToasts();
-  const discountedPrice = getDiscountPrice(
-    product.price,
-    product.discount
-  ).toFixed(2);
 
   const productPrice = product.price.toFixed(2);
   return (
@@ -60,16 +46,31 @@ const ProductBasic = ({
             <FaTimes className="didi-modal-btn" onClick={() => setToggler(false)}/>
             <DidiModal product={product}/>
           </div>}
-          <Row>
-            <Col lg={6} className="space-mb-mobile-only--30">
-              <div className="didi-gallery-container">
-                <DidiProduct product={product} onClick={() => setToggler(true)}/>
-                {/* <img src="https://swiperjs.com/demos/images/nature-1.jpg" className="didi-img"/> */}
-              </div>
-            </Col>
-
-            <Col lg={6} className="didi-product-info">
-              <div className="didi-product-container">
+          <div className="did-product-page">
+            <div className="didi-main-swiper">
+                {/* <DidiProduct product={product} onClick={() => setToggler(true)}/> */}
+              <Swiper
+                autoplay={{
+                  delay: 1500,
+                  disableOnInteraction: false,
+                }}
+                style={{
+                  "--swiper-navigation-color": "black",
+                  "--swiper-pagination-color": "black",
+                }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                slidesPerView={1}
+                className="didi-swiper"
+              >
+                {product.image.map((img, index) => (
+                  <SwiperSlide className="didi-swiper-slide">
+                      <img src={urlFor(product.image[index])} onClick={() => setToggler(true)}/>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+             <div className="didi-product-container">
                 <h2 className="didi-product-name">
                   <div>
                     {product.name} 
@@ -78,31 +79,16 @@ const ProductBasic = ({
                     NT${product.price}
                   </div>
                 </h2>
-                {/* <div className="didi-line">
-                </div> */}
-                {/* <h3 > 簡介 </h3> */}
                 <div className="didi-product-fullDescription">
                   {product.fullDescription}
                 </div>
-                {/* <Link
-                  href="/"
-                  as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
-                >
-                  <a className="lezada-button lezada-button--medium lezada-button--icon--left didi-product-button">
-                    <IoIosCart />  立即購買
-                  </a>
-                </Link> */}
                 <button className="didi-product-button">
                   <a href={product.lineURL}>
                     聯繫我們 <IoMdArrowForward/>
                   </a>
                 </button>
               </div>
-              <a>
-
-              </a>
-            </Col>
-          </Row>
+          </div>
           <Row>
             <div className="didi-product-video">
               <h3 className="space-mb--r50">

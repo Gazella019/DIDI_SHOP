@@ -17,8 +17,8 @@ const DidiModal = ({product, onClickHandler}) => {
                 <div className="didi-modal-content">
                     <Swiper
                         style={{
-                        "--swiper-navigation-color": "#a6a3a3",
-                        "--swiper-pagination-color": "#a6a3a3",
+                        "--swiper-navigation-color": "black",
+                        "--swiper-pagination-color": "black",
                         }}
                         navigation={true}
                         modules={[Navigation]}

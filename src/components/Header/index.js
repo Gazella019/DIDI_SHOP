@@ -7,6 +7,7 @@ import HeaderSix from "./HeaderSix";
 import HeaderSeven from "./HeaderSeven";
 import HeaderEight from "./HeaderEight";
 import DidiHeader from "./DidiHeader";
+import DidiNavSideBar from "./DidiNavSideBar";
 
 export {
   HeaderOne,
@@ -18,4 +19,5 @@ export {
   HeaderSeven,
   HeaderEight,
   DidiHeader,
+  DidiNavSideBar,
 };

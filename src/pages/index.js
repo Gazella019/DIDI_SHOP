@@ -45,7 +45,7 @@ const Furniture = ({ products }) => {
           <HoverBannerOne spaceBottomClass="space-mb--r100" text={banner2text} images={banner2img}/>
 
           {/* Image slider for testing purpose */}
-          <ImageSliderTwo imageSliderData={imageSliderData} />
+          {/* <ImageSliderTwo imageSliderData={imageSliderData} className="didi-home-slider"/> */}
 
           {/* image cta */}
           <ImageCtaTwo spaceBottomClass="space-pb--r100" />

@@ -25,14 +25,11 @@ const DidiProduct = ({product, toggleModal}) => {
         thumbs={{ swiper: thumbsSwiper }}
         slidesPerView={1}
         modules={[Navigation, Thumbs]}
-        className="didi-main-swiper"
       >
         {product.image.map((img, index) => (
           // console.log(index)
-          <SwiperSlide className="swiper_wrapper">
-            <div className="swiper-img-card">
+          <SwiperSlide>
               <img src={urlFor(product.image[index])}/>
-            </div>
           </SwiperSlide>
         ))}
         {/* <SwiperSlide>

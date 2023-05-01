@@ -29,7 +29,7 @@ export default {
         },
         { 
             name: 'price',
-            title: '價錢',
+            title: '售價',
             type: 'number',
         },
         {

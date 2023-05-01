@@ -27,52 +27,41 @@ const FooterTwo = ({ footerBgClass }) => {
   };
   return (
     <footer className="didi-footer">
-      <Container className="wide">
-        <Row>
-          <Col className="footer-single-widget">
-            <div className="logo space-mb--35">
-              <Image
-                src={
-                  process.env.PUBLIC_URL + footerBgClass ===
-                  "bg-color--blue-two"
-                    ? "/assets/images/logo.png"
-                    : "/assets/images/logo.png"
-                }
-                width={150}
-                height={150}
-                alt=""
-              />
-            </div>
+      
+      <Image
+        src={
+          process.env.PUBLIC_URL + footerBgClass ===
+          "bg-color--blue-two"
+            ? "/assets/images/logo.png"
+            : "/assets/images/logo.png"
+        }
+        width={150}
+        height={150}
+        alt=""
+      />
 
-          </Col>
-
-          <Col className="footer-single-widget space-mb--50">
-            <div className="blurr"></div>
-            <div className="footer-blurr-text">
-              <h5 className="footer-single-widget__title">關注我們</h5>
-              <nav className="footer-single-widget__nav footer-single-widget__nav--social">
-                <ul>
-                  <li>
-                    <a href="https://www.facebook.com">
-                      <FaFacebookF style = {{ color: "black", fontSize: "1.2em" }}/> Facebook
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com">
-                      <FaInstagram style = {{ color: "black", fontSize: "1.2em" }}/> Instagram
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.youtube.com">
-                      <FaYoutube style = {{ color: "black", fontSize: "1.2em" }}/> Youtube
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+      <div className="footer-blurr-text">
+        <h5 className="footer-single-widget__title">關注我們</h5>
+        <nav className="footer-single-widget__nav footer-single-widget__nav--social">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com">
+                <FaFacebookF style = {{ color: "black", fontSize: "1.2em" }}/> Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com">
+                <FaInstagram style = {{ color: "black", fontSize: "1.2em" }}/> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com">
+                <FaYoutube style = {{ color: "black", fontSize: "1.2em" }}/> Youtube
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <button
         className={`scroll-top ${scroll > top ? "show" : ""}`}
         onClick={() => scrollToTop()}

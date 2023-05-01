@@ -3,10 +3,12 @@ import Swiper from "react-id-swiper";
 
 const HeroSliderFour = ({ sliderData }) => {
   const params = {
+    slidesPerView: 1,
     loop: true,
     speed: 1000,
     autoplay: {
-      delay: 1000,
+      delay: 2500,
+      disableOnInteraction: false
     },
     effect: "fade",
     watchSlidesVisibility: true,
@@ -29,19 +31,10 @@ const HeroSliderFour = ({ sliderData }) => {
                   key={i}
                 >
                   <div className="hero-slider-four__content">
-                    <h5 className="sub-title">{single.subtitle}</h5>
                     <h1
                       className="title"
                       dangerouslySetInnerHTML={{ __html: single.title }}
                     />
-                    <div className="slider-link">
-                      <Link
-                        href={single.url}
-                        as={process.env.PUBLIC_URL + single.url}
-                      >
-                        <a>shop collection</a>
-                      </Link>
-                    </div>
                   </div>
                 </div>
               );

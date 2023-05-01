@@ -38,13 +38,6 @@ p:last-child {
     margin-bottom: 0;
 }
 
-a,
-button {
-    display: inline-block;
-
-    cursor: pointer;
-    transition: $transition--default;
-}
 
 *:focus {
     outline: none;
@@ -85,104 +78,19 @@ textarea:focus:-ms-input-placeholder {
     color: transparent !important;
 } /* IE 10+ */
 
-// didi_modify
-.shop-clothes {
-    background-image: url("https://images.unsplash.com/photo-1571139627661-cf707929f465?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 130vh;
-}
-
-.shop-foods {
-    background-image: url("https://images.unsplash.com/photo-1582683740035-92658ae5ed5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 130vh;
-}
-
-.shop-house {
-    background-image: url("https://images.unsplash.com/photo-1542335834-96ffae4f762f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1553&q=80");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 130vh;
-}
-
-.shop-jewls {
-    background-image: url("https://images.unsplash.com/photo-1518451841069-6d102d0be9d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 130vh;
-}
-
-.shop-partners {
-    // background-image: url("https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-    // background-position: center; /* Center the image */
-    // background-repeat: no-repeat; /* Do not repeat the image */
-    // background-size: cover; /* Resize the background image to cover the entire container */
-    // -webkit-background-size: cover;
-    // -moz-background-size: cover;
-    // -o-background-size: cover;
-    // background-size: cover;
-    height: 150vh;
-}
-
-.shop-supplies {
-    background-image: url("https://images.unsplash.com/photo-1578941838877-141265f3a898?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1965&q=80");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 130vh;
-}
-
-.about-content {
-    background-image: url("https://images.unsplash.com/photo-1518451841069-6d102d0be9d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
-    ackground-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 110vh;
-}
-
-.shop-all {
-    background-image: url("https://images.unsplash.com/photo-1518451841069-6d102d0be9d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
-    ackground-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    min-height: 130vh;
-}
 /*=====  End of base  ======*/
 
+
+// .shop-clothes
+// .shop-foods
+// .shop-house
+// .shop-jewls
+// .shop-partners
+// .shop-supplies
+// .about-content
+// .shop-all {
+//     background-color: #191919;
+// }
 
 
 .product-detail-container{
@@ -265,24 +173,8 @@ textarea:focus:-ms-input-placeholder {
     margin: 10px 10px;
 }
 
-// .didi-product-container {
-//     display: flex;
-// // }
-// .gallery-container {
-//     width: 500px;
-//     height: 500px;
-//     background-color: #f02d34;
-// }
-
-.didi-modal-container {
-    transition: 1s;
-}
-.didi-gallery-container {
-    cursor: pointer;   
-}
 
 .didi-product-container {
-    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,12 +193,6 @@ textarea:focus:-ms-input-placeholder {
     margin-top: 15px;
     width: 100%;
     height: 15vh;
-}
-
-.didi-main-swiper {
-    width: 100%;
-    height: 50vh;
-    position: relative;
 }
 
 .didi-product-name {
@@ -369,8 +255,11 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .didi-footer {
-    padding: 50px 0 10px 0;
+    padding: 50px 50px;
     background-color: #ebeae6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .didi-card-content {
     padding: 10px;
@@ -409,6 +298,14 @@ textarea:focus:-ms-input-placeholder {
 
 .didi-navbar {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 0;
+    h1 {
+        margin-left: 20px;
+    }
 }
 
 .didi-header {
@@ -420,7 +317,17 @@ textarea:focus:-ms-input-placeholder {
     background-color: #4a4949
 }
 
+.nav-side-btn {
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+}
 
+.didi-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @media only screen and (max-width: 1024px) {
 	.nav-btn {
 		visibility: visible;
@@ -433,22 +340,21 @@ textarea:focus:-ms-input-placeholder {
     }
 
 	.didi-navbar {
-		position: fixed;
-		top: 0;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-        background-color: #4a4949;
-		gap: 1.5rem;
-		transition: 1s;
-        transform: translateY(-100vh);
-        z-index: 100;
+        h1 {
+            font-size: 28px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: 0 auto;
+        padding: 10px 0;
 	}
 
+    .didi-logo {
+        width: 50px;
+        height: 50px;
+    }
 	.responsive_nav {
 		transform: none;
 	}
@@ -524,17 +430,8 @@ textarea:focus:-ms-input-placeholder {
     justify-items: center;
 }
 
-.swiper_wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-// .swiper-img-card {
-//     width: 400px;
-//     height: 400px;
-// }
-.swiper-img-card img {
+img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -596,17 +493,20 @@ textarea:focus:-ms-input-placeholder {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .shop-sidebar-container {
     width: 90%;
+    height: 90%;
     background-color: #ebebeb;
 }
 
 .didi-swiper-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
 }
 
 .test {
@@ -619,14 +519,8 @@ textarea:focus:-ms-input-placeholder {
     height: 100%;
 }
 
-.didi-swiper-slide {
-    background-color: #535252;
-    padding: 50px;
-}
-
 .didi-product-swiper {
-    width: 800px;
-    height: 800px;
+    max-width: 60vw;
 }
 
 
@@ -683,13 +577,24 @@ textarea:focus:-ms-input-placeholder {
     width: 70%;
     margin: 0.9rem auto;
 }
-.didi-new-product{
+
+
+.didi-new-product {
+    background-color: #ffffff;
+    .product-price {
+        color: #00081C;
+    }
+    cursor: pointer;
+}
+
+.product-info {
     display: flex;
-    // overflow: hidden;
     flex-direction: column;
-    // justify-content: space-between;
-    margin: 1rem;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        margin-top: 10px;
+    }
 }
 
 .product-img img{
@@ -773,116 +678,13 @@ textarea:focus:-ms-input-placeholder {
     animation: ease-in-out;
 }
 
-
-
-
-/* Media Queries */
-@media screen and (max-width: 992px){
-    .product-items{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .didi-new-product {
-        // padding: 20px;
-        width: 300px;
-        height: 400px;
-    }
-    .product-img{
-        width: 100%;
-        height: 300px;
-        cursor: pointer;
-    }
-
-    .product-info{
-        text-align: center;
-        padding-top: 20px;
-    }
-
-    .product-price {
-        color: #00081C;
-    }
-
-    .shop-sidebar {
-        display: none;
-    }
+.product-items {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
 }
 
-@media screen and (min-width: 992px){
-    .product-items{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .didi-new-product {
-        // padding: 20px;
-        min-width: 250px;
-        min-height: 400px;
-    }
-
-    .product-img{
-        width: 100%;
-        height: 300px;
-        cursor: pointer;
-    }
-
-    .product-info {
-        background-color: #ffffff;
-        padding: 10px;
-    }
-}
-
-@media screen and (min-width: 1200px){
-    .product-items{
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-    }
-
-    .didi-new-product {
-        // padding: 20px;
-        // background-color: #324d67;
-        min-width: 250px;
-        min-height: 400px;
-    }
-
-    .product-img{
-        width: 100%;
-        height: 320px;
-        cursor: pointer;
-    }
-
-    .product-info {
-        background-color: #ffffff;
-        padding: 10px;
-    }
-
-    .products .text-light{
-        width: 50%;
-    }
-    
-}
-
-@media screen and (min-width: 1336px){
-    .product-items{
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .didi-new-product {
-        width: 100px;
-        height: 100px;
-    }
-
-    .product-img{
-        width: 100%;
-        height: 250px;
-        cursor: pointer;
-    }
-
-
-    .product-info {
-        background-color: #ffffff;
-        padding: 10px;
-    }
-
-}
 
 .didi-text {
     color: #00081C;
@@ -947,3 +749,219 @@ textarea:focus:-ms-input-placeholder {
     line-height: 1.5;
 }
 
+.product-img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.product-img:hover img{
+    transition: all .5s;
+    transform: scale(1.05);
+}
+
+.didi-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.didi-swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.didi-main-swiper {
+    // width: 400px !important;
+    // height: 500px !important;
+    width: 550px;
+    height: 650px;
+    // background-color: #324d67;
+    position: relative;
+}
+
+.did-product-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    // background-color: #40c9a2;
+}
+
+// @media screen and (max-width: 1300px){
+//     .didi-product-container {
+//         width: 450px;
+//     }
+// }
+
+@media screen and (max-width: 1040px){
+    .didi-header{
+        display: none;
+    }
+    // background-color: black;
+}
+
+@media screen and (max-width: 1200px){
+    .did-product-page {
+        // width: 400px !important;
+        // height: 500px !important;
+        // width: 700px;
+        // height: 700px;
+        // background-color: #324d67;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .didi-product-container {
+        margin-top: 50px;
+    }
+    // .didi-header {
+    //     display: none;
+    // }
+    // .didi-home-slider {
+    //     display: none;
+    // }
+}
+
+@media screen and (max-width: 1400px){
+    .header-content__navigation {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1040px){
+    // didi_modify
+    .shop-clothes {
+        background-image: url("https://images.unsplash.com/photo-1571139627661-cf707929f465?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 130vh;
+    }
+
+    .shop-foods {
+        background-image: url("https://images.unsplash.com/photo-1582683740035-92658ae5ed5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 130vh;
+    }
+
+    .shop-house {
+        background-image: url("https://images.unsplash.com/photo-1542335834-96ffae4f762f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1553&q=80");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 130vh;
+    }
+
+    .shop-jewls {
+        background-image: url("https://images.unsplash.com/photo-1518451841069-6d102d0be9d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .shop-partners {
+        // background-image: url("https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+        // background-position: center; /* Center the image */
+        // background-repeat: no-repeat; /* Do not repeat the image */
+        // background-size: cover; /* Resize the background image to cover the entire container */
+        // -webkit-background-size: cover;
+        // -moz-background-size: cover;
+        // -o-background-size: cover;
+        // background-size: cover;
+        height: 150vh;
+    }
+
+    .shop-supplies {
+        background-image: url("https://images.unsplash.com/photo-1578941838877-141265f3a898?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1965&q=80");
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 130vh;
+    }
+
+    .about-content {
+        background-image: url("https://images.unsplash.com/photo-1518451841069-6d102d0be9d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
+        ackground-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 110vh;
+    }
+
+    .shop-all {
+        background-image: url("https://images.unsplash.com/photo-1518451841069-6d102d0be9d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
+        ackground-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 130vh;
+    }
+}
+
+.didi-sidebar-icon {
+    position: absolute;
+    top: 15;
+    right: 15;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.didi-sidebar {
+    position: fixed;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #898888;
+    z-index: 100;
+}
+
+.didi-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+}
+
+.didi-ul li{
+    margin: 20px 0;
+}
+
+.products-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    padding-bottom: 150px;
+}
