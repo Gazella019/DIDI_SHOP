@@ -9,14 +9,7 @@ const BreadcrumbOne = ({ children, backgroundImage, pageTitle, className }) => {
         backgroundImage: `url("${process.env.PUBLIC_URL + backgroundImage}")`
       }}
     >
-      <Container>
-        <Row>
-          <Col>
-            <h1 className="breadcrumb__title">{pageTitle}</h1>
-            {children}
-          </Col>
-        </Row>
-      </Container>
+      <h1 className="didi_page_title">{pageTitle}</h1>
     </div>
   );
 };

@@ -7,7 +7,7 @@ import { FaTimes, FaBars } from "react-icons/fa";
 
 const LayoutDidi = ({ children }) => {
 
-  const [showSideBar, setShowSideBar] = useState(true);
+  const [showSideBar, setShowSideBar] = useState(false);
   function toggleSideBar() {
     setShowSideBar(!showSideBar);
   }

@@ -62,32 +62,28 @@ const FullwidthNoSidebar = ({ products }) => {
           pageTitle="所有商品"
         >
         </BreadcrumbOne>
-        <div className="shop-page-content">
-
-          {/* shop page body */}
-          <div className="shop-page-content__body">
-            <Container className="wide">
-              <Row>
-                <Col>
-                  <div className = "product-items">
-                    {products &&
-                      products.map((product) => {
-                        return (
-                          <Link
-                            href={`/shop/product-basic/${product.slug.current}`}
-                          >
-                            <a>
-                              <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
-                            </a>
-                          </Link>
-                        );
-                      })}
-                  </div>
-                </Col>
-              </Row>
-            </Container>
+        {/* shop page body */}
+        <div className="products-container">
+            {/* <ShopSidebar
+              products={products}
+              getSortParams={getSortParams}
+            /> */}
+            <div className = "product-items">
+              {products &&
+                products.map((product) => {
+                  return (
+                    <DidiNewProductCard slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                    // <Link
+                    //   href={`/shop/product-basic/${product.slug.current}`}
+                    // >
+                    //   <a>
+                    //     <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                    //   </a>
+                    // </Link>
+                  );
+                })}
+            </div>
           </div>
-        </div>
       </div>
       <FooterTwo/>
     </LayoutDidi>

@@ -69,43 +69,27 @@ const ShopHouse = ({ products }) => {
       >
       </BreadcrumbOne>
         {/* shop page body */}
-        <div className="shop-page-content__body space-mt--r100">
-          <Container>
-            <Row>
-              <Col
-                lg={2}
-                className="order-2 order-lg-1 space-mt-mobile-only--50"
-              >
-                {/* shop sidebar */}
-                <ShopSidebar
-                  products={products}
-                  getSortParams={getSortParams}
-                />
-              </Col>
-
-              <Col lg={10} className="order-1 order-lg-2">
-                {/* shop products */}
-                {/* <ShopProducts layout={layout} products={currentData} /> */}
-
-                {/* shop product pagination */}
-                <div className = "product-items">
-                    {products &&
-                      products.map((product) => {
-                        return (
-                          <Link
-                            href={`/shop/product-basic/${product.slug.current}`}
-                          >
-                            <a>
-                              <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
-                            </a>
-                          </Link>
-                        );
-                      })}
-                  </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        <div className="products-container">
+            {/* <ShopSidebar
+              products={products}
+              getSortParams={getSortParams}
+            /> */}
+            <div className = "product-items">
+              {products &&
+                products.map((product) => {
+                  return (
+                    <DidiNewProductCard slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                    // <Link
+                    //   href={`/shop/product-basic/${product.slug.current}`}
+                    // >
+                    //   <a>
+                    //     <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                    //   </a>
+                    // </Link>
+                  );
+                })}
+            </div>
+          </div>
       </div>
       <FooterTwo/>
     </LayoutDidi>

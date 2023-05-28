@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 import { connect } from "react-redux";
 import { useToasts } from "react-toast-notifications";
-import { LayoutTwo } from "../../../components/Layout";
+import { LayoutDidi } from "../../../components/Layout";
 import { getDiscountPrice } from "../../../lib/product";
 import { BreadcrumbOne } from "../../../components/Breadcrumb";
 import { IoMdArrowForward } from "react-icons/io";
@@ -37,7 +37,7 @@ const ProductBasic = ({
 
   const productPrice = product.price.toFixed(2);
   return (
-    <LayoutTwo>
+    <LayoutDidi>
       <div className="product-details space-mt--r100 ">
         <Container className="didi-container">
           { toggler && <div>
@@ -109,7 +109,7 @@ const ProductBasic = ({
       </div>
       <div className="didi-product-banner">
       </div>
-    </LayoutTwo>
+    </LayoutDidi>
   );
 };
 
