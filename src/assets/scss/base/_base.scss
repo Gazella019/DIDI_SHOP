@@ -379,6 +379,7 @@ textarea:focus:-ms-input-placeholder {
 
 .didi-related-product {
     display: flex;
+    flex-wrap: wrap;
     padding: 20px;
     width: 100%;
     height: 100%;
@@ -525,7 +526,11 @@ img {
     max-width: 60vw;
 }
 
-
+.breadcrumb-area {
+    height: 20vh;
+    margin-bottom: 60px;
+    background-size: cover;
+}
 /* product page from */
 
 // .didi-product-img {
@@ -683,7 +688,7 @@ img {
 .product-items {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 30px;
 }
 
@@ -777,6 +782,7 @@ img {
 .didi-main-swiper {
     // width: 400px !important;
     // height: 500px !important;
+    // min-width: 300px;
     width: 550px;
     height: 650px;
     // background-color: #324d67;
@@ -785,7 +791,7 @@ img {
 
 .did-product-page {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     // background-color: #40c9a2;
 }
 
@@ -799,6 +805,16 @@ img {
     .didi-header{
         display: none;
     }
+    .didi-main-swiper {
+        // width: 400px !important;
+        // height: 500px !important;
+        // min-width: 300px;
+        width: 100%;
+        height: 580px;
+        // background-color: #324d67;
+        position: relative;
+    }
+    
     // background-color: black;
 }
 

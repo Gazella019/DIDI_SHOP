@@ -68,6 +68,7 @@ const ShopFoods = ({ products }) => {
       <div className="shop-page-content shop-foods">
       <BreadcrumbOne
         pageTitle="食品"
+        backgroundImage="https://images.unsplash.com/photo-1516211697506-8360dbcfe9a4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
       >
         <ul className="breadcrumb__list">
           <li>
