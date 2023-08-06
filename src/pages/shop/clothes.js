@@ -66,7 +66,7 @@ const ShopClothes = ({ products }) => {
       <div className="shop-page-content shop-clothes">
       <BreadcrumbOne
         pageTitle="服裝飾品"
-        backgroundImage="https://images.unsplash.com/photo-1523211737006-e54a3c7299ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+        // backgroundImage="https://images.unsplash.com/photo-1523211737006-e54a3c7299ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
       >
       </BreadcrumbOne>
         {/* shop page body */}

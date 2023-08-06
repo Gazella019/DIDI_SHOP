@@ -17,16 +17,18 @@ const LayoutDidi = ({ children }) => {
       {showSideBar && <DidiNavSideBar toggleSideBar={toggleSideBar}/>}
       <header className="didi-navbar">
         <div className="didi-title">
-          <Link href="/" as={process.env.PUBLIC_URL + "/"} className="didi-logo">
+          <Link href="/" as={process.env.PUBLIC_URL + "/"}>
             <a>
               <Image
                 src={process.env.PUBLIC_URL + "/assets/images/logo.png"}
+                className="didi-logo"
                 alt="logo image"
                 width={80}
-                height={80}
+                height={120}
               />
             </a>
           </Link>
+          {/* <img src={process.env.PUBLIC_URL + "/assets/images/logo.png"} className="didi-logo"/> */}
           <h1>
             DIDI SHOP
           </h1>

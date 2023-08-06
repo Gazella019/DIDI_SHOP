@@ -35,8 +35,8 @@ const FooterTwo = ({ footerBgClass }) => {
             ? "/assets/images/logo.png"
             : "/assets/images/logo.png"
         }
-        width={150}
-        height={150}
+        width={120}
+        height={160}
         alt=""
       />
 

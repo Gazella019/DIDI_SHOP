@@ -8,7 +8,6 @@ const DidiNewProductCard = ({slug, title, price, image}) => {
                 <a>
                     <div className="product-img">
                         <img src ={image} />
-                        {/* hello */}
                     </div>
             </a>
             </Link>
