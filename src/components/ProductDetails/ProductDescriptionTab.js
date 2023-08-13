@@ -32,17 +32,14 @@ const ProductDescriptionTab = ({ product }) => {
           </Tab.Pane>
           <Tab.Pane eventKey="additionalInfo">
             <div className="didi-detail-text">
-              您有權在收到產品的30天內，退還任意/全部從我們的網站直接購買的產品。(依消保法規定，耳環屬個人衛生用品，故無鑑賞期，同時基於個人衛生原則，恕不受理退換貨服務。)
-              若您需要辦理退貨，敬請將所有商品、包裝禮盒及贈品一併退回。
-              獲贈的免費產品不適用於普通的退換貨政策。如有退款需求，產品需保持到貨時同樣的全新狀態並與獲贈產品一起寄回。
-              由於活動優惠是根據原始消費金額，如果退貨後不再符合活動條件，退款金額會在原付款金額上調整。
-              敬請留意，產品不能在本地零售店退還。
-              更多資訊，請點閱我們的退貨政策。
+              {product.shipping ? product.shipping : 
+              "物流寄送"}
             </div>
           </Tab.Pane>
           <Tab.Pane eventKey="reviews">
           <div className="didi-detail-text">
-            我們提供安全的支付方式：Visa, Mastercard, Maestro, American Express, Discover, Diners Club International, Paypal
+            {product.return ? product.shipping : 
+              "退貨方式"}
           </div>
           </Tab.Pane>
         </Tab.Content>

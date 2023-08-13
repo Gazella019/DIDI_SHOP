@@ -48,7 +48,7 @@ const Navigation = () => {
               <ul className="sub-menu sub-menu--one-column">
                 <li>
                   <Link
-                    href="/other/about"
+                    href="/shop/clothes"
                     as={process.env.PUBLIC_URL + "/other/about"}
                   >
                     <a onClick={ShowNavbar}>男士</a>
@@ -56,7 +56,7 @@ const Navigation = () => {
                 </li>
                 <li>
                   <Link
-                    href="/other/about-two"
+                    href="/shop/clothes"
                     as={process.env.PUBLIC_URL + "/other/about-two"}
                   >
                     <a onClick={ShowNavbar}>女士</a>
@@ -64,7 +64,7 @@ const Navigation = () => {
                 </li>
                 <li>
                   <Link
-                    href="/other/about-two"
+                    href="/shop/clothes"
                     as={process.env.PUBLIC_URL + "/other/about-two"}
                   >
                     <a onClick={ShowNavbar}>孩童</a>
@@ -90,7 +90,7 @@ const Navigation = () => {
               <ul className="sub-menu sub-menu--one-column">
                 <li>
                   <Link
-                    href="/other/about"
+                    href="/shop/house"
                     as={process.env.PUBLIC_URL + "/other/about"}
                   >
                     <a onClick={ShowNavbar}>新屋</a>
@@ -98,26 +98,10 @@ const Navigation = () => {
                 </li>
                 <li>
                   <Link
-                    href="/other/about-two"
+                    href="/shop/house"
                     as={process.env.PUBLIC_URL + "/other/about-two"}
                   >
                     <a onClick={ShowNavbar}>中古屋</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/other/about-two"
-                    as={process.env.PUBLIC_URL + "/other/about-two"}
-                  >
-                    <a onClick={ShowNavbar}>新車</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/other/about-two"
-                    as={process.env.PUBLIC_URL + "/other/about-two"}
-                  >
-                    <a onClick={ShowNavbar}>中古車</a>
                   </Link>
                 </li>
               </ul>

@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 const BreadcrumbOne = ({ children, backgroundImage, pageTitle, className }) => {
   return (
     <div
-      className={`breadcrumb-area space-pt--50 ${
+      className={`space-pt--10 space-pb--10${
         className ? className : ""
       }`}
       style={{

@@ -1,6 +1,6 @@
 export default {
     name: 'product',
-    title: 'Product',
+    title: 'Didi後台',
     type: 'document',
     fields: [
         {
@@ -84,6 +84,16 @@ export default {
         {
             name: 'fullDescription',
             title: '商品介紹',
+            type: 'string',
+        },
+        {
+            name: 'shipping',
+            title: '送貨＆付款',
+            type: 'string',
+        },
+        {
+            name: 'retrun',
+            title: '退貨',
             type: 'string',
         },
     ]

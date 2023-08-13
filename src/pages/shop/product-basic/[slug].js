@@ -51,7 +51,7 @@ const ProductBasic = ({
                 {/* <DidiProduct product={product} onClick={() => setToggler(true)}/> */}
               <Swiper
                 autoplay={{
-                  delay: 1500,
+                  delay: 2000,
                   disableOnInteraction: false,
                 }}
                 style={{
@@ -113,15 +113,6 @@ const ProductBasic = ({
   );
 };
 
-// const ProductBasic = (props) => {
-//   console.log(props);
-//   return (
-//     <div>
-//       hello
-//     </div>
-//   )
-// };
-// export default connect(mapStateToProps, mapDispatchToProps)(ProductBasic);
 export default ProductBasic;
 export const getStaticPaths = async () => {
   const query = `*[_type == "product"] {

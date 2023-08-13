@@ -31,6 +31,7 @@ const ShopHouse = ({ products }) => {
   const [currentData, setCurrentData] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
   const [shopTopFilterStatus, setShopTopFilterStatus] = useState(false);
+  const filterPorductsByCategory = products.filter(product => product.category.includes("house"));
 
   const pageLimit = 20;
 
@@ -76,8 +77,8 @@ const ShopHouse = ({ products }) => {
               getSortParams={getSortParams}
             /> */}
             <div className = "product-items">
-              {products &&
-                products.map((product) => {
+              {filterPorductsByCategory &&
+                filterPorductsByCategory.map((product) => {
                   return (
                     <DidiNewProductCard slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
                     // <Link

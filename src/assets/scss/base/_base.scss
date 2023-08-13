@@ -302,7 +302,7 @@ textarea:focus:-ms-input-placeholder {
     align-items: center;
     width: 95%;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 0 0;
     gap: 50px;
     h1 {
         margin-left: 20px;
@@ -331,8 +331,8 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .didi-logo {
-    width: 80px;
-    height: 120px;
+    width: 60px;
+    height: 90px;
     object-fit: cover;
 }
 
@@ -349,14 +349,14 @@ textarea:focus:-ms-input-placeholder {
 
 	.didi-navbar {
         h1 {
-            font-size: 28px;
+            font-size: 25px;
         }
         display: flex;
         justify-content: center;
         align-items: center;
         width: 95%;
         margin: 0 auto;
-        padding: 10px 0;
+        padding: 0px 0;
 	}
 
 	.responsive_nav {
@@ -527,6 +527,7 @@ img {
 
 .didi-product-swiper {
     max-width: 60vw;
+    height: auto;
 }
 
 .breadcrumb-area {
@@ -595,6 +596,7 @@ img {
         color: #00081C;
     }
     cursor: pointer;
+    // max-width: 300px;
 }
 
 .product-info {
@@ -691,7 +693,7 @@ img {
 .product-items {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 250px);
     // grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
 }
@@ -710,6 +712,7 @@ img {
 }
 
 .didi-partner-img {
+    display: block;
     width: 100%;
     height: 50vh;
     // background-color: #324d67;
@@ -724,6 +727,21 @@ img {
     font-size: 50px;
     font-weight: 350;
 
+}
+
+.didi-partner-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    padding: 50px 0;
+    // height: 300px;
+}
+
+.didi-partner-gallery img{
+    width: 350px;
+    height: auto;
 }
 
 .didi-partner-subtitle {
@@ -805,12 +823,22 @@ img {
 //     }
 // }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1200px){
+    .did-product-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .didi-product-container {
+        margin-top: 50px;
+    }
     .product-items {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        grid-template-rows: auto;
+        grid-template-columns: repeat(4, 200px);
+        // grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
         gap: 30px;
     }
 }
@@ -828,32 +856,41 @@ img {
         // background-color: #324d67;
         position: relative;
     }
-    // background-color: black;
-}
+    // chia-cheng
+    .didi-product-swiper {
+        max-width: 100vw;
+        height: 600px;
+        // height: auto;
+    }
 
-@media screen and (max-width: 1200px){
-    .did-product-page {
-        // width: 400px !important;
-        // height: 500px !important;
-        // width: 700px;
-        // height: 700px;
-        // background-color: #324d67;
+    .didi-swiper-card img {
+        width: 100%;
+        height: 100%;
+        // height: auto;
+        // max-height: 80vh;
+    }
+    .didi-partner-gallery {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
     }
-    .didi-product-container {
-        margin-top: 50px;
+
+    .didi-partner-gallery img{
+        width: 70vw;
+        height: 250px;
+        // height: auto;
     }
-    // .didi-header {
-    //     display: none;
-    // }
-    // .didi-home-slider {
-    //     display: none;
-    // }
 }
+
+@media screen and (max-width: 720px) {
+    .product-items {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 320px));
+        grid-template-rows: auto;
+        gap: 30px;
+    }
+}
+
 
 @media screen and (max-width: 1400px){
     .header-content__navigation {
@@ -872,7 +909,7 @@ img {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 130vh;
+        min-height: 120vh;
     }
 
     .shop-foods {
@@ -884,11 +921,11 @@ img {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 130vh;
+        min-height: 100vh;
     }
 
     .shop-house {
-        background-image: url("https://images.unsplash.com/photo-1542335834-96ffae4f762f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1553&q=80");
+        background-image: url("https://images.unsplash.com/photo-1519078313888-5a8068170f8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1430&q=80");
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; /* Resize the background image to cover the entire container */
@@ -896,7 +933,7 @@ img {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 130vh;
+        min-height: 120vh;
     }
 
     .shop-jewls {
@@ -908,6 +945,7 @@ img {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        min-height: 120vh;
     }
 
     .shop-partners {
@@ -919,7 +957,9 @@ img {
         // -moz-background-size: cover;
         // -o-background-size: cover;
         // background-size: cover;
-        height: 150vh;
+        // height: 150vh;
+        // background-color: #324d67;
+        padding-bottom: 100px;
     }
 
     .shop-supplies {
@@ -931,7 +971,7 @@ img {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 130vh;
+        min-height: 120vh;
     }
 
     .about-content {
@@ -943,7 +983,7 @@ img {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 110vh;
+        min-height: 120vh;
     }
 
     .shop-all {
@@ -955,7 +995,7 @@ img {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 130vh;
+        min-height: 120vh;
     }
 }
 
@@ -987,6 +1027,12 @@ img {
 
 .didi-ul li{
     margin: 20px 0;
+}
+
+.sidebar-small {
+    font-size: 10px;
+    text-align: center;
+    // color: green;
 }
 
 .products-container {
