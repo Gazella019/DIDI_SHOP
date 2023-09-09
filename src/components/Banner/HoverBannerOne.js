@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container, Row, Col } from "react-bootstrap";
 
-const HoverBannerOne = ({ spaceBottomClass, text, images}) => {
+const HoverBannerOne = ({ spaceBottomClass, text, images, bannerLink}) => {
   return (
     <div
       className={`hover-banner-area ${
@@ -25,8 +25,8 @@ const HoverBannerOne = ({ spaceBottomClass, text, images}) => {
                 <div className="title">
                   <p>
                     <Link
-                      href="/shop/jewls"
-                      as={process.env.PUBLIC_URL + "/shop/jewls"}
+                      href={`/shop/${bannerLink[0]}`}
+                      as={process.env.PUBLIC_URL + `/shop/${bannerLink[0]}`}
                     >
                       <a>
                         {text[0]}
@@ -34,16 +34,16 @@ const HoverBannerOne = ({ spaceBottomClass, text, images}) => {
                     </Link>
                   </p>
                   <Link
-                    href="/shop/jewls"
-                    as={process.env.PUBLIC_URL + "/shop/jewls"}
+                    href={`/shop/${bannerLink[0]}`}
+                    as={process.env.PUBLIC_URL + `/shop/${bannerLink[0]}`}
                   >
                     <a>Shop Now</a>
                   </Link>
                 </div>
               </div>
               <Link
-                href="/shop/jewls"
-                as={process.env.PUBLIC_URL + "/shop/jewls"}
+                href={`/shop/${bannerLink[0]}`}
+                as={process.env.PUBLIC_URL + `/shop/${bannerLink[0]}`}
               >
                 <a className="banner-link" />
               </Link>
@@ -64,8 +64,8 @@ const HoverBannerOne = ({ spaceBottomClass, text, images}) => {
                 <div className="title">
                   <p>
                     <Link
-                      href="/shop/clothes"
-                      as={process.env.PUBLIC_URL + "/shop/clothes"}
+                      href={`/shop/${bannerLink[1]}`}
+                      as={process.env.PUBLIC_URL + `/shop/${bannerLink[1]}`}
                     >
                       <a>
                       {text[1]}
@@ -73,16 +73,16 @@ const HoverBannerOne = ({ spaceBottomClass, text, images}) => {
                     </Link>
                   </p>
                   <Link
-                    href="/shop/clothes"
-                    as={process.env.PUBLIC_URL + "/shop/clothes"}
+                    href={`/shop/${bannerLink[1]}`}
+                    as={process.env.PUBLIC_URL + `/shop/${bannerLink[1]}`}
                   >
                     <a>Shop Now</a>
                   </Link>
                 </div>
               </div>
               <Link
-                href="/shop/clothes"
-                as={process.env.PUBLIC_URL + "/shop/clothes"}
+                href={`/shop/${bannerLink[1]}`}
+                as={process.env.PUBLIC_URL + `/shop/${bannerLink[1]}`}
               >
                 <a className="banner-link" />
               </Link>
@@ -103,8 +103,8 @@ const HoverBannerOne = ({ spaceBottomClass, text, images}) => {
                 <div className="title">
                   <p>
                     <Link
-                      href="/shop/supplies"
-                      as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
+                      href={`/shop/${bannerLink[2]}`}
+                      as={process.env.PUBLIC_URL + `/shop/${bannerLink[2]}`}
                     >
                       <a>
                       {text[2]}
@@ -112,16 +112,16 @@ const HoverBannerOne = ({ spaceBottomClass, text, images}) => {
                     </Link>
                   </p>
                   <Link
-                    href="/shop/supplies"
-                    as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
+                    href={`/shop/${bannerLink[2]}`}
+                    as={process.env.PUBLIC_URL + `/shop/${bannerLink[2]}`}
                   >
                     <a>Shop Now</a>
                   </Link>
                 </div>
               </div>
               <Link
-                href="/shop/supplies"
-                as={process.env.PUBLIC_URL + "/shop/left-sidebar"}
+                href={`/shop/${bannerLink[2]}`}
+                as={process.env.PUBLIC_URL + `/shop/${bannerLink[2]}`}
               >
                 <a className="banner-link" />
               </Link>

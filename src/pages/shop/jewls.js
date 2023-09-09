@@ -51,15 +51,15 @@ const ShopJewls = ({ products }) => {
 
   useEffect(() => {
     let sortedProducts = getSortedProducts(products, sortType, sortValue);
-    const filterSortedProducts = getSortedProducts(
-      sortedProducts,
-      filterSortType,
-      filterSortValue
-    );
-    sortedProducts = filterSortedProducts;
+    // const filterSortedProducts = getSortedProducts(
+    //   sortedProducts,
+    //   filterSortType,
+    //   filterSortValue
+    // );
+    // sortedProducts = filterSortedProducts;
     setSortedProducts(sortedProducts);
-    setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
-  }, [offset, products, sortType, sortValue, filterSortType, filterSortValue]);
+    // setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
+  }, [sortedProducts]);
 
   return (
     <LayoutDidi>
@@ -91,6 +91,9 @@ const ShopJewls = ({ products }) => {
                   );
                 })}
             </div>
+            {/* {products.map((product) => {
+              return <div>{product.name}</div>
+            })} */}
           </div>
       </div>
       <FooterTwo />
@@ -102,7 +105,7 @@ const ShopJewls = ({ products }) => {
 export const getServerSideProps = async () => {
   const query = '*[_type == "product"]';
   const products = await client.fetch(query);
-  // console.log(products)
+  console.log(products)
   return {
     props: { products }
   }

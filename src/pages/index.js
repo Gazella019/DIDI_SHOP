@@ -31,6 +31,9 @@ const Furniture = ({ products }) => {
     "https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
   ];
 
+  const banner1link = ["jewls", "clothes", "supplies"];
+  const banner2link = ["foods", "house", "partners"];
+
   const banner3img = [
     "https://images.unsplash.com/photo-1502652023201-a16bde8138d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
     "https://images.unsplash.com/photo-1603251578711-3290ca1a0187?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",                    
@@ -53,8 +56,8 @@ const Furniture = ({ products }) => {
         />
           <div className="space-mb--r100"></div>
           {/* hover banner */}
-          <HoverBannerOne spaceBottomClass="space-mb--r100" text={banner1text} images={banner1img}/>
-          <HoverBannerOne spaceBottomClass="space-mb--r100" text={banner2text} images={banner2img}/>
+          <HoverBannerOne spaceBottomClass="space-mb--r100" text={banner1text} images={banner1img} bannerLink={banner1link}/>
+          <HoverBannerOne spaceBottomClass="space-mb--r100" text={banner2text} images={banner2img} bannerLink={banner2link}/>
           {/* <HoverBannerOne spaceBottomClass="space-mb--r100" text={banner3text} images={banner3img}/> */}
 
           {/* Image slider for testing purpose */}

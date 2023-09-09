@@ -354,9 +354,11 @@ textarea:focus:-ms-input-placeholder {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 95%;
-        margin: 0 auto;
+        width: 100%;
+        // margin: 0 auto;
         padding: 0px 0;
+        // box-shadow: 0 4px 2px -4px gray;
+        box-shadow: rgba(69, 69, 69, 0.1) -2px 4px 29px -2px;
 	}
 
 	.responsive_nav {
@@ -510,9 +512,9 @@ img {
 }
 
 .didi-swiper-card img {
-    max-width: 100%;
-    height: auto;
-    max-height: 80vh;
+    width: 100%;
+    height: 100%;
+    // max-height: 80vh;
 }
 
 .test {
@@ -526,8 +528,8 @@ img {
 }
 
 .didi-product-swiper {
-    max-width: 60vw;
-    height: auto;
+    max-width: 80vw;
+    height: 100%;
 }
 
 .breadcrumb-area {
@@ -542,6 +544,10 @@ img {
 //     height: 100%;
 //     display: block;
 // }
+
+.didishow {
+    display: none;
+}
 
 .didi-test-container{
     width: 88vw;
@@ -925,7 +931,7 @@ img {
     }
 
     .shop-house {
-        background-image: url("https://images.unsplash.com/photo-1519078313888-5a8068170f8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1430&q=80");
+        background-image: url("https://images.unsplash.com/photo-1685757529646-cf3d19bd3823?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80");
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; /* Resize the background image to cover the entire container */
@@ -1032,6 +1038,7 @@ img {
 .sidebar-small {
     font-size: 10px;
     text-align: center;
+    // color: #40c9a2;
     // color: green;
 }
 
@@ -1043,10 +1050,17 @@ img {
     padding-bottom: 150px;
 }
 
+.sidebarSpan {
+    margin-left: 10px;
+    display: inline-block;
+    cursor: pointer;
+    // color: #40c9a2;
+}
+
 .didi_page_title {
     max-width: 1100px;
     width: 90%;
-   margin: 50px auto;
+    margin: 50px auto;
 }
 
 .didi-hero-title {
