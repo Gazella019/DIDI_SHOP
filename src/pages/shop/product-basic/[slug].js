@@ -8,6 +8,7 @@ import { getDiscountPrice } from "../../../lib/product";
 import { BreadcrumbOne } from "../../../components/Breadcrumb";
 import { IoMdArrowForward } from "react-icons/io";
 import { FaTimes } from "react-icons/fa";
+import { FooterTwo } from "../../../components/Footer";
 import { DidiProductCard, DidiRelatedProduct, DidiModal }from "../../../components/Product";
 
 import {
@@ -107,8 +108,7 @@ const ProductBasic = ({
               <DidiRelatedProduct/>
         </Container>
       </div>
-      <div className="didi-product-banner">
-      </div>
+      <FooterTwo/>
     </LayoutDidi>
   );
 };

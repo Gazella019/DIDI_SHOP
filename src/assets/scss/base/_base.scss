@@ -336,52 +336,6 @@ textarea:focus:-ms-input-placeholder {
     object-fit: cover;
 }
 
-@media only screen and (max-width: 1024px) {
-	.nav-btn {
-		visibility: visible;
-		opacity: 1;
-	}
-
-    .test-nav {
-        display: flex;
-        flex-direction: column;
-    }
-
-	.didi-navbar {
-        h1 {
-            font-size: 25px;
-        }
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        // margin: 0 auto;
-        padding: 0px 0;
-        // box-shadow: 0 4px 2px -4px gray;
-        box-shadow: rgba(69, 69, 69, 0.1) -2px 4px 29px -2px;
-	}
-
-	.responsive_nav {
-		transform: none;
-	}
-
-    .didi-mobile-logo {
-        font-size: 1.2rem;
-        color: white;
-        display: block;
-        cursor: pointer;
-    }
-
-	.nav-close-btn {
-		position: absolute;
-        font-size: 2rem;
-        color: white;
-		top: 2rem;
-		right: 2rem;
-	}
-
-}
-
 .didi-related-product {
     display: flex;
     flex-wrap: wrap;
@@ -911,23 +865,24 @@ img {
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: cover; /* Resize the background image to cover the entire container */
+        background-size: contain; /* Resize the background image to contain the entire container */
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 120vh;
+        height: 140vh;
     }
 
     .shop-foods {
         background-image: url("https://images.unsplash.com/photo-1582683740035-92658ae5ed5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
+        background-size: contain; /* Resize the background image to contain the entire container */
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 100vh;
+        height: 140vh;
     }
 
     .shop-house {
@@ -939,19 +894,19 @@ img {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 120vh;
+        height: 140vh;
     }
 
     .shop-jewls {
         background-image: url("https://images.unsplash.com/photo-1518451841069-6d102d0be9d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
+        background-size: contain; /* Resize the background image to contain the entire container */
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 120vh;
+        height: 140vh;
     }
 
     .shop-partners {
@@ -965,6 +920,7 @@ img {
         // background-size: cover;
         // height: 150vh;
         // background-color: #324d67;
+        // display: flex;
         padding-bottom: 100px;
     }
 
@@ -977,31 +933,31 @@ img {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 120vh;
+        height: 140vh;
     }
 
     .about-content {
         background-image: url("https://images.unsplash.com/photo-1518451841069-6d102d0be9d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
-        ackground-position: center; /* Center the image */
+        background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
+        background-size: contain; /* Resize the background image to contain the entire container */
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 120vh;
+        height: 140vh;
     }
 
     .shop-all {
         background-image: url("https://images.unsplash.com/photo-1518451841069-6d102d0be9d6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80");
-        ackground-position: center; /* Center the image */
+        background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: cover; /* Resize the background image to cover the entire container */
+        background-size: contain; /* Resize the background image to contain the entire container */
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        min-height: 120vh;
+        height: 140vh;
     }
 }
 
@@ -1067,4 +1023,78 @@ img {
     position: absolute;
     bottom: 20%;
     left: 10%;
+}
+
+// mobile version
+@media only screen and (max-width: 1024px) {
+	.nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+    .test-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+	.didi-navbar {
+        h1 {
+            font-size: 25px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        // margin: 0 auto;
+        padding: 0px 0;
+        // box-shadow: 0 4px 2px -4px gray;
+        box-shadow: rgba(69, 69, 69, 0.1) -2px 4px 29px -2px;
+	}
+
+	.responsive_nav {
+		transform: none;
+	}
+
+    .didi-mobile-logo {
+        font-size: 1.2rem;
+        color: white;
+        display: block;
+        cursor: pointer;
+    }
+
+	.nav-close-btn {
+		position: absolute;
+        font-size: 2rem;
+        color: white;
+		top: 2rem;
+		right: 2rem;
+	}
+
+    .didi-footer {
+        padding: 30px 30px;
+        background-color: #ebeae6;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .didi-partner-title {
+        // padding-top: 5px;
+        margin-top: 25px;
+        // background-color: #40c9a2;
+        padding-left: 25px;
+        text-align: left;
+        // color: #00081C;
+        font-size: 18px;
+        font-weight: 200;
+    
+    }
+
+    .didi-partner-subtitle {
+        margin: 5vh 0;
+        text-align: center;
+        color: #00081C;
+        font-size: 35px;
+        font-weight: 300;
+    }
 }
