@@ -10,6 +10,7 @@ import fetchProducts from "../redux/actions/productActions";
 import products from "../data/products.json";
 import "../assets/scss/styles.scss";
 import Preloader from "../components/Preloader";
+import BackgroundMusic from "../components/BackgroundMusic";
 
 class MyApp extends App {
   constructor(props) {
@@ -42,6 +43,7 @@ class MyApp extends App {
             </audio> */}
           </div>
         </Head>
+        {/* <BackgroundMusic /> */}
         <ToastProvider placement="bottom-left">
           <Provider store={reduxStore}>
             <PersistGate loading={<Preloader />} persistor={this.persistor}>

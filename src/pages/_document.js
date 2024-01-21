@@ -11,9 +11,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <audio>
-            <source src={process.env.PUBLIC_URL + "assets/Spring-Flowers.mp3"} type="audio/mpeg"/>
-          </audio>
         </body>
       </Html>
     );

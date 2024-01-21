@@ -11,6 +11,7 @@ import { getProducts } from "../../lib/product";
 import { FooterTwo } from "../../components/Footer";
 import { DidiNewProductCard } from "../../components/Product";
 import { urlFor } from "../../lib/client";
+import Pagination from "../../components/Pagination/Pagination";
 
 import {
   ShopHeader,
@@ -49,6 +50,7 @@ const ShopClothes = ({ products }) => {
     setFilterSortValue(sortValue);
   };
 
+
   useEffect(() => {
     let sortedProducts = getSortedProducts(products, sortType, sortValue);
     const filterSortedProducts = getSortedProducts(
@@ -65,33 +67,23 @@ const ShopClothes = ({ products }) => {
     <LayoutDidi>
       {/* breadcrumb */}
       <div className="shop-page-content shop-clothes">
-      <BreadcrumbOne
-        pageTitle="服裝飾品"
-        // backgroundImage="https://images.unsplash.com/photo-1523211737006-e54a3c7299ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-      >
-      </BreadcrumbOne>
+        <BreadcrumbOne
+          pageTitle="服裝飾品"
+          // backgroundImage="https://images.unsplash.com/photo-1523211737006-e54a3c7299ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+        >
+        </BreadcrumbOne>
         {/* shop page body */}
-        <div className="products-container">
-            {/* <ShopSidebar
-              products={products}
-              getSortParams={getSortParams}
-            /> */}
+        <Pagination products={filterPorductsByCategory}/>
+        {/* <div className="products-container">
             <div className = "product-items">
               {filterPorductsByCategory &&
                 filterPorductsByCategory.map((product) => {
                   return (
-                    <DidiNewProductCard slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
-                    // <Link
-                    //   href={`/shop/product-basic/${product.slug.current}`}
-                    // >
-                    //   <a>
-                    //     <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
-                    //   </a>
-                    // </Link>
+                    <DidiNewProductCard key={product.id} slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
                   );
                 })}
             </div>
-          </div>
+        </div> */}
       </div>
       <FooterTwo/>
     </LayoutDidi>

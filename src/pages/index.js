@@ -27,7 +27,7 @@ const Furniture = ({ products }) => {
   ];
   const banner2img = [
     "assets/images/pic3.jpeg",
-    "https://images.unsplash.com/photo-1608397717231-4a2883be7ad2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1694&q=80",
+    "https://i.pinimg.com/originals/89/43/ad/8943ad3709f79b0c8c147e2e9f80340e.jpg",
     "https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
   ];
 
