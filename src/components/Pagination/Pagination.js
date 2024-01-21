@@ -41,7 +41,7 @@ const Pagination = ({ products }) => {
             {Array.from({ length: totalPages }).map((_, index) => (
             <div
                 key={index}
-                className={`pagination-button ${currentPage === index + 1 ? 'active' : ''}`}
+                className={`pagination-button ${currentPage === index + 1 ? 'button_active' : ''}`}
                 onClick={() => handlePageChange(index + 1)}
             >
                 {index + 1}

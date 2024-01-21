@@ -341,9 +341,23 @@ textarea:focus:-ms-input-placeholder {
     flex-wrap: wrap;
     padding: 20px;
     width: 100%;
-    height: 100%;
-    justify-content: center;
+    // height: 100%;
+    justify-content: space-between;
     align-items: center;
+}
+
+.related-item {
+    flex: 1; /* 子元件平均佈局 */
+    max-width: calc(33.33% - 10px); /* 每個子元件的最大寬度 */
+    text-align: center;
+    margin: 5px; /* 元件間的間距 */
+}
+
+.related-item img{
+    max-width: 100%; /* 商品圖片寬度自動適應 */
+    max-height: 70%;
+    object-fit: cover;
+    height: auto;
 }
 
 .didi-product-banner {
@@ -467,7 +481,7 @@ img {
 
 .didi-swiper-card img {
     width: 100%;
-    height: 100%;
+    height: auto;
     // max-height: 80vh;
 }
 
@@ -796,7 +810,7 @@ img {
     .product-items {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(4, 200px);
+        grid-template-columns: repeat(4, 1fr);
         // grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
         gap: 30px;
     }
@@ -844,8 +858,8 @@ img {
     .product-items {
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, minmax(100px, 320px));
-        grid-template-rows: auto;
+        background-color: #40c9a2;
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
 }
@@ -1094,6 +1108,7 @@ img {
         color: white;
 		top: 2rem;
 		right: 2rem;
+        cursor: pointer;
 	}
 
     .didi-footer {

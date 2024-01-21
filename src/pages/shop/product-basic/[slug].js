@@ -29,22 +29,37 @@ import "swiper/components/scrollbar/scrollbar.min.css";
 
 const ProductBasic = ({
   product,
+  allProducts,
 }) => {
   useEffect(() => {
     document.querySelector("body").classList.remove("overflow-hidden");
+    // document.body.style.overflow = 'hidden';
   });
   
-  const [toggler, setToggler] = useState(false);
+  const openModal = () => {
+    setToggler(true);
+    // 禁止頁面滾動
+    document.body.style.overflow = 'hidden';
+  };
 
+  const closeModal = () => {
+    setToggler(false)
+    // 解除禁止頁面滾動
+    document.body.style.overflow = 'auto';
+  };
+
+  const [toggler, setToggler] = useState(false);
+  let relatedProducts = allProducts.filter((idx) => (idx.category[0] === product.category[0] && idx.id != product.id));
+  relatedProducts = relatedProducts.slice(0, 3);
   const productPrice = product.price.toFixed(2);
   return (
     <LayoutDidi>
       <div className="product-details space-mt--r100 ">
         <Container className="didi-container">
           { toggler && <div>
-            <div className="didi-overlay" onClick={() => setToggler(false)}>
+            <div className="didi-overlay" onClick={() => closeModal()}>
             </div>
-            <FaTimes className="didi-modal-btn" onClick={() => setToggler(false)}/>
+            <FaTimes className="didi-modal-btn" onClick={() => closeModal()}/>
             <DidiModal product={product}/>
           </div>}
           <div className="did-product-page">
@@ -66,7 +81,7 @@ const ProductBasic = ({
               >
                 {product.image.map((img, index) => (
                   <SwiperSlide className="didi-swiper-slide">
-                      <img src={urlFor(product.image[index])} onClick={() => setToggler(true)}/>
+                      <img src={urlFor(product.image[index])} onClick={() => openModal()}/>
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -105,7 +120,7 @@ const ProductBasic = ({
               <ProductDescriptionTab product={product} />
             </Col>
           </Row>
-              <DidiRelatedProduct/>
+          <DidiRelatedProduct products={relatedProducts}/>
         </Container>
       </div>
       <FooterTwo/>
@@ -138,9 +153,11 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params: { slug }}) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
   const product = await client.fetch(query);
+  const queryAll = '*[_type == "product"]';
+  const allProducts = await client.fetch(queryAll);
   // console.log(product);
   return {
-    props: { product },
+    props: { product, allProducts },
     revalidate: 300,
   }
 }
