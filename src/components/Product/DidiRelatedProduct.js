@@ -1,7 +1,6 @@
 import { urlFor } from "../../lib/client";
 import React, { useState } from "react";
-import DidiProductCard from "./DidiProductCard";
-import product from "../../../didishop/schemas/product";
+import Link from "next/link";
 
 const DidiRelatedProduct = ({products}) => {
     console.log(products)
@@ -12,15 +11,15 @@ const DidiRelatedProduct = ({products}) => {
             </h3>
             <div className="didi-related-product">
                 {products.map((product) => (
-                    <div className="related-item">
-                        <img src={urlFor(product.thumbImage[0])}/>
-                        <h1>{product.name}</h1>
-                    </div>
+                    <Link href={`/shop/product-basic/${product.slug.current}`}>
+                        <div className="related-item">
+                            <div className="related-item-img">
+                                <img src={urlFor(product.thumbImage[0])}/>
+                            </div>
+                            <p className="related-item-title">{product.name}</p>
+                        </div>
+                    </Link>
                 ))}
-                {/* <img></img> */}
-                {/* <DidiProductCard isTemplate={true} index={1}/>
-                <DidiProductCard isTemplate={true} index={2}/>
-                <DidiProductCard isTemplate={true} index={3}/> */}
             </div>
         </div>
     )

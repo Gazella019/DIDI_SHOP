@@ -13,6 +13,8 @@ import { FooterTwo } from "../../components/Footer";
 import { client } from '../../lib/client';
 import { DidiNewProductCard } from "../../components/Product";
 import { urlFor } from "../../lib/client";
+import Pagination from "../../components/Pagination/Pagination";
+
 
 const FullwidthNoSidebar = ({ products }) => {
   const [layout, setLayout] = useState("grid four-column");
@@ -63,27 +65,7 @@ const FullwidthNoSidebar = ({ products }) => {
         >
         </BreadcrumbOne>
         {/* shop page body */}
-        <div className="products-container">
-            {/* <ShopSidebar
-              products={products}
-              getSortParams={getSortParams}
-            /> */}
-            <div className = "product-items">
-              {products &&
-                products.map((product) => {
-                  return (
-                    <DidiNewProductCard slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
-                    // <Link
-                    //   href={`/shop/product-basic/${product.slug.current}`}
-                    // >
-                    //   <a>
-                    //     <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
-                    //   </a>
-                    // </Link>
-                  );
-                })}
-            </div>
-          </div>
+        <Pagination products={products}/>
       </div>
       <FooterTwo/>
     </LayoutDidi>

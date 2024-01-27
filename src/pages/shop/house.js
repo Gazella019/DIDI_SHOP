@@ -11,6 +11,7 @@ import { getProducts } from "../../lib/product";
 import { FooterTwo } from "../../components/Footer";
 import { DidiNewProductCard } from "../../components/Product";
 import { urlFor } from "../../lib/client";
+import Pagination from "../../components/Pagination/Pagination";
 
 import {
   ShopHeader,
@@ -71,27 +72,7 @@ const ShopHouse = ({ products }) => {
       >
       </BreadcrumbOne>
         {/* shop page body */}
-        <div className="products-container">
-            {/* <ShopSidebar
-              products={products}
-              getSortParams={getSortParams}
-            /> */}
-            <div className = "product-items">
-              {filterPorductsByCategory &&
-                filterPorductsByCategory.map((product) => {
-                  return (
-                    <DidiNewProductCard slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
-                    // <Link
-                    //   href={`/shop/product-basic/${product.slug.current}`}
-                    // >
-                    //   <a>
-                    //     <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
-                    //   </a>
-                    // </Link>
-                  );
-                })}
-            </div>
-          </div>
+        <Pagination products={filterPorductsByCategory}/>
       </div>
       <FooterTwo/>
     </LayoutDidi>

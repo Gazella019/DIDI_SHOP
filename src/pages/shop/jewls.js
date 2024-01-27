@@ -11,6 +11,7 @@ import { getProducts } from "../../lib/product";
 import { FooterTwo } from "../../components/Footer";
 import { DidiNewProductCard } from "../../components/Product";
 import { urlFor } from "../../lib/client";
+import Pagination from "../../components/Pagination/Pagination";
 
 import {
   ShopHeader,
@@ -70,31 +71,7 @@ const ShopJewls = ({ products }) => {
             // backgroundImage="https://images.unsplash.com/photo-1584377334016-464803e03b80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
           >
         </BreadcrumbOne>
-          {/* shop page body */}
-          <div className="products-container">
-            {/* <ShopSidebar
-              products={products}
-              getSortParams={getSortParams}
-            /> */}
-            <div className = "product-items">
-              {filterPorductsByCategory &&
-                filterPorductsByCategory.map((product) => {
-                  return (
-                    <DidiNewProductCard slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
-                    // <Link
-                    //   href={`/shop/product-basic/${product.slug.current}`}
-                    // >
-                    //   <a>
-                    //     <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
-                    //   </a>
-                    // </Link>
-                  );
-                })}
-            </div>
-            {/* {products.map((product) => {
-              return <div>{product.name}</div>
-            })} */}
-          </div>
+        <Pagination products={filterPorductsByCategory}/>
       </div>
       <FooterTwo />
     </LayoutDidi>
@@ -112,12 +89,3 @@ export const getServerSideProps = async () => {
 }
 
 export default ShopJewls;
-
-// const mapStateToProps = (state) => {
-//   const products = state.productData;
-//   return {
-//     products: getProducts(products, "furniture", "popular", 12)
-//   };
-// };
-
-// export default connect(mapStateToProps)(ShopJewls);
