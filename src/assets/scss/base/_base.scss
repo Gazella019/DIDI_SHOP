@@ -1,6 +1,8 @@
 /*=============================================
 =            base            =
 =============================================*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap');
+
 
 *,
 *::after,
@@ -110,10 +112,6 @@ textarea:focus:-ms-input-placeholder {
     height: 400px;
     cursor: pointer;
     transition: .3s ease-in-out;
-  }
-  .product-detail-image:hover{
-    background-color: #f02d34;
-  
   }
   
   .product-detail-container .product-detail-image{
@@ -362,11 +360,11 @@ textarea:focus:-ms-input-placeholder {
     object-fit: cover;
 }
 
-.related-item-img:hover {
-    transition: all .8s;
-    transform: scale(1.03);
-    overflow: hidden;
-}
+// .related-item-img:hover {
+//     transition: all .8s;
+//     transform: scale(1.03);
+//     overflow: hidden;
+// }
 
 .related-item-title {
     color: #00081C;
@@ -772,17 +770,17 @@ img {
     // margin-bottom: 8px; /* 商品圖片和商品標題之間的間距 */
 }
 
-.product-image:hover {
-    transition: all .8s;
-    transform: scale(1.08);
-    overflow: hidden;
-}
+// .product-image:hover {
+//     transition: all .8s;
+//     transform: scale(1.08);
+//     overflow: hidden;
+// }
   
 // 問題是出在product img的size影響整條row heighj
-.product-img:hover img{
-    transition: all .5s;
-    transform: scale(1.05);
-}
+// .product-img:hover img{
+//     transition: all .5s;
+//     transform: scale(1.05);
+// }
 
 .didi-swiper {
     width: 100%;
