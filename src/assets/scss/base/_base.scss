@@ -1,7 +1,7 @@
 /*=============================================
 =            base            =
 =============================================*/
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
 
 
 *,
@@ -537,7 +537,8 @@ img {
 .lg-title,
 .md-title,
 .sm-title{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Noto Serif TC', serif;
     padding: 0.6rem 0;
     text-transform: capitalize;
 }
@@ -550,7 +551,8 @@ img {
 }
 .md-title{
     font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Noto Serif TC', serif;
 }
 .sm-title{
     font-weight: 300;
