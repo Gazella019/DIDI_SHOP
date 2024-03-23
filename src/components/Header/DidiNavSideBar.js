@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from "next/link";
-import { FaTimes, FaBars } from "react-icons/fa";
+import { FaTimes, FaChevronDown } from "react-icons/fa";
+
 import { useRef, useState } from "react";
 
 const DidiNavSideBar = ({toggleSideBar}) => {
@@ -56,10 +57,12 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                         </Link>
                     </li>
                     <li className="position-relative">
-                        <Link href="/shop/clothes" as={process.env.PUBLIC_URL + "/"}>
-                            <a>服裝飾品</a>
-                        </Link>
-                        <span className={"sidebarSpan"} onClick={show1Subsidebar}>+</span>
+                        <span className={"sidebar-title"} onClick={show1Subsidebar}>
+                            服裝飾品
+                        </span>
+                        <span className={"sidebarSpan"} onClick={show1Subsidebar}>
+                            <FaChevronDown />
+                        </span>
                         <ul className={`subsiderbar ${show1 == "false" ? "didishow" : ""}`}>
                             <li className={"sidebar-small"}>
                                 <Link
@@ -98,10 +101,12 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                         </Link>
                     </li>
                     <li className="position-relative">
-                        <Link href="/shop/house" as={process.env.PUBLIC_URL + "/"}>
-                            <a>房屋/車</a>
-                        </Link>
-                        <span className={"sidebarSpan"} onClick={show2Subsidebar}>+</span>
+                        <span className={"sidebar-title"} onClick={show2Subsidebar}>
+                            房屋/車
+                        </span>
+                        <span className={"sidebarSpan"} onClick={show2Subsidebar}>
+                            <FaChevronDown />
+                        </span>
                         <ul className={`subsiderbar ${show2 == "false" ? "didishow" : ""}`}>
                             <li className="sidebar-small">
                                 <Link
@@ -122,10 +127,12 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                         </ul>
                     </li>
                     <li className="position-relative">
-                        <Link href="/shop/partners" as={process.env.PUBLIC_URL + "/"}>
-                            <a>合作商家</a>
-                        </Link>
-                        <span className={"sidebarSpan"} onClick={show3Subsidebar}>+</span>
+                        <span className={"sidebar-title"} onClick={show3Subsidebar}>
+                            合作商家
+                        </span>
+                        <span className={"sidebarSpan"} onClick={show3Subsidebar}>
+                            <FaChevronDown />
+                        </span>
                             <ul className={`subsiderbar ${show3 == "false" ? "didishow" : ""}`}>
                                 <li className="sidebar-small">
                                     <Link

@@ -99,7 +99,7 @@ const ProductBasic = ({
                   {product.fullDescription}
                 </div>
                 <button className="didi-product-button">
-                  <a href={product.lineURL}>
+                  <a href={product.lineURL} className="contact">
                     聯繫我們 <IoMdArrowForward/>
                   </a>
                 </button>

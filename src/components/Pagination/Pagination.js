@@ -4,7 +4,7 @@ import { urlFor } from "../../lib/client";
 
 const productsPerPage = 12; // 每頁顯示的商品數
 
-const Pagination = ({ products }) => {
+const Pagination = ({ products, category }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.ceil(products.length / productsPerPage);
@@ -32,7 +32,7 @@ const Pagination = ({ products }) => {
               {currentProducts &&
                 currentProducts.map((product) => {
                   return (
-                    <DidiNewProductCard key={product.id} slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                    <DidiNewProductCard key={product.id} category={category} slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
                   );
                 })}
             </div>

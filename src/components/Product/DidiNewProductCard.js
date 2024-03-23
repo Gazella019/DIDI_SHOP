@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-const DidiNewProductCard = ({slug, title, price, image}) => {
+const DidiNewProductCard = ({category, slug, title, price, image}) => {
     return (
-        <Link href={`/shop/product-basic/${slug}`}>
+        <Link href={`/shop/${category}/${slug}`}>
             <div className="didi-new-product">
                 <img src ={image} className="product-image"/>
                 <div className="product-info">

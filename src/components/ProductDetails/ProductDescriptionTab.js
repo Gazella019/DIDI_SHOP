@@ -38,7 +38,7 @@ const ProductDescriptionTab = ({ product }) => {
           </Tab.Pane>
           <Tab.Pane eventKey="reviews">
           <div className="didi-detail-text">
-            {product.return ? product.shipping : 
+            {product.retrun ? product.retrun : 
               "退貨方式"}
           </div>
           </Tab.Pane>

@@ -4,7 +4,8 @@
 
 header {
   h1{
-    font-family: 'Prata', serif;
+    font-family: 'Inter', sans-serif;
+    ont-family: 'Noto Serif TC', serif;
   }
   position: relative;
   &.topbar-shadow {
@@ -114,7 +115,8 @@ header {
 
     &.white-content {
       .header-content__logo {
-        font-family: 'Prata', serif;
+        font-family: 'Inter', sans-serif;
+        font-family: 'Noto Serif TC', serif;
         .dark-logo {
           display: block;
         }
