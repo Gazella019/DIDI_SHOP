@@ -34,25 +34,24 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                 <FaTimes className='didi-sidebar-icon' onClick={() => toggleSideBar(true)}/>
                 <ul className='didi-ul'>
                     <li>
-                        <Link href="/" as={process.env.PUBLIC_URL + "/"}>
+                        <Link href="/">
                             <a>主頁</a>
                         </Link>
                     </li>
                     <li>
                         <Link
                             href="/shop/fullwidth-no-sidebar"
-                            as={process.env.PUBLIC_URL + "/shop/fullwidth-no-sidebar"}
                         >
                             <a>商店</a>
                         </Link>
                     </li>
                     <li className="position-relative">
-                        <Link href="/other/about-two" as={process.env.PUBLIC_URL + "/"}>
+                        <Link href="/other/about-two">
                         <a>關於我們</a>
                         </Link>
                     </li>
                     <li className="position-relative">
-                        <Link href="/shop/jewls" as={process.env.PUBLIC_URL + "/"}>
+                        <Link href="/shop/jewls">
                         <a>珠寶/玉石</a>
                         </Link>
                     </li>
@@ -67,7 +66,6 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                             <li className={"sidebar-small"}>
                                 <Link
                                     href="/shop/clothes"
-                                    as={process.env.PUBLIC_URL + "/other/about"}
                                 >
                                     <a>男士</a>
                                 </Link>
@@ -75,7 +73,6 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                             <li className="sidebar-small">
                                 <Link
                                     href="/shop/clothes"
-                                    as={process.env.PUBLIC_URL + "/other/about-two"}
                                 >
                                     <a>女士</a>
                                 </Link>
@@ -83,7 +80,6 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                             <li className="sidebar-small">
                                 <Link
                                     href="/shop/clothes"
-                                    as={process.env.PUBLIC_URL + "/other/about-two"}
                                 >
                                     <a>孩童</a>
                             </Link>
@@ -91,12 +87,12 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                         </ul>
                     </li>
                     <li className="position-relative">
-                        <Link href="/shop/supplies" as={process.env.PUBLIC_URL + "/"}>
+                        <Link href="/shop/supplies">
                             <a>日常用品</a>
                         </Link>
                     </li>
                     <li className="position-relative">
-                        <Link href="/shop/foods" as={process.env.PUBLIC_URL + "/"}>
+                        <Link href="/shop/foods">
                             <a>食品</a>
                         </Link>
                     </li>
@@ -111,7 +107,6 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                             <li className="sidebar-small">
                                 <Link
                                     href="/shop/house"
-                                    as={process.env.PUBLIC_URL + "/other/about"}
                                 >
                                     <a>新屋</a>
                                 </Link>
@@ -119,7 +114,6 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                             <li className="sidebar-small">
                                 <Link
                                     href="/shop/house"
-                                    as={process.env.PUBLIC_URL + "/other/about-two"}
                                 >
                                     <a>中古屋</a>
                                 </Link>
@@ -127,7 +121,6 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                             <li className="sidebar-small">
                                 <Link
                                     href="/shop/house"
-                                    as={process.env.PUBLIC_URL + "/other/about-two"}
                                 >
                                     <a>新車</a>
                                 </Link>
@@ -135,7 +128,6 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                             <li className="sidebar-small">
                                 <Link
                                     href="/shop/house"
-                                    as={process.env.PUBLIC_URL + "/other/about-two"}
                                 >
                                     <a>中古車</a>
                                 </Link>
@@ -153,7 +145,6 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                                 <li className="sidebar-small">
                                     <Link
                                         href="/shop/partners"
-                                        as={process.env.PUBLIC_URL + "/other/about"}
                                     >
                                         <a>傑泰玻璃</a>
                                     </Link>

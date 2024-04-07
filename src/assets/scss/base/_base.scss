@@ -351,6 +351,7 @@ textarea:focus:-ms-input-placeholder {
 .related-item {
     flex: 1; /* 子元件平均佈局 */
     // max-width: calc(33.33% - 10px); /* 每個子元件的最大寬度 */
+    max-width: 33%;
     height: 500px;
     text-align: center;
     margin: 5px; /* 元件間的間距 */

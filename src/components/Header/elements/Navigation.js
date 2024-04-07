@@ -18,54 +18,50 @@ const Navigation = () => {
       <div ref={navRef} className="didi-navbar header-content__navigation space-pr--15 space-pl--15">
         <ul className="test-nav">
           <li>
-              <Link href="/" as={process.env.PUBLIC_URL + "/"}>
+              <Link href="/">
                 <a onClick={ShowNavbar}>主頁</a>
               </Link>
           </li>
           <li>
               <Link
                 href="/shop/fullwidth-no-sidebar"
-                as={process.env.PUBLIC_URL + "/shop/fullwidth-no-sidebar"}
               >
                 <a onClick={ShowNavbar}>商店</a>
               </Link>
             </li>
             <li className="position-relative">
-              <Link href="/other/about-two" as={process.env.PUBLIC_URL + "/"}>
+              <Link href="/other/about-two">
               <a onClick={ShowNavbar}>關於我們</a>
               </Link>
             </li>
           <li className="position-relative">
-            <Link href="/shop/jewls" as={process.env.PUBLIC_URL + "/"}>
+            <Link href="/shop/jewls">
               <a onClick={ShowNavbar}>珠寶/玉石</a>
               </Link>
             </li>
             <li className="position-relative">
-              <Link href="/shop/clothes" as={process.env.PUBLIC_URL + "/"}>
+              <Link href="/shop/clothes">
                 <a onClick={ShowNavbar}>服裝飾品</a>
               </Link>
               <IoIosArrowDown />
               <ul className="sub-menu sub-menu--one-column">
                 <li>
                   <Link
-                    href="/shop/clothes"
-                    as={process.env.PUBLIC_URL + "/other/about"}
+                    href="/shop/clothes?tag=男士"
                   >
                     <a onClick={ShowNavbar}>男士</a>
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/shop/clothes"
-                    as={process.env.PUBLIC_URL + "/other/about-two"}
+                    href="/shop/clothes?tag=女士"
                   >
                     <a onClick={ShowNavbar}>女士</a>
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/shop/clothes"
-                    as={process.env.PUBLIC_URL + "/other/about-two"}
+                    href="/shop/clothes?tag=孩童"
                   >
                     <a onClick={ShowNavbar}>孩童</a>
                   </Link>
@@ -73,38 +69,38 @@ const Navigation = () => {
               </ul>
             </li>
             <li className="position-relative">
-              <Link href="/shop/supplies" as={process.env.PUBLIC_URL + "/"}>
+              <Link href="/shop/supplies">
                 <a onClick={ShowNavbar}>日常用品</a>
               </Link>
             </li>
             <li className="position-relative">
-              <Link href="/shop/foods" as={process.env.PUBLIC_URL + "/"}>
+              <Link href="/shop/foods">
                 <a onClick={ShowNavbar}>食品</a>
               </Link>
             </li>
             <li className="position-relative">
-              <Link href="/shop/house" as={process.env.PUBLIC_URL + "/"}>
+              <Link href="/shop/house">
                 <a onClick={ShowNavbar}>房屋/車</a>
               </Link>
               <IoIosArrowDown />
               <ul className="sub-menu sub-menu--one-column">
                 <li>
                   <Link
-                    href="/shop/house"
+                    href="/shop/house?tag=新屋"
                   >
                     <a onClick={ShowNavbar}>新屋</a>
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/shop/house"
+                    href="/shop/house?tag=中古屋"
                   >
                     <a onClick={ShowNavbar}>中古屋</a>
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/shop/house"
+                    href="/shop/house?tag=新車"
                   >
                     <a onClick={ShowNavbar}>新車</a>
                   </Link>
@@ -119,7 +115,7 @@ const Navigation = () => {
               </ul>
             </li>
             <li className="position-relative">
-              <Link href="/shop/partners" as={process.env.PUBLIC_URL + "/"}>
+              <Link href="/shop/partners">
                 <a onClick={ShowNavbar}>合作商家產品介紹</a>
               </Link>
               <IoIosArrowDown />
@@ -127,7 +123,6 @@ const Navigation = () => {
                 <li>
                   <Link
                     href="/shop/partners"
-                    as={process.env.PUBLIC_URL + "/shop/partners"}
                   >
                     <a onClick={ShowNavbar}>傑泰玻璃</a>
                   </Link>
