@@ -95,7 +95,7 @@ const ProductBasic = ({
                   </div>
                 </h2>
                 <div className="didi-product-fullDescription">
-                  {product.fullDescription}
+                  {product.shortDescription}
                 </div>
                 <button className="didi-product-button">
                   <a href={product.lineURL} className="contact">

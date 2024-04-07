@@ -91,7 +91,6 @@ const Navigation = () => {
                 <li>
                   <Link
                     href="/shop/house"
-                    as={process.env.PUBLIC_URL + "/other/about"}
                   >
                     <a onClick={ShowNavbar}>新屋</a>
                   </Link>
@@ -99,9 +98,22 @@ const Navigation = () => {
                 <li>
                   <Link
                     href="/shop/house"
-                    as={process.env.PUBLIC_URL + "/other/about-two"}
                   >
                     <a onClick={ShowNavbar}>中古屋</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/shop/house"
+                  >
+                    <a onClick={ShowNavbar}>新車</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/shop/house?tag=中古車"
+                  >
+                    <a onClick={ShowNavbar}>中古車</a>
                   </Link>
                 </li>
               </ul>

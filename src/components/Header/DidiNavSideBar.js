@@ -124,6 +124,22 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                                     <a>中古屋</a>
                                 </Link>
                             </li>
+                            <li className="sidebar-small">
+                                <Link
+                                    href="/shop/house"
+                                    as={process.env.PUBLIC_URL + "/other/about-two"}
+                                >
+                                    <a>新車</a>
+                                </Link>
+                            </li>
+                            <li className="sidebar-small">
+                                <Link
+                                    href="/shop/house"
+                                    as={process.env.PUBLIC_URL + "/other/about-two"}
+                                >
+                                    <a>中古車</a>
+                                </Link>
+                            </li>
                         </ul>
                     </li>
                     <li className="position-relative">

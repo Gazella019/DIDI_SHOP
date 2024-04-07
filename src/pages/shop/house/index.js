@@ -12,6 +12,7 @@ import { FooterTwo } from "../../../components/Footer";
 import { DidiNewProductCard } from "../../../components/Product";
 import { urlFor } from "../../../lib/client";
 import Pagination from "../../../components/Pagination/Pagination";
+import { useRouter } from 'next/router';
 
 import {
   ShopHeader,
@@ -62,6 +63,12 @@ const ShopHouse = ({ products }) => {
     setCurrentData(sortedProducts.slice(offset, offset + pageLimit));
   }, [offset, products, sortType, sortValue, filterSortType, filterSortValue]);
 
+  const router = useRouter();
+  const { query } = router;
+
+  // tag 為小分類 ex:男裝 女裝
+  if(query["tag"])
+    products = products.filter(product => product.tag.includes(query["tag"]))
   return (
     <LayoutDidi>
       {/* breadcrumb */}
