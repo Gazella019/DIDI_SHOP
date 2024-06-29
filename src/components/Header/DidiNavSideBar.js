@@ -144,7 +144,7 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                             <ul className={`subsiderbar ${show3 == "false" ? "didishow" : ""}`}>
                                 <li className="sidebar-small">
                                     <Link
-                                        href="/shop/partners"
+                                        href="/partner/test1"
                                     >
                                         <a>傑泰玻璃</a>
                                     </Link>

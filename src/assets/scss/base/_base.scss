@@ -709,10 +709,56 @@ img {
     width: 100%;
     height: 50vh;
     // background-color: #324d67;
-    background-image: url("https://images.unsplash.com/photo-1512704450162-780bb2dba7a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
     background-size: cover;
 }
 
+.didi-partner-index-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* 卡片之间的间距 */
+    justify-content: center; /* 中心对齐 */
+  }
+  
+  .didi-partner-index-link {
+    text-decoration: none; /* 去掉链接下划线 */
+    color: inherit; /* 保持文字颜色 */
+  }
+  
+  .didi-partner-index-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px; /* 卡片圆角 */
+    width: 200px; /* 卡片固定宽度 */
+    height: 300px; /* 卡片固定高度 */
+    text-align: center; /* 文字居中 */
+    box-sizing: border-box; /* 包含padding和border */
+  }
+  
+  .didi-partner-index-img {
+    width: 100%;
+    height: 70%; /* 确保图片占据卡片的70%高度 */
+    overflow: hidden; /* 隐藏溢出部分 */
+  }
+  
+  .didi-partner-index-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 确保图片覆盖整个容器并保持比例 */
+    border-radius: 8px; /* 图片圆角 */
+  }
+  
+  .didi-partner-index-title {
+    margin-top: 10px; /* 图片和文字之间的间距 */
+    font-size: 16px;
+    font-weight: bold;
+    flex-grow: 1; /* 占据剩余高度 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
 .didi-partner-title {
     margin-top: 10vh;
     text-align: center;

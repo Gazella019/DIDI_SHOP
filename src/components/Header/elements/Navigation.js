@@ -115,14 +115,14 @@ const Navigation = () => {
               </ul>
             </li>
             <li className="position-relative">
-              <Link href="/shop/partners">
+              <Link href="/partner">
                 <a onClick={ShowNavbar}>合作商家產品介紹</a>
               </Link>
               <IoIosArrowDown />
               <ul className="sub-menu sub-menu--one-column">
                 <li>
                   <Link
-                    href="/shop/partners"
+                    href="/partner/test1"
                   >
                     <a onClick={ShowNavbar}>傑泰玻璃</a>
                   </Link>

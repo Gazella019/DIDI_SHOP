@@ -10,6 +10,7 @@ import { getSortedProducts } from "../../lib/product";
 import { getProducts } from "../../lib/product";
 import { FooterTwo } from "../../components/Footer";
 import { urlFor } from "../../lib/client";
+import { IoMdArrowForward } from "react-icons/io";
 
 import {
   ShopHeader,
@@ -66,20 +67,27 @@ const ShopPartners = ({ partner }) => {
           合作商家
         </div>
         <div className="didi-partner-subtitle">
-          {partner[0].name}
+          {partner.name}
         </div>
-        <div className="didi-partner-img"/>
+        <button className="didi-product-button">
+          <a href={partner.lineURL} className="contact">
+            聯繫我們 <IoMdArrowForward/>
+          </a>
+        </button>
+        <div className="didi-partner-img">
+          <img src={urlFor(partner.thumbImage[0])}/>
+        </div>
         <div className="didi-partner-gallery">
-          <img src={urlFor(partner[0].image[0])}/>
-          <img src={urlFor(partner[0].image[1])}/>
-          <img src={urlFor(partner[0].image[2])}/>
+          {partner.image.map((img, index) => (
+            <img key={index} src={urlFor(img)} alt={`Partner Image ${index}`} />
+          ))}
         </div>
         <div className="partner-container">
           <div className="didi-partner-info">
-            {partner[0].shortDescription}
+            {partner.shortDescription}
           </div>
           <p className="didi-partner-p">
-            {partner[0].fullDescription}
+            {partner.fullDescription}
           </p>
         </div>
           
@@ -89,9 +97,8 @@ const ShopPartners = ({ partner }) => {
   );
 };
 
-
-export const getServerSideProps = async () => {
-  const query = '*[_type == "partner"]';
+export const getServerSideProps = async ({ params: { slug }}) => {
+  const query = `*[_type == "partner" && slug.current == '${slug}'][0]`;
   const partner = await client.fetch(query);
   return {
     props: { partner }
