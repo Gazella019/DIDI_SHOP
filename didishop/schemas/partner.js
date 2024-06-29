@@ -13,21 +13,15 @@ export default {
             title: '公司名稱',
             type: 'string',
         },
-        // {
-        //     name: 'slug',
-        //     title: '英文網址',
-        //     type: 'slug',
-        //     options: {
-        //         source: 'name',
-        //         maxLength: 90,
-        //     }
-        // },
-        // {
-        //     name: 'category',
-        //     title: '分類',
-        //     type: 'array',
-        //     of: [{ type: 'string' }],
-        // },
+        {
+            name: 'slug',
+            title: '英文網址',
+            type: 'slug',
+            options: {
+                source: 'name',
+                maxLength: 90,
+            }
+        },
         {
             name: 'shortDescription',
             title: '公司簡介',

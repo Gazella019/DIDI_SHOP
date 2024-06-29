@@ -11,7 +11,7 @@ const DidiRelatedProduct = ({products}) => {
             </h3>
             <div className="didi-related-product">
                 {products.map((product) => (
-                    <Link href={`/shop/product-basic/${product.slug.current}`}>
+                    <Link href={`/shop/${product.category}/${product.slug.current}`}>
                         <div className="related-item">
                             <div className="related-item-img">
                                 <img src={urlFor(product.thumbImage[0])}/>

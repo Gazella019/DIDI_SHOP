@@ -32,7 +32,7 @@ const Pagination = ({ products, category }) => {
               {currentProducts &&
                 currentProducts.map((product) => {
                   return (
-                    <DidiNewProductCard key={product.id} category={category} slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                    <DidiNewProductCard key={product.id} category={product.category} slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
                   );
                 })}
             </div>

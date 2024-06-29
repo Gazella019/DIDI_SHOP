@@ -22,6 +22,11 @@ export default {
                 maxLength: 90,
             }
         },
+        {
+            name: 'category',
+            title: '分類',
+            type: 'string',
+        },
         { 
             name: 'price',
             title: '售價',

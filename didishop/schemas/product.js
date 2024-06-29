@@ -45,8 +45,7 @@ export default {
         {
             name: 'category',
             title: '分類',
-            type: 'array',
-            of: [{ type: 'string' }],
+            type: 'string',
         },
         {
             name: 'tag',

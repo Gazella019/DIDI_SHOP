@@ -65,21 +65,21 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                         <ul className={`subsiderbar ${show1 == "false" ? "didishow" : ""}`}>
                             <li className={"sidebar-small"}>
                                 <Link
-                                    href="/shop/clothes"
+                                    href="/shop/clothes?tag=男士"
                                 >
                                     <a>男士</a>
                                 </Link>
                             </li>
                             <li className="sidebar-small">
                                 <Link
-                                    href="/shop/clothes"
+                                    href="/shop/clothes?tag=女士"
                                 >
                                     <a>女士</a>
                                 </Link>
                             </li>
                             <li className="sidebar-small">
                                 <Link
-                                    href="/shop/clothes"
+                                    href="/shop/clothes?tag=孩童"
                                 >
                                     <a>孩童</a>
                             </Link>
@@ -106,28 +106,28 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                         <ul className={`subsiderbar ${show2 == "false" ? "didishow" : ""}`}>
                             <li className="sidebar-small">
                                 <Link
-                                    href="/shop/house"
+                                    href="/shop/house?tag=新屋"
                                 >
                                     <a>新屋</a>
                                 </Link>
                             </li>
                             <li className="sidebar-small">
                                 <Link
-                                    href="/shop/house"
+                                    href="/shop/house?tag=中古屋"
                                 >
                                     <a>中古屋</a>
                                 </Link>
                             </li>
                             <li className="sidebar-small">
                                 <Link
-                                    href="/shop/house"
+                                    href="/shop/house?tag=新車"
                                 >
                                     <a>新車</a>
                                 </Link>
                             </li>
                             <li className="sidebar-small">
                                 <Link
-                                    href="/shop/house"
+                                    href="/shop/house?tag=中古車"
                                 >
                                     <a>中古車</a>
                                 </Link>

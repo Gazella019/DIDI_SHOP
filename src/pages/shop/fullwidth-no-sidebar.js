@@ -73,8 +73,26 @@ const FullwidthNoSidebar = ({ products }) => {
 };
 
 export const getServerSideProps = async () => {
-  const query = '*[_type == "product"]';
-  const products = await client.fetch(query);
+  let products;
+  let query = '*[_type == "foods"]';
+  let temp = await client.fetch(query);
+  products = temp;
+  
+  query = '*[_type == "clothes"]';
+  temp = await client.fetch(query);
+  products = products.concat(temp);
+
+  query = '*[_type == "house"]';
+  temp = await client.fetch(query);
+  products = products.concat(temp);
+
+  query = '*[_type == "jewls"]';
+  temp = await client.fetch(query);
+  products = products.concat(temp);
+
+  query = '*[_type == "supplies"]';
+  temp = await client.fetch(query);
+  products = products.concat(temp);
   // console.log(products)
   return {
     props: { products }
