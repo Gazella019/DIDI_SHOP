@@ -135,22 +135,10 @@ const DidiNavSideBar = ({toggleSideBar}) => {
                         </ul>
                     </li>
                     <li className="position-relative">
-                        <span className={"sidebar-title"} onClick={show3Subsidebar}>
-                            合作商家
-                        </span>
-                        <span className={"sidebarSpan"} onClick={show3Subsidebar}>
-                            <FaChevronDown />
-                        </span>
-                            <ul className={`subsiderbar ${show3 == "false" ? "didishow" : ""}`}>
-                                <li className="sidebar-small">
-                                    <Link
-                                        href="/partner/test1"
-                                    >
-                                        <a>傑泰玻璃</a>
-                                    </Link>
-                                </li>
-                            </ul>
-                        </li>
+                        <Link href="/partner">
+                            <a>合作商家</a>
+                        </Link>
+                    </li>
                     </ul>
             </div>
         </>

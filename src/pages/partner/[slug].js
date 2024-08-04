@@ -62,33 +62,33 @@ const ShopPartners = ({ partner }) => {
   return (
     <LayoutDidi>
       {/* breadcrumb */}
-      <div className="shop-partners">
+      <div className="partner-container">
         <div className="didi-partner-title">
           合作商家
         </div>
         <div className="didi-partner-subtitle">
           {partner.name}
         </div>
-        <button className="didi-product-button">
-          <a href={partner.lineURL} className="contact">
-            聯繫我們 <IoMdArrowForward/>
-          </a>
-        </button>
         <div className="didi-partner-img">
-          <img src={urlFor(partner.thumbImage[0])}/>
+          <img className="full-width" src={urlFor(partner.thumbImage[0])}/>
         </div>
         <div className="didi-partner-gallery">
           {partner.image.map((img, index) => (
             <img key={index} src={urlFor(img)} alt={`Partner Image ${index}`} />
           ))}
         </div>
-        <div className="partner-container">
-          <div className="didi-partner-info">
-            {partner.shortDescription}
-          </div>
-          <p className="didi-partner-p">
-            {partner.fullDescription}
-          </p>
+        <div className="didi-partner-info">
+          {partner.shortDescription}
+        </div>
+        <p className="didi-partner-p">
+          {partner.fullDescription}
+        </p>
+        <div className="partner-button">
+          <button className="didi-product-button">
+            <a href={partner.lineURL} className="contact">
+              聯繫我們 <IoMdArrowForward/>
+            </a>
+          </button>
         </div>
           
       </div>
