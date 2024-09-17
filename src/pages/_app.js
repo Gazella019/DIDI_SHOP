@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useRef } from "react";
 import App from "next/app";
 import Head from "next/head";
 import withReduxStore from "../lib/with-redux-store";
@@ -28,21 +28,12 @@ class MyApp extends App {
           <div className="didi-main-header">
             <title>DIDI Shop</title>
             <link rel="icon" href={process.env.PUBLIC_URL + "/favicon.ico"} />
-            {/* <iframe src="silence.mp3" allow="autoplay" id="audio"></iframe> */}
-            {/* <audio
-              controls
-              autoplay
-              loop
-              src="/bgm.mp3" className="didi-music-player">
-                  Your browser does not support the
-                  <code>audio</code> element.
-            </audio> */}
           </div>
         </Head>
-        {/* <BackgroundMusic /> */}
         <ToastProvider placement="bottom-left">
           <Provider store={reduxStore}>
             <PersistGate loading={<Preloader />} persistor={this.persistor}>
+              <BackgroundMusic />
               <Component {...pageProps} />
             </PersistGate>
           </Provider>

@@ -1,19 +1,47 @@
-import React, { useEffect } from 'react';
+import { useEffect, useRef } from "react";
 
 const BackgroundMusic = () => {
-  useEffect(() => {
-    const audio = new Audio('/audio/bgm.mp3');
-    audio.loop = true; // 循環播放
-    audio.play();
+  const audioRef = useRef(null);
 
+  useEffect(() => {
+    const audio = audioRef.current;
+
+    const playAudio = () => {
+      if (audio) {
+        audio.play().catch((error) => {
+          console.error("Failed to play audio automatically:", error);
+        });
+      }
+    };
+
+    // Attempt to play audio on component mount
+    playAudio();
+
+    // Add event listener to play audio on user interaction if autoplay fails
+    const handleUserInteraction = () => {
+      playAudio();
+      document.removeEventListener('click', handleUserInteraction);
+      document.removeEventListener('keydown', handleUserInteraction);
+    };
+
+    document.addEventListener('click', handleUserInteraction);
+    document.addEventListener('keydown', handleUserInteraction);
+
+    // Cleanup event listeners on component unmount
     return () => {
-      // 清理資源
-      audio.pause();
-      audio.currentTime = 0;
+      document.removeEventListener('click', handleUserInteraction);
+      document.removeEventListener('keydown', handleUserInteraction);
     };
   }, []);
 
-  return null; // 這個組件不需要渲染任何內容
+  return (
+    <div>
+      <audio ref={audioRef} loop>
+        <source src="/audio/bgm.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  );
 };
 
 export default BackgroundMusic;
