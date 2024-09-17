@@ -28,11 +28,11 @@ const Furniture = ({ products }) => {
   const banner2img = [
     "assets/images/pic3.jpeg",
     "assets/images/car_house.png",
-    "https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    "https://plus.unsplash.com/premium_photo-1669324357471-e33e71e3f3d8?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   ];
 
-  const banner1link = ["jewls", "clothes", "supplies"];
-  const banner2link = ["foods", "house", "partners"];
+  const banner1link = ["/shop/jewls", "/shop/clothes", "/shop/supplies"];
+  const banner2link = ["/shop/foods", "/shop/house", "partner"];
 
   const banner3img = [
     "https://images.unsplash.com/photo-1502652023201-a16bde8138d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
@@ -40,7 +40,7 @@ const Furniture = ({ products }) => {
     "https://images.unsplash.com/photo-1573855619003-97b4799dcd8b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
     "https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80",
     "https://images.unsplash.com/photo-1594950195709-a14f66c242d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    "https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    "https://plus.unsplash.com/premium_photo-1669324357471-e33e71e3f3d8?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   ]
 
   const banner3text = [

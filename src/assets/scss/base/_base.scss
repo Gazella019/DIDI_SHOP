@@ -584,34 +584,59 @@ img {
     margin: 0.9rem auto;
 }
 
+.products-container {
+    display: flex;
+    justify-content: center; // Center the product items within the container
+    width: 100%;
+}
+
+.product-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Adjust columns dynamically
+    gap: 20px; // Adjust the gap as needed
+    justify-content: center; // Center the grid within the container
+}
 
 .didi-new-product {
     display: flex;
     flex-direction: column;
-    height: 400px;
-    text-align: center;
-    .product-price {
-        color: #00081C;
-    }
+    width: 100%; // Allow width to adjust dynamically
+    aspect-ratio: 3 / 4; // Maintain a 3:4 aspect ratio
     background-color: white;
     cursor: pointer;
     overflow: hidden;
-    // max-width: 300px;
+    padding: 0; // Remove any padding
+    box-sizing: border-box; // Ensure padding and border are included in the element's total width and height
 }
 
-.product-info {
+.didi-new-product .product-img {
+    flex: 1;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    flex-grow: 1; /* 商品標題伸展以填充剩餘空間 */
-    // align-items: ;
-    // gap: 20px;
+    overflow: hidden;
+    padding: 0; // Remove any padding
 }
 
-.product-img img{
+.didi-new-product .product-img img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover; // Ensure the image covers the entire container
+}
+
+.didi-new-product .product-info {
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box; // Ensure padding is included in the element's total width and height
+}
+
+// Mobile view
+@media screen and (max-width: 1040px) {
+    .product-items {
+        grid-template-columns: repeat(2, 1fr); // 2 columns for mobile view
+        gap: 10px; // Adjust the gap as needed
+        justify-content: center; // Center the grid within the container
+    }
 }
 
 .product-btns{
@@ -725,6 +750,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 20px; /* 卡片之间的间距 */
+    min-height: 65vh;
     justify-content: center; /* 中心对齐 */
   }
   
@@ -879,7 +905,9 @@ img {
 }
 
 .product-items {
+    
     width: 100%;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     // background-color: #CDBC7A;
@@ -944,7 +972,7 @@ img {
 }
 
 // mobile view
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1040px) {
     .product-items {
         width: 100%;
         display: grid;
@@ -952,10 +980,17 @@ img {
         gap: 30px;
     }
     .related-item {
-        width: 100%;
-        height: 300px;
+        max-width: 100%;
+        width: 250px;
         flex: 1;
     }
+
+    .related-item-title {
+        color: #00081C;
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
     .didi-product-name {
         flex-direction: column;
     }
@@ -965,15 +1000,18 @@ img {
         margin-right: 0;
     }
     
-    .related-item-title {
-        margin-top: 8px;
-        font-size: 12px;
+    // .related-item-title {
+    //     margin-top: 8px;
+    //     font-size: 12px;
+    // }
+
+    .didi-related-product-container {
+        margin-top: 5vh;
     }
 
     .didi-related-product {
-        padding: 10px;
+       flex-direction: column;
     }
-    
 }
 
 

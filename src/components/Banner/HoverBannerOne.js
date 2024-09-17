@@ -25,8 +25,8 @@ const HoverBannerOne = ({ spaceBottomClass, text, images, bannerLink}) => {
                 <div className="title">
                   <p>
                     <Link
-                      href={`/shop/${bannerLink[0]}`}
-                      as={process.env.PUBLIC_URL + `/shop/${bannerLink[0]}`}
+                      href={`${bannerLink[0]}`}
+                      as={process.env.PUBLIC_URL + `${bannerLink[0]}`}
                     >
                       <a>
                         {text[0]}
@@ -34,16 +34,16 @@ const HoverBannerOne = ({ spaceBottomClass, text, images, bannerLink}) => {
                     </Link>
                   </p>
                   <Link
-                    href={`/shop/${bannerLink[0]}`}
-                    as={process.env.PUBLIC_URL + `/shop/${bannerLink[0]}`}
+                    href={`${bannerLink[0]}`}
+                    as={process.env.PUBLIC_URL + `${bannerLink[0]}`}
                   >
                     <a>Shop Now</a>
                   </Link>
                 </div>
               </div>
               <Link
-                href={`/shop/${bannerLink[0]}`}
-                as={process.env.PUBLIC_URL + `/shop/${bannerLink[0]}`}
+                href={`${bannerLink[0]}`}
+                as={process.env.PUBLIC_URL + `${bannerLink[0]}`}
               >
                 <a className="banner-link" />
               </Link>
@@ -65,7 +65,7 @@ const HoverBannerOne = ({ spaceBottomClass, text, images, bannerLink}) => {
                   <p>
                     <Link
                       href={`/shop/${bannerLink[1]}`}
-                      as={process.env.PUBLIC_URL + `/shop/${bannerLink[1]}`}
+                      as={process.env.PUBLIC_URL + `${bannerLink[1]}`}
                     >
                       <a>
                       {text[1]}
@@ -73,16 +73,16 @@ const HoverBannerOne = ({ spaceBottomClass, text, images, bannerLink}) => {
                     </Link>
                   </p>
                   <Link
-                    href={`/shop/${bannerLink[1]}`}
-                    as={process.env.PUBLIC_URL + `/shop/${bannerLink[1]}`}
+                    href={`${bannerLink[1]}`}
+                    as={process.env.PUBLIC_URL + `${bannerLink[1]}`}
                   >
                     <a>Shop Now</a>
                   </Link>
                 </div>
               </div>
               <Link
-                href={`/shop/${bannerLink[1]}`}
-                as={process.env.PUBLIC_URL + `/shop/${bannerLink[1]}`}
+                href={`${bannerLink[1]}`}
+                as={process.env.PUBLIC_URL + `${bannerLink[1]}`}
               >
                 <a className="banner-link" />
               </Link>
@@ -103,8 +103,8 @@ const HoverBannerOne = ({ spaceBottomClass, text, images, bannerLink}) => {
                 <div className="title">
                   <p>
                     <Link
-                      href={`/shop/${bannerLink[2]}`}
-                      as={process.env.PUBLIC_URL + `/shop/${bannerLink[2]}`}
+                      href={`${bannerLink[2]}`}
+                      as={process.env.PUBLIC_URL + `${bannerLink[2]}`}
                     >
                       <a>
                       {text[2]}
@@ -112,16 +112,16 @@ const HoverBannerOne = ({ spaceBottomClass, text, images, bannerLink}) => {
                     </Link>
                   </p>
                   <Link
-                    href={`/shop/${bannerLink[2]}`}
-                    as={process.env.PUBLIC_URL + `/shop/${bannerLink[2]}`}
+                    href={`${bannerLink[2]}`}
+                    as={process.env.PUBLIC_URL + `${bannerLink[2]}`}
                   >
                     <a>Shop Now</a>
                   </Link>
                 </div>
               </div>
               <Link
-                href={`/shop/${bannerLink[2]}`}
-                as={process.env.PUBLIC_URL + `/shop/${bannerLink[2]}`}
+                href={`${bannerLink[2]}`}
+                as={process.env.PUBLIC_URL + `${bannerLink[2]}`}
               >
                 <a className="banner-link" />
               </Link>
