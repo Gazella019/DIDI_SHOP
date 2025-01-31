@@ -6,15 +6,24 @@ import { useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 
 const LayoutDidi = ({ children }) => {
-
   const [showSideBar, setShowSideBar] = useState(false);
+
   function toggleSideBar() {
     setShowSideBar(!showSideBar);
   }
+
   return (
     <Fragment>
-      {/* <HeaderThree aboutOverlay={aboutOverlay} /> */}
-      {showSideBar && <DidiNavSideBar toggleSideBar={toggleSideBar}/>}
+      {/* 背景遮罩 */}
+      <div className={`sidebar ${showSideBar ? "open" : ""}`}>
+        <DidiNavSideBar toggleSideBar={toggleSideBar} />
+      </div>
+      <div className={`overlay ${showSideBar ? "show" : ""}`} onClick={toggleSideBar}></div>
+
+
+
+
+      {/* 頂部導航欄 */}
       <header className="didi-navbar">
         <div className="didi-title">
           <Link href="/" as={process.env.PUBLIC_URL + "/"}>
@@ -28,14 +37,12 @@ const LayoutDidi = ({ children }) => {
               />
             </a>
           </Link>
-          {/* <img src={process.env.PUBLIC_URL + "/assets/images/logo.png"} className="didi-logo"/> */}
-          <h1>
-            DIDI SHOP
-          </h1>
+          <h1>DIDI SHOP</h1>
         </div>
-        <FaBars className="nav-side-btn" onClick={toggleSideBar}/>
+        <FaBars className="nav-side-btn" onClick={toggleSideBar} />
       </header>
-      <DidiHeader/>
+
+      <DidiHeader />
       {children}
     </Fragment>
   );
