@@ -15,7 +15,9 @@ import heroSliderData from "../data/hero-sliders/hero-slider-five.json";
 import testimonialOneData from "../data/testimonials/testimonial-one.json";
 import imageSliderData from "../data/image-sliders/image-slider-one.json";
 
-const Furniture = ({ products }) => {
+import { client } from "../lib/client";
+
+const Furniture = ({ products, siteSettings }) => {
 
   const banner1text = ['珠寶玉石', '服裝飾品', '日常用品'];
   const banner2text = ['食品', '房屋/車', '合作商家'];
@@ -64,7 +66,7 @@ const Furniture = ({ products }) => {
           {/* <ImageSliderTwo imageSliderData={imageSliderData} className="didi-home-slider"/> */}
 
           {/* image cta */}
-          <ImageCtaTwo spaceBottomClass="space-pb--r100" />
+          <ImageCtaTwo spaceBottomClass="space-pb--r100" lineURL={siteSettings.lineURL} />
           <FooterTwo/>
       </div>
     </LayoutDidi>
@@ -79,3 +81,12 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(Furniture);
+
+export const getStaticProps = async () => {
+  const query = `*[_type == "siteSettings"][0]`;
+  const siteSettings = await client.fetch(query);
+
+  return {
+    props: { siteSettings },
+  }
+}

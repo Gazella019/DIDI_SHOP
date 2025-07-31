@@ -11,6 +11,8 @@ import supplies from './supplies'
 import foods from './foods'
 import house from './house'
 import partner from './partner'
+import contactus from './contactus'
+import siteSettings from './siteSettings'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -19,6 +21,6 @@ export default createSchema({
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    product, jewls, clothes, supplies, foods, house, partner/* Your types here! */
+    product, jewls, clothes, supplies, foods, house, partner, contactus, siteSettings/* Your types here! */
   ]),
 })

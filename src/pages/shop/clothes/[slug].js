@@ -110,7 +110,7 @@ const ProductBasic = ({
                 影片介紹
               </h3>
               {/* <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ONqYdBtTltg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-              <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${product.youtubeURL}`} title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+              <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${product.youtubeURL}`} title="YouTube video player" frameBorder="0" allowFullScreen></iframe>
             </div>
           </Row>
           <Row>
