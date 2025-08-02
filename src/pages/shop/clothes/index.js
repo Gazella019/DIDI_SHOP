@@ -87,7 +87,7 @@ const ShopClothes = ({ products }) => {
               {filterPorductsByCategory &&
                 filterPorductsByCategory.map((product) => {
                   return (
-                    <DidiNewProductCard key={product.id} slug={product.slug.current} title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                    <DidiNewProductCard key={product.id} slug={product.slug.current} title={product.name} price={product.price} image={product.thumbImage[0]}/>
                   );
                 })}
             </div>
@@ -99,7 +99,16 @@ const ShopClothes = ({ products }) => {
 };
 
 export const getServerSideProps = async () => {
-  const query = '*[_type == "clothes"]';
+  const query = `*[_type == "clothes"]{
+  ...,
+  "thumbImage": thumbImage[]{
+    _key,
+    _type,
+    asset->,
+    crop,
+    hotspot
+  }
+}`
   const products = await client.fetch(query);
 
   return {

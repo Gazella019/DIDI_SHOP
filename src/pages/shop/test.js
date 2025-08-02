@@ -74,7 +74,7 @@ const Test = ({ products }) => {
                         href={`/shop/product-basic/${product.slug.current}`}
                       >
                         <a>
-                          <DidiNewProductCard title={product.name} price={product.price} image={urlFor(product.thumbImage[0])}/>
+                          <DidiNewProductCard title={product.name} price={product.price} image={product.thumbImage[0]}/>
                         </a>
                       </Link>
                     );

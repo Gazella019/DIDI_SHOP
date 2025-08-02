@@ -87,7 +87,16 @@ const ShopHouse = ({ products }) => {
 };
 
 export const getServerSideProps = async () => {
-  const query = '*[_type == "house"]';
+  const query = `*[_type == "house"]{
+  ...,
+  "thumbImage": thumbImage[]{
+    _key,
+    _type,
+    asset->,
+    crop,
+    hotspot
+  }
+}`
   const products = await client.fetch(query);
   // console.log(products)
   return {
