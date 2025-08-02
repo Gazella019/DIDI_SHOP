@@ -80,7 +80,7 @@ const ProductBasic = ({
               >
                 {product.image.map((img, index) => (
                   <SwiperSlide className="didi-swiper-slide">
-                      <img src={urlFor(product.image[index])} onClick={() => openModal()}/>
+                      <img src={urlFor(product.image[index]).width(800).auto('format').url()} onClick={() => openModal()}/>
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -129,7 +129,7 @@ const ProductBasic = ({
 
 export default ProductBasic;
 export const getStaticPaths = async () => {
-  const query = `*[_type == "product"] {
+  const query = `*[_type == "clothes"] {
     slug {
       current
     }
@@ -150,9 +150,16 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params: { slug }}) => {
-  const query = `*[_type == "clothes" && slug.current == '${slug}'][0]`;
+  const query = `*[_type == "clothes" && slug.current == '${slug}'][0]{
+    ...,
+    "image": image[]{..., asset->},
+    "thumbImage": thumbImage[]{..., asset->}
+  }`;
   const product = await client.fetch(query);
-  const queryAll = '*[_type == "clothes"]';
+  const queryAll = `*[_type == "clothes"]{
+    ...,
+    "thumbImage": thumbImage[]{..., asset->}
+  }`;
   const allProducts = await client.fetch(queryAll);
   // console.log(product);
   return {

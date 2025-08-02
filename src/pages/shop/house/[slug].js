@@ -129,7 +129,7 @@ const ProductBasic = ({
 
 export default ProductBasic;
 export const getStaticPaths = async () => {
-  const query = `*[_type == "product"] {
+  const query = `*[_type == "house"] {
     slug {
       current
     }
@@ -150,9 +150,16 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async ({ params: { slug }}) => {
-  const query = `*[_type == "house" && slug.current == '${slug}'][0]`;
+  const query = `*[_type == "house" && slug.current == '${slug}'][0]{
+    ...,
+    "image": image[]{..., asset->},
+    "thumbImage": thumbImage[]{..., asset->}
+  }`;
   const product = await client.fetch(query);
-  const queryAll = '*[_type == "house"]';
+  const queryAll = `*[_type == "house"]{
+    ...,
+    "thumbImage": thumbImage[]{..., asset->}
+  }`;
   const allProducts = await client.fetch(queryAll);
   // console.log(product);
   return {

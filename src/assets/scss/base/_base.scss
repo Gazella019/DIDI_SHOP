@@ -965,14 +965,20 @@ img {
 @media screen and (max-width: 1200px){
     .did-product-page {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+        flex-direction: row; // Keep it horizontal
+        flex-wrap: wrap; // Allow wrapping if needed
+        gap: 30px; // Add some space between image and info
     }
+
+    .didi-main-swiper,
     .didi-product-container {
-        margin-top: 50px;
+        flex: 1 1 400px; // Allow them to grow and shrink, with a base width
     }
+
+    .didi-product-container {
+        margin-top: 0; // Remove the top margin on mobile
+    }
+
     .product-items {
         width: 100%;
         display: grid;
@@ -1026,17 +1032,6 @@ img {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
-    .related-item {
-        max-width: 100%;
-        width: 250px;
-        flex: 1;
-    }
-
-    .related-item-title {
-        color: #00081C;
-        font-size: 15px;
-        letter-spacing: 2px;
-    }
 
     .didi-product-name {
         flex-direction: column;
@@ -1047,17 +1042,43 @@ img {
         margin-right: 0;
     }
     
-    // .related-item-title {
-    //     margin-top: 8px;
-    //     font-size: 12px;
-    // }
-
     .didi-related-product-container {
         margin-top: 5vh;
+        width: 100%; /* Ensure container takes full width */
     }
 
     .didi-related-product {
-       flex-direction: column;
+        display: flex;
+        width: 100%;
+        gap: 15px; /* Spacing between items */
+        align-items: stretch; /* Ensure items are the same height */
+    }
+
+    .related-item {
+        flex: 1 1 0; /* Allow items to grow and shrink equally */
+        width: 0; /* Set base width to 0 when using flex: 1 */
+        display: flex;
+        flex-direction: column; /* Stack image and title */
+    }
+
+    .related-item-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1; /* Modern CSS for 1:1 aspect ratio */
+        object-fit: cover; /* Cover the area */
+    }
+
+    .related-item-title {
+        color: #00081C;
+        font-size: 15px;
+        letter-spacing: 2px;
+        margin-top: 10px; /* Space between image and title */
+        min-height: 45px; /* Reserve space for ~2 lines of text */
+        display: flex;
+        align-items: center; /* Vertically center text */
+        justify-content: center; /* Horizontally center text */
+        text-align: center;
+        overflow: hidden; /* Prevent long text from breaking layout */
     }
 }
 
